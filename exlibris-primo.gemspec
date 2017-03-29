@@ -30,4 +30,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "pry", "~> 0.9.12.2"
   s.add_development_dependency 'minitest', '~> 4.7.5'
   s.add_development_dependency "rack", "~> 1.6.5"
+  s.add_development_dependency "test-unit", "~> 3.2.3"
 end
