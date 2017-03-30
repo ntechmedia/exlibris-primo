@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name        = "exlibris-primo"
   s.version     = Exlibris::Primo::VERSION
   s.authors     = ["Scot Dalton"]
-  s.email       = ["scotdalton@gmail.com"]
-  s.homepage    = "https://github.com/scotdalton/exlibris-primo"
+  s.email       = ["scotdalton@gmail.com", "barnaby.alter@gmail.com"]
+  s.homepage    = "https://github.com/NYULibraries/exlibris-primo"
   s.summary     = "Library to work with Exlibris' Primo discovery system."
   s.description = "Library to work with Exlibris' Primo discovery system. Does not require Rails."
   s.license     = 'MIT'
