@@ -3,7 +3,7 @@
 [![Build Status](https://api.travis-ci.org/NYULibraries/exlibris-primo.png?branch=master)](https://travis-ci.org/NYULibraries/exlibris-primo)
 [![Dependency Status](https://gemnasium.com/NYULibraries/exlibris-primo.png)](https://gemnasium.com/NYULibraries/exlibris-primo)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/exlibris-primo.png)](https://codeclimate.com/github/NYULibraries/exlibris-primo)
-[![Coverage Status](https://coveralls.io/repos/NYULibraries/exlibris-primo/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/exlibris-primo)
+[![Coverage Status](https://coveralls.io/repos/github/NYULibraries/exlibris-primo/badge.svg?branch=master)](https://coveralls.io/github/NYULibraries/exlibris-primo?branch=master)
 
 Exlibris::Primo offers a set of classes for interacting with the ExLibris Primo APIs.
 
