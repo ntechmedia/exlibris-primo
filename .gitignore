@@ -3,3 +3,4 @@ pkg/
 *.bak
 coverage/
 .ruby-version
+*.gem
