@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "activesupport", ">= 3.2.14"
   s.add_dependency "nokogiri", "~> 1.7.1"
   s.add_dependency "json", "~> 1.8.0"
-  s.add_dependency "savon", "~> 2.8.0"
+  s.add_dependency "savon", "~> 2.11.1"
   s.add_dependency "iso-639", "~> 0.2.0"
   s.add_development_dependency "rake", "~> 10.1"
   s.add_development_dependency "vcr", "~> 2.9.0"
