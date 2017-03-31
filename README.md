@@ -1,9 +1,9 @@
 # Exlibris::Primo
 [![Gem Version](https://badge.fury.io/rb/exlibris-primo.png)](http://badge.fury.io/rb/exlibris-primo)
-[![Build Status](https://api.travis-ci.org/scotdalton/exlibris-primo.png?branch=master)](https://travis-ci.org/scotdalton/exlibris-primo)
-[![Dependency Status](https://gemnasium.com/scotdalton/exlibris-primo.png)](https://gemnasium.com/scotdalton/exlibris-primo)
-[![Code Climate](https://codeclimate.com/github/scotdalton/exlibris-primo.png)](https://codeclimate.com/github/scotdalton/exlibris-primo)
-[![Coverage Status](https://coveralls.io/repos/scotdalton/exlibris-primo/badge.png?branch=master)](https://coveralls.io/r/scotdalton/exlibris-primo)
+[![Build Status](https://api.travis-ci.org/NYULibraries/exlibris-primo.png?branch=master)](https://travis-ci.org/NYULibraries/exlibris-primo)
+[![Dependency Status](https://gemnasium.com/NYULibraries/exlibris-primo.png)](https://gemnasium.com/NYULibraries/exlibris-primo)
+[![Code Climate](https://codeclimate.com/github/NYULibraries/exlibris-primo.png)](https://codeclimate.com/github/NYULibraries/exlibris-primo)
+[![Coverage Status](https://coveralls.io/repos/NYULibraries/exlibris-primo/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/exlibris-primo)
 
 Exlibris::Primo offers a set of classes for interacting with the ExLibris Primo APIs.
 
@@ -83,7 +83,7 @@ Exlibris::Primo::Config can also read in from a YAML file that specifies the var
     end
 
 ## Exlibris::Primo::EShelf
-The Exlibris::Primo::EShelf class provides methods for reading a given user's Primo eshelf 
+The Exlibris::Primo::EShelf class provides methods for reading a given user's Primo eshelf
 and eshelf structure as well as adding and removing records.
 
 ## Example of Exlibris::Primo::EShelf in action
@@ -95,7 +95,7 @@ and eshelf structure as well as adding and removing records.
     eshelf.add_records(["PrimoRecordId","PrimoRecordId2"], basket_id)
 
 ## Exlibris::Primo::Reviews
-The Exlibris::Primo::Reviews class provides methods for reading a given user's Primo reviews 
+The Exlibris::Primo::Reviews class provides methods for reading a given user's Primo reviews
 features.
 
 ## Example of Exlibris::Primo::Reviews in action
@@ -104,7 +104,7 @@ features.
     user_record_reviews = reviews.reviews #=> Array of Primo reviews
 
 ## Exlibris::Primo::Tags
-The Exlibris::Primo::Tags class provides methods for reading a given user's Primo tags 
+The Exlibris::Primo::Tags class provides methods for reading a given user's Primo tags
 features.
 
 ## Example of Exlibris::Primo::Tags in action
