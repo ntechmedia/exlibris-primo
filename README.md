@@ -1,7 +1,6 @@
 # Exlibris::Primo
 [![Gem Version](https://badge.fury.io/rb/exlibris-primo.png)](http://badge.fury.io/rb/exlibris-primo)
 [![Build Status](https://api.travis-ci.org/NYULibraries/exlibris-primo.png?branch=master)](https://travis-ci.org/NYULibraries/exlibris-primo)
-[![Dependency Status](https://gemnasium.com/NYULibraries/exlibris-primo.png)](https://gemnasium.com/NYULibraries/exlibris-primo)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/exlibris-primo.png)](https://codeclimate.com/github/NYULibraries/exlibris-primo)
 [![Coverage Status](https://coveralls.io/repos/github/NYULibraries/exlibris-primo/badge.svg?branch=master)](https://coveralls.io/github/NYULibraries/exlibris-primo?branch=master)
 
