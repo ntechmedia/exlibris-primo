@@ -353,5 +353,7 @@ class SearchTest < Test::Unit::TestCase
 
     search_request = search.send(:search_request)
     assert_equal search_request.request_params.count, 1
+    assert_equal search_request.request_params.first.key, key
+    assert_equal search_request.request_params.first.value, value
   end
 end
