@@ -22,8 +22,8 @@ module Exlibris
             @request_params ||= []
           end
 
-          def add_request_param(value, key)
-            request_params << RequestParam.new(:value => value, :key => key)
+          def add_request_param(key, value)
+            request_params << RequestParam.new(:key => key, :value => value)
           end
         end
       end
