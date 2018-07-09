@@ -1,10 +1,11 @@
 module WebService
   module Request
     require 'test_helper'
-    class RequestParamTest < Test::Unit::TestCase
+    class RequestParamsTest < Test::Unit::TestCase
       class SearchDummy
         include Exlibris::Primo::WebService::Request::RequestParams
         include Exlibris::Primo::XmlUtil
+
         def to_xml
           build_xml { |xml|
             request_params_xml.call xml
@@ -37,7 +38,7 @@ module WebService
 
       def test_request_params_xml_with_no_params
         search = SearchDummy.new
-        assert_equal '', search.to_xml
+        assert_equal "<RequestParams/>", search.to_xml
       end
 
       def test_request_params_xml_with_params
