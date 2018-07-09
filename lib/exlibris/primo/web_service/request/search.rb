@@ -12,6 +12,7 @@ module Exlibris
           include Languages
           include Locations
           include QueryTerms
+          include RequestParams
           include SearchElements
           include SortBys
 
