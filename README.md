@@ -81,6 +81,40 @@ Exlibris::Primo::Config can also read in from a YAML file that specifies the var
       config.load_yaml "./config/primo.yml"
     end
 
+## API Choice    
+Currently Ex Libris provides a fully featured [SOAP API](https://developers.exlibrisgroup.com/primo/apis/webservices/soap) and a 
+REST API (see [Primo REST APIs](https://developers.exlibrisgroup.com/primo/apis/webservices/rest) and [Brief Search](https://developers.exlibrisgroup.com/primo/apis/search/GET/AnSF56/p3aKzRujr9pj8qtyT3YiaSYVA/f5643222-bb88-4f3d-b2d6-5029e527c515)) 
+which, at the time of writing, has limited features.  
+
+You can choose which API to use either are the creation of a new instance passing in the `api` option
+
+```ruby
+    eshelf = Exlibris::Primo::EShelf.new(
+      :api => :soap,
+      :user_id => "USER_ID",
+      :base_url => "http://primo.institution.edu", 
+      :insitution => "INSTITUTION"
+    )
+
+    search = Exlibris::Primo::Search.new(
+      :api => :rest,
+      :base_url => "http://primo.institution.edu",
+      :institution => "INSTITUTION"
+    )
+```
+
+Or you can set it globally through the configuration (which defaults to `:soap`).
+
+```ruby
+    Exlibris::Primo.configure do |config|
+      config.api :rest
+    end
+```
+__N.B.__: As mentioned earlier the REST API only supports a subset of the features so global setting 
+should be done with caution. 
+
+
+
 ## Exlibris::Primo::EShelf
 The Exlibris::Primo::EShelf class provides methods for reading a given user's Primo eshelf
 and eshelf structure as well as adding and removing records.

@@ -7,7 +7,7 @@ module Exlibris
     module Config
       class << self
         include WriteAttributes
-        attr_accessor :base_url, :proxy_url, :institution, :institutions, :libraries, :availability_statuses, :sources,
+        attr_accessor :api, :base_url, :proxy_url, :institution, :institutions, :libraries, :availability_statuses, :sources,
           :facet_labels, :facet_top_level, :facet_collections, :facet_resource_types, :load_time
 
         def load_yaml file
@@ -23,6 +23,10 @@ module Exlibris
       module Attributes
         def config
           @config ||= Config
+        end
+
+        def api
+          @api ||= :soap
         end
 
         def base_url
