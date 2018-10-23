@@ -61,10 +61,14 @@ class Test::Unit::TestCase
     assert_equal(request_document.root.children.size, expected_args.size)
     assert_request_children(request, expected_root) do |child|
       child_xml = xmlize(child)
-      assert_equal expected_args.shift, child_xml
+      assert_equal strip_xml(expected_args.shift), child_xml
     end
   end
   protected :assert_request
+
+  def strip_xml(xml)
+    xml.gsub(/\s+</, '<').gsub(/\n/, '')
+  end
 
   def yaml_primo_configuration(overide_proxy_url = true)
     Exlibris::Primo.configure do |config|

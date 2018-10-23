@@ -24,6 +24,7 @@ module WebService
         search = SearchDummy.new
         search.add_request_param(@key_1, @value_1)
         search.add_request_param(@key_2, @value_2)
+
         assert_equal @key_1, search.request_params[0].key
         assert_equal @value_1, search.request_params[0].value
         assert_equal @key_2, search.request_params[1].key
@@ -33,27 +34,36 @@ module WebService
 
       def test_request_params
         search = SearchDummy.new
+
         assert_equal [], search.request_params
       end
 
       def test_request_params_xml_with_no_params
         search = SearchDummy.new
-        assert_equal "<RequestParams/>", search.to_xml
+        expected_xml = strip_xml(
+          <<-XML
+            <RequestParams/>
+          XML
+        )
+
+        assert_equal expected_xml, search.to_xml
       end
 
       def test_request_params_xml_with_params
         search = SearchDummy.new
         search.add_request_param(@key_1, @value_1)
         search.add_request_param(@key_2, @value_2)
-        assert_equal "<RequestParams>" \
-                     "<RequestParam key=\"#{@key_1}\">" \
-                     "#{@value_1}" \
-                     "</RequestParam>" \
-                     "<RequestParam key=\"#{@key_2}\">" \
-                     "#{@value_2}" \
-                     "</RequestParam>" \
-                     "</RequestParams>", search.to_xml
 
+        expected_xml = strip_xml(
+          <<-XML
+            <RequestParams>
+              <RequestParam key="#{@key_1}">#{@value_1}</RequestParam>
+              <RequestParam key="#{@key_2}">#{@value_2}</RequestParam>
+            </RequestParams>
+          XML
+        )
+
+        assert_equal expected_xml, search.to_xml
       end
     end
   end
