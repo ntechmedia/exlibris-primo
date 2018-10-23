@@ -42,8 +42,8 @@ module WebService
         search = SearchDummy.new
         expected_xml = strip_xml(
           <<-XML
-            <RequestParams/>
-          XML
+          <RequestParams/>
+        XML
         )
 
         assert_equal expected_xml, search.to_xml
@@ -56,11 +56,11 @@ module WebService
 
         expected_xml = strip_xml(
           <<-XML
-            <RequestParams>
-              <RequestParam key="#{@key_1}">#{@value_1}</RequestParam>
-              <RequestParam key="#{@key_2}">#{@value_2}</RequestParam>
-            </RequestParams>
-          XML
+          <RequestParams>
+            <RequestParam key="#{@key_1}">#{@value_1}</RequestParam>
+            <RequestParam key="#{@key_2}">#{@value_2}</RequestParam>
+          </RequestParams>
+        XML
         )
 
         assert_equal expected_xml, search.to_xml

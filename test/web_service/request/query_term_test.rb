@@ -15,14 +15,32 @@ module WebService
         query_term.value = @isbn
         query_term.precision = "exact"
         query_term.index = "isbn"
-        assert_equal "<QueryTerm><IndexField>isbn</IndexField>"+
-          "<PrecisionOperator>exact</PrecisionOperator><Value>0143039008</Value></QueryTerm>", query_term.to_xml
+        expected_xml = strip_xml(
+          <<-XML
+          <QueryTerm>
+            <IndexField>isbn</IndexField>
+            <PrecisionOperator>exact</PrecisionOperator>
+            <Value>0143039008</Value>
+          </QueryTerm>
+        XML
+        )
+
+        assert_equal expected_xml, query_term.to_xml
       end
 
       def test_write_attributes
         query_term = Exlibris::Primo::WebService::Request::QueryTerm.new(:value => @isbn, :precision => "exact", :index => "isbn")
-        assert_equal "<QueryTerm><IndexField>isbn</IndexField>"+
-          "<PrecisionOperator>exact</PrecisionOperator><Value>0143039008</Value></QueryTerm>", query_term.to_xml
+        expected_xml = strip_xml(
+          <<-XML
+          <QueryTerm>
+            <IndexField>isbn</IndexField>
+            <PrecisionOperator>exact</PrecisionOperator>
+            <Value>0143039008</Value>
+          </QueryTerm>
+        XML
+        )
+
+        assert_equal expected_xml, query_term.to_xml
       end
     end
   end
