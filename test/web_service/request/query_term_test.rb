@@ -10,8 +10,8 @@ module WebService
         @genre = "Book"
       end
 
-      def test_set_attributes
-        query_term = Exlibris::Primo::WebService::Request::QueryTerm.new()
+      def test_set_attributes_for_xml
+        query_term = Exlibris::Primo::WebService::Request::QueryTerm.new
         query_term.value = @isbn
         query_term.precision = "exact"
         query_term.index = "isbn"
@@ -28,7 +28,7 @@ module WebService
         assert_equal expected_xml, query_term.to_xml
       end
 
-      def test_write_attributes
+      def test_write_attributes_for_xml
         query_term = Exlibris::Primo::WebService::Request::QueryTerm.new(:value => @isbn, :precision => "exact", :index => "isbn")
         expected_xml = strip_xml(
           <<-XML
@@ -41,6 +41,23 @@ module WebService
         )
 
         assert_equal expected_xml, query_term.to_xml
+      end
+
+      def test_set_attributes_for_rest
+        query_term = Exlibris::Primo::WebService::Request::QueryTerm.new
+        query_term.value = @isbn
+        query_term.precision = "exact"
+        query_term.index = "isbn"
+        expected_param = "#{query_term.value},#{query_term.precision},#{query_term.index}"
+
+        assert_equal expected_param, query_term.to_s
+      end
+
+      def test_write_attributes_for_rest
+        query_term = Exlibris::Primo::WebService::Request::QueryTerm.new(:value => @isbn, :precision => "exact", :index => "isbn")
+        expected_param = "#{@isbn},exact,isbn"
+
+        assert_equal expected_param, query_term.to_s
       end
     end
   end
