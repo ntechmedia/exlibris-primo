@@ -8,11 +8,11 @@ module Exlibris
           def boolean_operator
             @boolean_operator ||= "AND"
           end
-          
-          # 
+
+          #
           # Returns a lambda that takes a Nokogiri::XML::Builder as an argument
           # and appends query terms XML to it.
-          # 
+          #
           def query_terms_xml
             bool_operator = boolean_operator
             lambda do |xml|
@@ -24,14 +24,15 @@ module Exlibris
               }
             end
           end
+
           protected :query_terms_xml
 
           def query_terms
             @query_terms ||= []
           end
 
-          def add_query_term(value, index, precision="contains")
-            query_terms << QueryTerm.new(:value => value, :index => index, :precision => precision)
+          def add_query_term(value, index, precision = "contains")
+            query_terms << QueryTerm.new(value: value, index: index, precision: precision)
           end
         end
       end
