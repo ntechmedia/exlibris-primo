@@ -19,9 +19,9 @@ module Exlibris
             @exclude_values ||= []
           end
 
-          # Returns a string for inclusion in a query parameter for the REST API
+          # Returns a string for inclusion in the "q" parameter for the REST API
           def to_s
-            "#{value},#{precision},#{index}"
+            "#{index},#{precision},#{value.gsub(';', '')}"
           end
 
           def to_xml
