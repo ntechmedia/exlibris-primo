@@ -3,10 +3,10 @@ module Exlibris
     module WebService
       module Request
         module Locations
-          # 
+          #
           # Returns a lambda that takes a Nokogiri::XML::Builder as an argument
           # and appends locations XML to it.
-          # 
+          #
           def locations_xml
             lambda { |xml|
               # Specify the uic namespace. Not great, but adequate.
@@ -18,6 +18,15 @@ module Exlibris
             }
           end
           protected :locations_xml
+
+          # Returns a string for inclusion in the as a query parameter for the REST API
+          def locations_string
+            scope = locations.map(&:to_s).compact.join(',')
+
+            return '' if scope.empty?
+
+            "scope=#{scope}"
+          end
 
           def locations
             @locations ||= []

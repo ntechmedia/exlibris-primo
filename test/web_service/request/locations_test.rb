@@ -17,10 +17,10 @@ module WebService
       end
 
       def setup
-        @kind_1 = "local"
-        @value_1 = "scope:(VOLCANO)"
-        @kind_2 = "adaptor"
-        @value_2 = "primo_central_multiple_fe"
+        @kind_local = "local"
+        @value_local = "scope:(VOLCANO)"
+        @kind_adaptor = "adaptor"
+        @value_adaptor = "primo_central_multiple_fe"
       end
 
       def test_locations
@@ -49,8 +49,8 @@ module WebService
 
       def test_locations_xml_with_locations_for_xml
         search = SearchDummy.new
-        search.add_location(@kind_1, @value_1)
-        search.add_location(@kind_2, @value_2)
+        search.add_location(@kind_local, @value_local)
+        search.add_location(@kind_adaptor, @value_adaptor)
 
         expected_xml = strip_xml(
           <<-XML
@@ -59,8 +59,8 @@ module WebService
           <searchDummyRequest xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents">
             <PrimoSearchRequest xmlns="http://www.exlibris.com/primo/xsd/search/request">
               <Locations>
-                <uic:Location type="#{@kind_1}" value="#{@value_1}"/>
-                <uic:Location type="#{@kind_2}" value="#{@value_2}"/>
+                <uic:Location type="#{@kind_local}" value="#{@value_local}"/>
+                <uic:Location type="#{@kind_adaptor}" value="#{@value_adaptor}"/>
               </Locations>
             </PrimoSearchRequest>
             <institution/>
@@ -71,6 +71,32 @@ module WebService
         )
 
         assert_equal expected_xml, search.to_xml
+      end
+
+      def test_locations_string_with_no_locations_for_rest
+        search = SearchDummy.new
+        expected_output = ''
+
+        assert_equal expected_output, search.locations_string
+      end
+
+      def test_locations_string_with_locations_for_rest
+        search = SearchDummy.new
+        search.add_location(@kind_local, @value_local)
+        search.add_location(@kind_adaptor, @value_adaptor)
+
+        expected_output = 'scope=VOLCANO'
+
+        assert_equal expected_output, search.locations_string
+      end
+
+      def test_locations_string_with_adaptor_only_for_rest
+        search = SearchDummy.new
+        search.add_location(@kind_adaptor, @value_adaptor)
+
+        expected_output = ''
+
+        assert_equal expected_output, search.locations_string
       end
     end
   end
