@@ -35,13 +35,14 @@ module WebService
 
       def test_locations_xml_with_no_locations_for_xml
         search = SearchDummy.new
+        search.institution = 'TEST'
         expected_xml = strip_xml(
           <<-XML
           <request>
           <![CDATA[
           <searchDummyRequest xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents">
             <PrimoSearchRequest xmlns="http://www.exlibris.com/primo/xsd/search/request"/>
-            <institution/>
+            <institution>TEST</institution>
           </searchDummyRequest>
           ]]>
           </request>
@@ -53,6 +54,7 @@ module WebService
 
       def test_locations_xml_with_locations_for_xml
         search = SearchDummy.new
+        search.institution = 'TEST'
         search.add_location(@kind_local, @value_local)
         search.add_location(@kind_adaptor, @value_adaptor)
 
@@ -67,7 +69,7 @@ module WebService
                 <uic:Location type="#{@kind_adaptor}" value="#{@value_adaptor}"/>
               </Locations>
             </PrimoSearchRequest>
-            <institution/>
+            <institution>TEST</institution>
           </searchDummyRequest>
           ]]>
           </request>
