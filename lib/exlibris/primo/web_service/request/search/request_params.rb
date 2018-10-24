@@ -18,6 +18,11 @@ module Exlibris
           end
           protected :request_params_xml
 
+          def to_s
+            #TODO: There is no ExLibris documentation around the old request params and how to provide multiples of them.  Just using a semicolon for the time being.
+            request_params.map(&:to_s).join(';')
+          end
+
           def request_params
             @request_params ||= []
           end

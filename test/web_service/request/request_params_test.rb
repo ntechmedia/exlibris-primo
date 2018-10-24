@@ -38,7 +38,7 @@ module WebService
         assert_equal [], search.request_params
       end
 
-      def test_request_params_xml_with_no_params
+      def test_request_params_xml_with_no_params_for_xml
         search = SearchDummy.new
         expected_xml = strip_xml(
           <<-XML
@@ -49,7 +49,7 @@ module WebService
         assert_equal expected_xml, search.to_xml
       end
 
-      def test_request_params_xml_with_params
+      def test_request_params_xml_with_params_for_xml
         search = SearchDummy.new
         search.add_request_param(@key_1, @value_1)
         search.add_request_param(@key_2, @value_2)
@@ -64,6 +64,21 @@ module WebService
         )
 
         assert_equal expected_xml, search.to_xml
+      end
+
+      def test_request_params_xml_with_no_params_for_rest
+        search = SearchDummy.new
+        expected_param = ''
+
+        assert_equal expected_param, search.to_s
+      end
+
+      def test_request_params_xml_with_params_for_rest
+        search = SearchDummy.new
+        search.add_request_param('pcAvailability', 'true')
+        expected_param = "pcAvailability=true"
+
+        assert_equal expected_param, search.to_s
       end
     end
   end
