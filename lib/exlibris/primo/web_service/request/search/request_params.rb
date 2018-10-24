@@ -18,7 +18,8 @@ module Exlibris
           end
           protected :request_params_xml
 
-          def to_s
+          # Returns a string for inclusion in the as a query parameter for the REST API
+          def request_params_string
             #TODO: There is no ExLibris documentation around the old request params and how to provide multiples of them.  Just using a semicolon for the time being.
             request_params.map(&:to_s).join(';')
           end

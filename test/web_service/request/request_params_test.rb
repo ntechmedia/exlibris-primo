@@ -6,6 +6,10 @@ module WebService
         include Exlibris::Primo::WebService::Request::RequestParams
         include Exlibris::Primo::XmlUtil
 
+        def to_s
+          request_params_string
+        end
+
         def to_xml
           build_xml { |xml|
             request_params_xml.call xml
