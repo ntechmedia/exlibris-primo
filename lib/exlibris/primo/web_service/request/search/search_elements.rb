@@ -57,10 +57,10 @@ module Exlibris
           end
           protected :default_search_elements
 
-          # 
+          #
           # Returns a lambda that takes a Nokogiri::XML::Builder as an argument
           # and appends search elements XML to it.
-          # 
+          #
           def search_elements_xml
             lambda { |xml|
               search_elements.each do |element|
@@ -71,6 +71,11 @@ module Exlibris
             }
           end
           protected :search_elements_xml
+
+          # Returns a string for inclusion in the as a query parameter for the REST API
+          def search_elements_string
+
+          end
 
           #
           # Dynamically sets attr_accessors for search_elements
