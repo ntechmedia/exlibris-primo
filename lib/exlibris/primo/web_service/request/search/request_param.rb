@@ -18,7 +18,7 @@ module Exlibris
             end
           end
 
-          # Returns a string for inclusion in the as a query parameter for the REST API
+          # Returns a string for inclusion as a query parameter for the REST API
           def to_s
             if accepted.keys.exclude? key
               raise "The provided request parameter key #{key} is unknown. " \

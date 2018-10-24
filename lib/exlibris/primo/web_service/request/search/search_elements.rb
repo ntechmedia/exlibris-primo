@@ -72,7 +72,7 @@ module Exlibris
           end
           protected :search_elements_xml
 
-          # Returns a string for inclusion in the as a query parameter for the REST API
+          # Returns a string for inclusion as query parameters for the REST API
           def search_elements_string
             search_elements.map do |element|
               value = (send element) ? (send element) : default_search_elements[element]
