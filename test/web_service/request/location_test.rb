@@ -23,7 +23,7 @@ module WebService
 
       def test_to_s
         location = Exlibris::Primo::WebService::Request::Location.new(:kind => @kind, :value => @value)
-        expected_output = 'scope=VOLCANO'
+        expected_output = 'VOLCANO'
 
         assert_equal expected_output, location.to_s
       end

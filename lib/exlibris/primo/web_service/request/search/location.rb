@@ -13,7 +13,7 @@ module Exlibris
           def to_s
             return '' unless kind == 'local'
 
-            "scope=#{value.gsub(/scope:|\(|\)/, '')}"
+            value.gsub(/scope:|\(|\)/, '')
           end
         end
       end
