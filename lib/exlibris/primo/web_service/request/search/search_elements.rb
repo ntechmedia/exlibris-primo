@@ -74,7 +74,19 @@ module Exlibris
 
           # Returns a string for inclusion in the as a query parameter for the REST API
           def search_elements_string
+            search_elements.map do |element|
+              value = (send element) ? (send element) : default_search_elements[element]
+              name = element.id2name.camelize
+              name[0] = name[0].downcase
 
+              next if rest_search_element_params.exclude?(name) || value.nil?
+
+              "#{name}=#{URI.encode(value)}"
+            end.compact.join('&')
+          end
+
+          def rest_search_element_params
+            %w(limit offset sort getMore conVoc)
           end
 
           #
