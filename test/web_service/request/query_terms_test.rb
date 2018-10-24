@@ -6,6 +6,10 @@ module WebService
         include Exlibris::Primo::WebService::Request::QueryTerms
         include Exlibris::Primo::XmlUtil
 
+        def to_s
+          query_terms_string
+        end
+
         def to_xml
           build_xml { |xml|
             query_terms_xml.call xml

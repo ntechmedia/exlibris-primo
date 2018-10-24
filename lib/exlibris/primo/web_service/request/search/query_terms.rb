@@ -28,7 +28,7 @@ module Exlibris
           protected :query_terms_xml
 
           # Returns a string for inclusion in the "q" parameter for the REST API
-          def to_s
+          def query_terms_string
             query_terms.map(&:to_s).join(",#{boolean_operator};")
           end
 
