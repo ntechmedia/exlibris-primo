@@ -81,7 +81,7 @@ module Exlibris
 
               next if rest_search_element_params.exclude?(name) || value.nil?
 
-              "#{name}=#{URI.encode(value)}"
+              "#{name}=#{URI.encode(value.to_s)}"
             end.compact.join('&')
           end
 
