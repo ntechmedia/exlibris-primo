@@ -11,7 +11,8 @@ module Exlibris
 
           # Returns a string for inclusion as a query parameter for the REST API
           def to_s
-            return '' unless kind == 'local'
+            # TODO: Find out how to include adaptors & remotes (e.g. primo_central_multiple_fe) for the REST
+            return unless kind == 'local'
 
             value.gsub(/scope:|\(|\)/, '')
           end

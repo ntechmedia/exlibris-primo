@@ -33,7 +33,7 @@ module WebService
       def test_to_s_for_adaptors
         # TODO: Find out how to include adaptors (e.g. primo_central_multiple_fe) for the REST
         location = Exlibris::Primo::WebService::Request::Location.new(:kind => @kind_adaptor, :value => @value_adaptor)
-        expected_output = ''
+        expected_output = nil
 
         assert_equal expected_output, location.to_s
       end
