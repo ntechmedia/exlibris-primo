@@ -1,7 +1,7 @@
 module WebService
   module Request
     require 'test_helper'
-    class RequestParamsTest < Test::Unit::TestCase
+    class SearchElementsTest < Test::Unit::TestCase
       class SearchDummy
         include Exlibris::Primo::WebService::Request::SearchElements
         include Exlibris::Primo::XmlUtil
