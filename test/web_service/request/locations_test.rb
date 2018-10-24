@@ -7,6 +7,10 @@ module WebService
         include Exlibris::Primo::XmlUtil
         include Exlibris::Primo::WriteAttributes
 
+        def to_s
+          locations_string
+        end
+
         def to_xml
           super { |xml|
             xml.PrimoSearchRequest("xmlns" => "http://www.exlibris.com/primo/xsd/search/request") {
@@ -77,7 +81,7 @@ module WebService
         search = SearchDummy.new
         expected_output = ''
 
-        assert_equal expected_output, search.locations_string
+        assert_equal expected_output, search.to_s
       end
 
       def test_locations_string_with_locations_for_rest
@@ -87,7 +91,7 @@ module WebService
 
         expected_output = 'scope=VOLCANO'
 
-        assert_equal expected_output, search.locations_string
+        assert_equal expected_output, search.to_s
       end
 
       def test_locations_string_with_adaptor_only_for_rest
@@ -96,7 +100,7 @@ module WebService
 
         expected_output = ''
 
-        assert_equal expected_output, search.locations_string
+        assert_equal expected_output, search.to_s
       end
     end
   end
