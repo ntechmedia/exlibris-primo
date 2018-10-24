@@ -16,12 +16,27 @@ module Exlibris
           include SearchElements
           include SortBys
 
+          # SOAP API search elements
           add_default_search_elements :start_index => "1",
-            :bulk_size => "5", :did_u_mean_enabled => "false"
+                                      :bulk_size => "5",
+                                      :did_u_mean_enabled => "false"
 
-          add_search_elements :start_index, :bulk_size, :did_u_mean_enabled,
-              :highlighting_enabled, :get_more, :inst_boost
+          add_search_elements :start_index,
+                              :bulk_size,
+                              :did_u_mean_enabled,
+                              :highlighting_enabled,
+                              :get_more,
+                              :inst_boost
 
+          # REST API Elements
+          add_default_search_elements offset: "0",
+                                      limit: "5"
+
+          add_search_elements :limit,
+                              :offset,
+                              :sort,
+                              :get_more,
+                              :con_voc
           def to_xml
             super { |xml|
               xml.PrimoSearchRequest("xmlns" => "http://www.exlibris.com/primo/xsd/search/request") {
@@ -34,6 +49,17 @@ module Exlibris
                 locations_xml.call xml
               }
             }
+          end
+
+          # Returns a query string for use with the REST API
+          def to_s
+            [
+              request_params_string,
+              query_terms_string,
+              search_elements_string,
+              languages_string,
+              locations_string
+            ].delete_if(&:empty?).join('&')
           end
         end
 
