@@ -58,7 +58,8 @@ module WebService
         query_term.value = 'The road ahead; simple guidelines'
         query_term.precision = "exact"
         query_term.index = "title"
-        expected_param = "title,exact,The road ahead simple guidelines"
+        expected_value = URI.encode('The road ahead simple guidelines')
+        expected_param = "title,exact,#{expected_value}"
 
         assert_equal expected_param, query_term.to_s
       end

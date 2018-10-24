@@ -21,7 +21,7 @@ module Exlibris
 
           # Returns a string for inclusion in the "q" parameter for the REST API
           def to_s
-            "#{index},#{precision},#{value.gsub(';', '')}"
+            "#{index},#{precision},#{URI.encode(value.gsub(';', ''))}"
           end
 
           def to_xml
