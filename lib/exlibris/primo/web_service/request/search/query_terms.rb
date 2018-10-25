@@ -29,6 +29,8 @@ module Exlibris
 
           # Returns a string for inclusion in the "q" parameter for the REST API
           def query_terms_string
+            raise 'You must supply at least one query term' if query_terms.empty?
+
             "q=#{query_terms.map(&:to_s).join(",#{boolean_operator};")}"
           end
 

@@ -165,9 +165,9 @@ module WebService
 
       def test_query_terms_xml_no_params_for_rest
         search = SearchDummy.new
-        expected_param = ''
+        expected_message = 'You must supply at least one query term'
 
-        assert_equal expected_param, search.to_s
+        assert_raise_message(expected_message) { search.to_s }
       end
     end
   end
