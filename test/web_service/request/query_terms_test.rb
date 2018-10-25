@@ -142,7 +142,7 @@ module WebService
         end
 
         search.boolean_operator = 'AND'
-        expected_param = URI.encode("isbn,exact,0143039008,AND;title,contains,Travels with My Aunt,AND;genre,exact,Book")
+        expected_param = URI.encode("q=isbn,exact,0143039008,AND;title,contains,Travels with My Aunt,AND;genre,exact,Book")
 
         assert_equal expected_param, search.to_s
       end
@@ -158,7 +158,7 @@ module WebService
         end
 
         search.boolean_operator = 'OR'
-        expected_param = URI.encode("isbn,exact,0143039008,OR;title,contains,Travels with My Aunt,OR;genre,exact,Book")
+        expected_param = URI.encode("q=isbn,exact,0143039008,OR;title,contains,Travels with My Aunt,OR;genre,exact,Book")
 
         assert_equal expected_param, search.to_s
       end

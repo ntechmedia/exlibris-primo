@@ -29,7 +29,7 @@ module Exlibris
 
           # Returns a string for inclusion in the "q" parameter for the REST API
           def query_terms_string
-            query_terms.map(&:to_s).join(",#{boolean_operator};")
+            "q=#{query_terms.map(&:to_s).join(",#{boolean_operator};")}"
           end
 
           def query_terms

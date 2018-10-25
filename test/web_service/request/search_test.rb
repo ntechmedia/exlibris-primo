@@ -27,7 +27,7 @@ module WebService
         request.add_query_term @issn, 'isbn', 'exact'
         request.add_query_term @title, 'title', 'exact'
         request.add_location 'local', 'scope:(VOLCANO)'
-        expected_output = 'pcAvailability=true&isbn,exact,0090-5720,AND;title,exact,Travels%20with%20My%20Aunt&limit=20&offset=0&scope=VOLCANO'
+        expected_output = 'pcAvailability=true&q=isbn,exact,0090-5720,AND;title,exact,Travels%20with%20My%20Aunt&limit=20&offset=0&scope=VOLCANO'
 
         assert_equal expected_output, request.to_s
       end
