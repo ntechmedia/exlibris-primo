@@ -45,17 +45,17 @@ module WebService
           "<DidUMeanEnabled>false</DidUMeanEnabled>"+
           "</PrimoSearchRequest>", "<institution>NYU</institution>",
           "<docId>nyu_aleph000062856</docId>"
-        VCR.use_cassette('request full view') do
-          assert_nothing_raised {
-            response = request.call
-          }
-        end
+
+        assert_response request: request,
+                        vcr_cassette: 'request full view',
+                        expected_class: Exlibris::Primo::WebService::Response::FullView
       end
 
       def test_request_search_issn
           request = Exlibris::Primo::WebService::Request::Search.new :base_url => @base_url
           request.institution = @institution
           request.add_query_term @issn, "isbn", "exact"
+
           assert_request request, "searchRequest",
             "<PrimoSearchRequest xmlns=\"http://www.exlibris.com/primo/xsd/search/request\">"+
             "<RequestParams/>"+
@@ -68,11 +68,10 @@ module WebService
             "<BulkSize>5</BulkSize>"+
             "<DidUMeanEnabled>false</DidUMeanEnabled>"+
             "</PrimoSearchRequest>", "<institution>NYU</institution>"
-          VCR.use_cassette('request search issn') do
-            assert_nothing_raised {
-              response = request.call
-            }
-          end
+
+          assert_response request: request,
+                          vcr_cassette: 'request search issn',
+                          expected_class: Exlibris::Primo::WebService::Response::Search
       end
 
       def test_request_search_isbn
@@ -91,11 +90,10 @@ module WebService
             "<BulkSize>5</BulkSize>"+
             "<DidUMeanEnabled>false</DidUMeanEnabled>"+
             "</PrimoSearchRequest>", "<institution>NYU</institution>"
-          VCR.use_cassette('request search isbn') do
-            assert_nothing_raised {
-              response = request.call
-            }
-          end
+
+          assert_response request: request,
+                          vcr_cassette: 'request search isbn',
+                          expected_class: Exlibris::Primo::WebService::Response::Search
       end
 
       def test_request_search_title
@@ -114,11 +112,9 @@ module WebService
             "<BulkSize>5</BulkSize>"+
             "<DidUMeanEnabled>false</DidUMeanEnabled>"+
             "</PrimoSearchRequest>", "<institution>NYU</institution>"
-          VCR.use_cassette('request search title') do
-            assert_nothing_raised {
-              response = request.call
-            }
-          end
+          assert_response request: request,
+                          vcr_cassette: 'request search title',
+                          expected_class: Exlibris::Primo::WebService::Response::Search
       end
 
       def test_request_search_did_u_mean
@@ -161,11 +157,10 @@ module WebService
             "<BulkSize>5</BulkSize>"+
             "<DidUMeanEnabled>false</DidUMeanEnabled>"+
             "</PrimoSearchRequest>", "<institution>NYU</institution>"
-          VCR.use_cassette('request search author') do
-            assert_nothing_raised {
-              response = request.call
-            }
-          end
+
+          assert_response request: request,
+                          vcr_cassette: 'request search author',
+                          expected_class: Exlibris::Primo::WebService::Response::Search
       end
 
       def test_request_search_genre
@@ -184,11 +179,10 @@ module WebService
             "<BulkSize>5</BulkSize>"+
             "<DidUMeanEnabled>false</DidUMeanEnabled>"+
             "</PrimoSearchRequest>", "<institution>NYU</institution>"
-          VCR.use_cassette('request search genre') do
-            assert_nothing_raised {
-              response = request.call
-            }
-          end
+
+          assert_response request: request,
+                          vcr_cassette: 'request search genre',
+                          expected_class: Exlibris::Primo::WebService::Response::Search
       end
 
       def test_search_locations
@@ -209,11 +203,10 @@ module WebService
           "<DidUMeanEnabled>false</DidUMeanEnabled>"+
           "<Locations><uic:Location type=\"local\" value=\"scope:(NYU)\"/></Locations>"+
           "</PrimoSearchRequest>", "<institution>NYU</institution>"
-        VCR.use_cassette('request search locations') do
-          assert_nothing_raised {
-            response = request.call
-          }
-        end
+
+        assert_response request: request,
+                        vcr_cassette: 'request search locations',
+                        expected_class: Exlibris::Primo::WebService::Response::Search
       end
 
       def test_request_search_title_author_genre
@@ -251,11 +244,10 @@ module WebService
             assert_equal "<institution>NYU</institution>", xmlize(child)
           end
         end
-        VCR.use_cassette('request search title author genre') do
-          assert_nothing_raised {
-            response = request.call
-          }
-        end
+
+        assert_response request: request,
+                        vcr_cassette: 'request search title author genre',
+                        expected_class: Exlibris::Primo::WebService::Response::Search
       end
     end
   end
