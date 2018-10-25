@@ -15,7 +15,7 @@ module WebService
 
       def test_to_s_with_nothing
         request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
-        expected_output = ''
+        expected_output = 'limit=5&offset=0'
 
         assert_equal expected_output, request.to_s
       end
