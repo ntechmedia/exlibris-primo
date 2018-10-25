@@ -21,7 +21,7 @@ module Exlibris
           def endpoint
             @endpoint ||= URI.join(
               URI(base_url),
-              endpoint_path[Exlibris::Primo.config.api],
+              endpoint_path[Exlibris::Primo.config.api || api],
               (rest_method_mapping[self.class.endpoint] || self.class.endpoint).to_s
             ).to_s
           end
