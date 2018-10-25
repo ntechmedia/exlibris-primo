@@ -68,6 +68,18 @@ class Test::Unit::TestCase
 
   protected :assert_request
 
+  def assert_response(request:, vcr_cassette:, expected_class: )
+    VCR.use_cassette(vcr_cassette) do
+      response = nil
+      assert_nothing_raised {
+        response = request.call
+      }
+
+      assert_equal expected_class, response.class
+    end
+  end
+  protected :assert_response
+
   def strip_xml(xml)
     xml
       .gsub(/\s+</, '<') # Remove whitespace before each element
