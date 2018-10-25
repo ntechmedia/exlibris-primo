@@ -6,7 +6,7 @@ module WebService
         include Exlibris::Primo::WebService::Request::Languages
         include Exlibris::Primo::XmlUtil
 
-        def to_s
+        def to_query_string
           languages_string
         end
 
@@ -44,7 +44,7 @@ module WebService
         search = SearchDummy.new
         expected_output = ""
 
-        assert_equal expected_output, search.to_s
+        assert_equal expected_output, search.to_query_string
       end
 
       def test_languages_string_with_multiple_languages
@@ -53,7 +53,7 @@ module WebService
         search.add_language('fre')
         expected_output = 'lang=eng'
 
-        assert_equal expected_output, search.to_s
+        assert_equal expected_output, search.to_query_string
       end
     end
   end

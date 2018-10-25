@@ -15,9 +15,9 @@ module WebService
 
       def test_to_s_with_nothing
         request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
-        expected_output = 'limit=5&offset=0'
+        expected_message = 'You must supply at least one query term'
 
-        assert_equal expected_output, request.to_s
+        assert_raise_message(expected_message) { request.to_query_string }
       end
 
       def test_to_s_with_typical_request
@@ -29,7 +29,7 @@ module WebService
         request.add_location 'local', 'scope:(VOLCANO)'
         expected_output = 'pcAvailability=true&q=isbn,exact,0090-5720,AND;title,exact,Travels%20with%20My%20Aunt&limit=20&offset=0&scope=VOLCANO'
 
-        assert_equal expected_output, request.to_s
+        assert_equal expected_output, request.to_query_string
       end
 
 

@@ -52,7 +52,7 @@ module Exlibris
           end
 
           # Returns a query string for use with the REST API
-          def to_s
+          def to_query_string
             [
               request_params_string,
               query_terms_string,

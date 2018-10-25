@@ -28,7 +28,7 @@ module WebService
                             :get_more,
                             :con_voc
 
-        def to_s
+        def to_query_string
           search_elements_string
         end
 
@@ -64,7 +64,7 @@ module WebService
         search = SearchDummy.new
         expected_param = 'limit=20&offset=0'
 
-        assert_equal expected_param, search.to_s
+        assert_equal expected_param, search.to_query_string
       end
 
       def test_search_elements_string_with_overridden_defaults
@@ -76,7 +76,7 @@ module WebService
         search.con_voc = "false"
         expected_param = 'getMore=1&limit=10&offset=0&sort=title&conVoc=false'
 
-        assert_equal expected_param, search.to_s
+        assert_equal expected_param, search.to_query_string
       end
     end
   end

@@ -6,7 +6,7 @@ module WebService
         include Exlibris::Primo::WebService::Request::RequestParams
         include Exlibris::Primo::XmlUtil
 
-        def to_s
+        def to_query_string
           request_params_string
         end
 
@@ -74,7 +74,7 @@ module WebService
         search = SearchDummy.new
         expected_param = ''
 
-        assert_equal expected_param, search.to_s
+        assert_equal expected_param, search.to_query_string
       end
 
       def test_request_params_xml_with_params_for_rest
@@ -82,7 +82,7 @@ module WebService
         search.add_request_param('pcAvailability', 'true')
         expected_param = "pcAvailability=true"
 
-        assert_equal expected_param, search.to_s
+        assert_equal expected_param, search.to_query_string
       end
     end
   end

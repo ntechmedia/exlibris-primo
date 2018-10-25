@@ -7,7 +7,7 @@ module WebService
         include Exlibris::Primo::XmlUtil
         include Exlibris::Primo::WriteAttributes
 
-        def to_s
+        def to_query_string
           locations_string
         end
 
@@ -83,7 +83,7 @@ module WebService
         search = SearchDummy.new
         expected_output = ''
 
-        assert_equal expected_output, search.to_s
+        assert_equal expected_output, search.to_query_string
       end
 
       def test_locations_string_with_locations_for_rest
@@ -93,7 +93,7 @@ module WebService
 
         expected_output = 'scope=VOLCANO'
 
-        assert_equal expected_output, search.to_s
+        assert_equal expected_output, search.to_query_string
       end
 
       def test_locations_string_with_adaptor_only_for_rest
@@ -102,7 +102,7 @@ module WebService
 
         expected_output = ''
 
-        assert_equal expected_output, search.to_s
+        assert_equal expected_output, search.to_query_string
       end
     end
   end

@@ -6,7 +6,7 @@ module WebService
         include Exlibris::Primo::WebService::Request::QueryTerms
         include Exlibris::Primo::XmlUtil
 
-        def to_s
+        def to_query_string
           query_terms_string
         end
 
@@ -144,7 +144,7 @@ module WebService
         search.boolean_operator = 'AND'
         expected_param = URI.encode("q=isbn,exact,0143039008,AND;title,contains,Travels with My Aunt,AND;genre,exact,Book")
 
-        assert_equal expected_param, search.to_s
+        assert_equal expected_param, search.to_query_string
       end
 
       def test_mutliple_terms_for_add_query_term_with_or_for_rest
@@ -160,14 +160,14 @@ module WebService
         search.boolean_operator = 'OR'
         expected_param = URI.encode("q=isbn,exact,0143039008,OR;title,contains,Travels with My Aunt,OR;genre,exact,Book")
 
-        assert_equal expected_param, search.to_s
+        assert_equal expected_param, search.to_query_string
       end
 
       def test_query_terms_xml_no_params_for_rest
         search = SearchDummy.new
         expected_message = 'You must supply at least one query term'
 
-        assert_raise_message(expected_message) { search.to_s }
+        assert_raise_message(expected_message) { search.to_query_string }
       end
     end
   end
