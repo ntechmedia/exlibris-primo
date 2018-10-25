@@ -81,9 +81,9 @@ module WebService
 
       def test_locations_string_with_no_locations_for_rest
         search = SearchDummy.new
-        expected_output = ''
+        expected_message = 'Please provide at least one local location'
 
-        assert_equal expected_output, search.to_query_string
+        assert_raise(expected_message) { search.to_query_string }
       end
 
       def test_locations_string_with_locations_for_rest
@@ -100,9 +100,9 @@ module WebService
         search = SearchDummy.new
         search.add_location(@kind_adaptor, @value_adaptor)
 
-        expected_output = ''
+        expected_message = 'Please provide at least one local location'
 
-        assert_equal expected_output, search.to_query_string
+        assert_raise(expected_message) { search.to_query_string }
       end
     end
   end

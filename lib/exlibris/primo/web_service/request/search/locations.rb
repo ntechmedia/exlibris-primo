@@ -23,7 +23,7 @@ module Exlibris
           def locations_string
             scope = locations.map(&:to_s).compact.join(',')
 
-            return '' if scope.empty?
+            raise 'Please provide at least one local location' if scope.empty?
 
             "scope=#{scope}"
           end
