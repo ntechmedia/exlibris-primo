@@ -66,11 +66,19 @@ module Exlibris
               search_elements.each do |element|
                 value = (send element) ? (send element) : default_search_elements[element]
                 name = element.id2name.camelize
-                xml.send(name, value) unless value.nil?
+
+                next if soap_search_elements.exclude?(name) || value.nil?
+
+                xml.send(name, value)
               end
             }
           end
           protected :search_elements_xml
+
+          def soap_search_elements
+            %w(StartIndex BulkSize DidUMeanEnabled HighlightingEnabled GetMore InstBoost)
+          end
+          private :soap_search_elements
 
           # Returns a string for inclusion as query parameters for the REST API
           def search_elements_string
@@ -79,15 +87,16 @@ module Exlibris
               name = element.id2name.camelize
               name[0] = name[0].downcase
 
-              next if rest_search_element_params.exclude?(name) || value.nil?
+              next if rest_search_elements.exclude?(name) || value.nil?
 
               "#{name}=#{URI.encode(value.to_s)}"
             end.compact.join('&')
           end
 
-          def rest_search_element_params
+          def rest_search_elements
             %w(limit offset sort getMore conVoc)
           end
+          private :rest_search_elements
 
           #
           # Dynamically sets attr_accessors for search_elements
