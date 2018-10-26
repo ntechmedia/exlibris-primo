@@ -24,7 +24,29 @@ module Exlibris
           def rest_call
             return unless (Exlibris::Primo.config.api || api) == :rest
 
+            check_class_support
           end
+
+          private :rest_call
+
+          def check_class_support
+            klass = self.class.name.demodulize
+
+            if classes_supported_by_rest_api.exclude? klass
+              raise "The #{klass} is unsupported for the REST API. " \
+                    "Only the following are supported: #{classes_supported_by_rest_api.join(',')}"
+            end
+          end
+
+          private :check_class_support
+
+          def classes_supported_by_rest_api
+            [
+              'Search'
+            ]
+          end
+
+          private :classes_supported_by_rest_api
         end
       end
     end
