@@ -46,7 +46,6 @@ module Exlibris
           end
 
           private :rest_method_mapping
-
         end
       end
     end

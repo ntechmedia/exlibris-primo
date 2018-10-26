@@ -10,32 +10,34 @@ module Exlibris
           end
 
           module ClassAttributes
-            def soap_actions
-              @soap_actions ||= []
+            def actions(api)
+              @actions ||= {}
+              @actions[api] ||= []
             end
 
-            def add_soap_actions *actions
-              actions.each do |action|
-                soap_actions << action unless soap_actions.include? action
-              end
+            def add_api_actions api, *actions
+              @actions[api] = actions(api) + actions
+              @actions[api].uniq!
             end
-            protected :add_soap_actions
+
+            protected :add_api_actions
           end
 
-          def soap_actions
-            @soap_actions ||= self.class.soap_actions #.concat(client.wsdl.soap_actions)
+          def actions(api)
+            self.class.actions(api)
           end
-          protected :soap_actions
+
+          protected :actions
 
           #
           # Define methods for SOAP actions. SOAP actions take a single String argument, request_xml,
           # which is set as the body of the SOAP request
           #
           def method_missing(method, *args, &block)
-            if(soap_actions.include? method)
-              self.class.send(:define_method, method) { |request_xml|
+            if actions(current_api).include? method
+              self.class.send(:define_method, method) do |request_xml|
                 client.call(method, message: request_xml)
-              }
+              end
               send method, *args, &block
             else
               super
@@ -45,8 +47,12 @@ module Exlibris
           #
           # Tell users that we respond to SOAP actions.
           #
-          def respond_to?(method, include_private=false)
-            (soap_actions.include? method) ? true : super
+          def respond_to?(method, include_private = false)
+            (actions(current_api).include? method) ? true : super
+          end
+
+          def current_api
+            Exlibris::Primo.config.api || api
           end
         end
       end

@@ -7,7 +7,7 @@ module Exlibris
           include Config::Attributes
           include Endpoint
           include ApiClient
-          include SoapActions
+          include ApiActions
           include Wsdl
 
           self.abstract = true

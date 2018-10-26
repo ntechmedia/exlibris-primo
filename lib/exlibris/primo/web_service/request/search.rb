@@ -7,7 +7,7 @@ module Exlibris
         #
         class Search < Base
           self.has_client
-          self.soap_action = :search_brief
+          self.api_action = :search_brief
           include DisplayFields
           include Languages
           include Locations
@@ -69,7 +69,7 @@ module Exlibris
         class FullView < Search
           # Add doc_id to the base elements
           self.add_base_elements :doc_id
-          self.soap_action = :get_record
+          self.api_action = :get_record
         end
       end
     end
