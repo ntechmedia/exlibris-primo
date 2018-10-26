@@ -29,6 +29,18 @@ module Exlibris
           @api ||= :soap
         end
 
+        def api_key
+          @api_key
+        end
+
+        def vid
+          @vid
+        end
+
+        def tab
+          @tab
+        end
+
         def base_url
           @base_url ||= String.new config.base_url.to_s
         end
