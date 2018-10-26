@@ -2,7 +2,7 @@ module Exlibris
   module Primo
     module WebService
       module Client
-        module SoapActions
+        module ApiActions
           def self.included(klass)
             klass.class_eval do
               extend ClassAttributes
@@ -26,11 +26,11 @@ module Exlibris
             @soap_actions ||= self.class.soap_actions #.concat(client.wsdl.soap_actions)
           end
           protected :soap_actions
-          
-          # 
+
+          #
           # Define methods for SOAP actions. SOAP actions take a single String argument, request_xml,
           # which is set as the body of the SOAP request
-          # 
+          #
           def method_missing(method, *args, &block)
             if(soap_actions.include? method)
               self.class.send(:define_method, method) { |request_xml|
