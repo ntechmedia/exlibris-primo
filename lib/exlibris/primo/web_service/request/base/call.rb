@@ -25,10 +25,40 @@ module Exlibris
             return unless (Exlibris::Primo.config.api || api) == :rest
 
             check_class_support
+            check_required_params
           end
 
           private :rest_call
 
+          # Checks that all of the required parameters have been supplied either in the config or set on the request
+          def check_required_params
+            errors = required_params.map { |param, value| raise param_errors[param] if value.nil? }.compact
+            raise errors.joins('; ') unless errors.empty?
+          end
+
+          private :check_required_params
+
+          def required_params
+            {
+              vid: Exlibris::Primo.config.vid || vid,
+              tab: Exlibris::Primo.config.tab || tab,
+              apikey: Exlibris::Primo.config.api_key || api_key
+            }
+          end
+
+          private :required_params
+
+          def param_errors
+            {
+              vid: 'The vid (view ID) config attribute must be set. (e.g. ExlibrisPrimo.config.vid = "Auto1")',
+              tab: 'The tab search tab (tab) config attribute must be set. (e.g. ExlibrisPrimo.config.tab = "quicksearch")',
+              apikey: 'The apikey config attribute must be set. (e.g. ExlibrisPrimo.config.apikey = "l7xxcb1e0f7b1d09876119edf593ec552f95d")',
+            }
+          end
+
+          private :param_errors
+
+          # Check that the class that this module is included in is supported by the REST API
           def check_class_support
             klass = self.class.name.demodulize
 
@@ -40,6 +70,7 @@ module Exlibris
 
           private :check_class_support
 
+          # Request / Response Classes supported by the REST API
           def classes_supported_by_rest_api
             [
               'Search'

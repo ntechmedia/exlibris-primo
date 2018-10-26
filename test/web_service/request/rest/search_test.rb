@@ -1,16 +1,19 @@
 module WebService
   module Request
     require 'test_helper'
-    class SearchTest < Test::Unit::TestCase
+    class RestSearchTest < Test::Unit::TestCase
       def setup
-        @base_url = "http://bobcatdev.library.nyu.edu"
-        @institution = "NYU"
+        @base_url = ENV['REST_BASE_URL']
+
         @isbn = "0143039008"
         @issn = "0090-5720"
         @title = "Travels with My Aunt"
         @author = "Graham Greene"
         @genre = "Book"
-        @doc_id = "nyu_aleph000062856"
+      end
+
+      def teardown
+        Exlibris::Primo.config.api = :soap
       end
 
       def test_to_s_with_nothing
@@ -30,6 +33,54 @@ module WebService
         expected_output = 'pcAvailability=true&q=isbn,exact,0090-5720,AND;title,exact,Travels%20with%20My%20Aunt&limit=20&offset=0&scope=VOLCANO'
 
         assert_equal expected_output, request.to_query_string
+      end
+
+      def test_missing_vid
+        Exlibris::Primo.configure do |config|
+          config.api = :rest
+          config.vid = nil
+          config.tab = 'quicksearch'
+          config.api_key = ENV['REST_API_KEY']
+        end
+
+        request = Exlibris::Primo::WebService::Request::Search.new :base_url => @base_url
+        request.add_query_term @issn, "isbn", "exact"
+        request.add_location 'local', 'scope:(UB_local_PC)'
+        expected_message = 'The vid (view ID) config attribute must be set. (e.g. ExlibrisPrimo.config.vid = "Auto1")'
+
+        assert_raise_message(expected_message) { request.call }
+      end
+
+      def test_missing_tab
+        Exlibris::Primo.configure do |config|
+          config.api = :rest
+          config.vid = 'UNI'
+          config.tab = nil
+          config.api_key = ENV['REST_API_KEY']
+        end
+
+        request = Exlibris::Primo::WebService::Request::Search.new :base_url => @base_url
+        request.add_query_term @issn, "isbn", "exact"
+        request.add_location 'local', 'scope:(UB_local_PC)'
+        expected_message = 'The tab search tab (tab) config attribute must be set. (e.g. ExlibrisPrimo.config.tab = "quicksearch")'
+
+        assert_raise_message(expected_message) { request.call }
+      end
+
+      def test_missing_api_key
+        Exlibris::Primo.configure do |config|
+          config.api = :rest
+          config.vid = 'UNI'
+          config.tab = 'quicksearch'
+          config.api_key = nil
+        end
+
+        request = Exlibris::Primo::WebService::Request::Search.new :base_url => @base_url
+        request.add_query_term @issn, "isbn", "exact"
+        request.add_location 'local', 'scope:(UB_local_PC)'
+        expected_message = 'The apikey config attribute must be set. (e.g. ExlibrisPrimo.config.apikey = "l7xxcb1e0f7b1d09876119edf593ec552f95d")'
+
+        assert_raise_message(expected_message) { request.call }
       end
     end
   end
