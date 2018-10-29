@@ -20,6 +20,7 @@ VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
   # webmock needed for HTTPClient testing
   c.hook_into :webmock
+  c.filter_sensitive_data('<REST_API_KEY>') { ENV['REST_API_KEY'] }
   # c.debug_logger = $stderr
 end
 
