@@ -4,6 +4,7 @@ module Exlibris
       module Client
         module ApiClient
           require 'savon'
+          require 'faraday'
 
           def client
             rest_client || soap_client
@@ -11,15 +12,20 @@ module Exlibris
           protected :client
 
           def rest_client
-            return unless api == :rest
+            return unless current_api == :rest
 
-            # TODO: Choose a REST Client - Faraday is looking to be best atm
-            @client
+            @client = ::Faraday.new(url: endpoint) do |faraday|
+              faraday.request  :url_encoded
+              faraday.response :logger do | logger |
+                logger.filter(/(apikey=)(\w+)/,'\1[REMOVED]')
+              end
+              faraday.adapter  Faraday.default_adapter
+            end
           end
           private :rest_client
 
           def soap_client
-            return unless api == :soap
+            return unless current_api == :soap
 
             #
             # We're not using WSDL at the moment, since

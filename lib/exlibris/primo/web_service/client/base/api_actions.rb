@@ -52,7 +52,7 @@ module Exlibris
           def perform_rest_call(params)
             return unless current_api == :rest
 
-            # TODO: Implement REST API Client Call
+            client.get { |request| request.params = params }
           end
 
           #
