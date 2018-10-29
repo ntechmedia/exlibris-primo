@@ -15,18 +15,30 @@ module WebService
       end
 
       def test_eshelf_api_action
-        assert_equal :get_eshelf_structure,
-          Exlibris::Primo::WebService::Request::GetEshelfStructure.api_action
-        assert_equal :get_eshelf,
-          Exlibris::Primo::WebService::Request::GetEshelf.api_action
-        assert_equal :add_to_eshelf,
-          Exlibris::Primo::WebService::Request::AddToEshelf.api_action
-        assert_equal :remove_from_eshelf,
-          Exlibris::Primo::WebService::Request::RemoveFromEshelf.api_action
-        assert_equal :add_folder_to_eshelf,
-          Exlibris::Primo::WebService::Request::AddFolderToEshelf.api_action
-        assert_equal :remove_folder_from_eshelf,
-          Exlibris::Primo::WebService::Request::RemoveFolderFromEshelf.api_action
+        assert_equal(
+          { soap: :get_eshelf_structure },
+          Exlibris::Primo::WebService::Request::GetEshelfStructure.base_api_action
+        )
+        assert_equal(
+          { soap: :get_eshelf },
+          Exlibris::Primo::WebService::Request::GetEshelf.base_api_action
+        )
+        assert_equal(
+          { soap: :add_to_eshelf },
+          Exlibris::Primo::WebService::Request::AddToEshelf.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_from_eshelf },
+          Exlibris::Primo::WebService::Request::RemoveFromEshelf.base_api_action
+        )
+        assert_equal(
+          { soap: :add_folder_to_eshelf },
+          Exlibris::Primo::WebService::Request::AddFolderToEshelf.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_folder_from_eshelf },
+          Exlibris::Primo::WebService::Request::RemoveFolderFromEshelf.base_api_action
+        )
       end
 
       def test_call_eshelf_api_action
@@ -59,10 +71,14 @@ module WebService
       end
 
       def test_search_api_action
-        assert_equal :search_brief,
-          Exlibris::Primo::WebService::Request::Search.api_action
-        assert_equal :get_record,
-          Exlibris::Primo::WebService::Request::FullView.api_action
+        assert_equal(
+          { soap: :search_brief, rest: :search },
+          Exlibris::Primo::WebService::Request::Search.base_api_action
+        )
+        assert_equal(
+          { soap: :get_record },
+          Exlibris::Primo::WebService::Request::FullView.base_api_action
+        )
       end
 
       def test_call_search_api_action
@@ -79,41 +95,63 @@ module WebService
       end
 
       def test_reviews_api_action
-        assert_equal :get_reviews,
-          Exlibris::Primo::WebService::Request::GetReviews.api_action
-        assert_equal :get_all_my_reviews,
-          Exlibris::Primo::WebService::Request::GetAllMyReviews.api_action
-        assert_equal :get_reviews_for_record,
-          Exlibris::Primo::WebService::Request::GetReviewsForRecord.api_action
-        assert_equal :get_reviews_by_rating,
-          Exlibris::Primo::WebService::Request::GetReviewsByRating.api_action
-        assert_equal :add_review,
-          Exlibris::Primo::WebService::Request::AddReview.api_action
-        assert_equal :remove_review,
-          Exlibris::Primo::WebService::Request::RemoveReview.api_action
+        assert_equal(
+          { soap: :get_reviews },
+          Exlibris::Primo::WebService::Request::GetReviews.base_api_action
+        )
+        assert_equal(
+          { soap: :get_all_my_reviews },
+          Exlibris::Primo::WebService::Request::GetAllMyReviews.base_api_action
+        )
+        assert_equal(
+          { soap: :get_reviews_for_record },
+          Exlibris::Primo::WebService::Request::GetReviewsForRecord.base_api_action
+        )
+        assert_equal(
+          { soap: :get_reviews_by_rating },
+          Exlibris::Primo::WebService::Request::GetReviewsByRating.base_api_action
+        )
+        assert_equal(
+          { soap: :add_review },
+          Exlibris::Primo::WebService::Request::AddReview.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_review },
+          Exlibris::Primo::WebService::Request::RemoveReview.base_api_action
+        )
       end
 
       def test_tags_api_action
-        assert_equal :get_tags,
-          Exlibris::Primo::WebService::Request::GetTags.api_action
-        assert_equal :get_all_my_tags,
-          Exlibris::Primo::WebService::Request::GetAllMyTags.api_action
-        assert_equal :get_tags_for_record,
-          Exlibris::Primo::WebService::Request::GetTagsForRecord.api_action
-        assert_equal :remove_tag,
-          Exlibris::Primo::WebService::Request::RemoveTag.api_action
-        assert_equal :remove_user_tags,
-          Exlibris::Primo::WebService::Request::RemoveUserTags.api_action
+        assert_equal(
+          { soap: :get_tags },
+          Exlibris::Primo::WebService::Request::GetTags.base_api_action
+        )
+        assert_equal(
+          { soap: :get_all_my_tags },
+          Exlibris::Primo::WebService::Request::GetAllMyTags.base_api_action
+        )
+        assert_equal(
+          { soap: :get_tags_for_record },
+          Exlibris::Primo::WebService::Request::GetTagsForRecord.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_tag },
+          Exlibris::Primo::WebService::Request::RemoveTag.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_user_tags },
+          Exlibris::Primo::WebService::Request::RemoveUserTags.base_api_action
+        )
       end
 
       def test_undefined_action
-        Exlibris::Primo::WebService::Request::Search.send(:api_action=, :undefined_action)
+        Exlibris::Primo::WebService::Request::Search.send(:set_base_api_action, { soap: :undefined_action })
         assert_raise(NoMethodError) {
           VCR.use_cassette('request undefined action call') do
             Exlibris::Primo::WebService::Request::Search.new(:base_url => @base_url).call
           end
         }
-        Exlibris::Primo::WebService::Request::Search.send(:api_action=, :search_brief)
+        Exlibris::Primo::WebService::Request::Search.send(:set_base_api_action, { soap: :search_brief, rest: :search })
       end
     end
   end

@@ -35,8 +35,8 @@ module Exlibris
           #
           def method_missing(method, *args, &block)
             if actions(current_api).include? method
-              self.class.send(:define_method, method) do |request_xml|
-                client.call(method, message: request_xml)
+              self.class.send(:define_method, method) do |params|
+                perform_soap_call(method, params) || perform_rest_call(params)
               end
               send method, *args, &block
             else
@@ -44,15 +44,22 @@ module Exlibris
             end
           end
 
+          def perform_soap_call(method, request_xml)
+            return unless current_api == :soap
+            client.call(method, message: request_xml)
+          end
+
+          def perform_rest_call(params)
+            return unless current_api == :rest
+
+            # TODO: Implement REST API Client Call
+          end
+
           #
           # Tell users that we respond to SOAP actions.
           #
           def respond_to?(method, include_private = false)
             (actions(current_api).include? method) ? true : super
-          end
-
-          def current_api
-            Exlibris::Primo.config.api || api
           end
         end
       end

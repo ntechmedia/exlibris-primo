@@ -10,17 +10,19 @@ module Exlibris
           end
 
           module ClassAttributes
-            def api_action
-              @api_action ||= name.demodulize.underscore.to_sym
+            def base_api_action
+              @api_action ||= { soap: name.demodulize.underscore.to_sym }
             end
 
-            attr_writer :api_action
-            protected :api_action=
+            def set_base_api_action(action_hash)
+              @api_action = action_hash
+            end
           end
 
           def api_action
-            @api_action ||= self.class.api_action
+            @api_action ||= self.class.base_api_action[current_api]
           end
+
           protected :api_action
 
           def current_api
