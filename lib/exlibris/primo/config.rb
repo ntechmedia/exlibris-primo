@@ -26,7 +26,7 @@ module Exlibris
         end
 
         def api
-          @api ||= :soap
+          @api ||= Exlibris::Primo.config.api || :soap
         end
 
         def api_key
