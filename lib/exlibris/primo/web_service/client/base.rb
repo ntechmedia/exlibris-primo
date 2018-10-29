@@ -9,6 +9,7 @@ module Exlibris
           include ApiClient
           include ApiActions
           include Wsdl
+          include Api
 
           self.abstract = true
 

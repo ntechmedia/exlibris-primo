@@ -15,6 +15,8 @@ module Exlibris
           include ApiAction
           include WriteAttributes
           include XmlUtil
+          include Api
+
           self.abstract = true
           self.add_base_elements :institution, :ip, :group,
             :on_campus, :is_logged_in, :pds_handle

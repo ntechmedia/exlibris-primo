@@ -8,6 +8,8 @@ module Exlibris
           include Namespaces
           include Util
           include XmlUtil
+          include Api
+
           self.abstract = true
 
           attr_reader :savon_response, :api_action, :code, :body
