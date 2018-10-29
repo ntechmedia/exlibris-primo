@@ -24,10 +24,6 @@ module Exlibris
           end
 
           protected :api_action
-
-          def current_api
-            Exlibris::Primo.config.api || api
-          end
         end
       end
     end

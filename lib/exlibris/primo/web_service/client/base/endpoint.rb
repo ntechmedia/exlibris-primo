@@ -21,7 +21,7 @@ module Exlibris
           def endpoint
             @endpoint ||= URI.join(
               URI(base_url),
-              endpoint_path[Exlibris::Primo.config.api || api],
+              endpoint_path[current_api],
               (rest_method_mapping[self.class.endpoint] || self.class.endpoint).to_s
             ).to_s
           end
@@ -38,7 +38,7 @@ module Exlibris
           private :endpoint_path
 
           def rest_method_mapping
-            return {} unless Exlibris::Primo.config.api == :rest
+            return {} unless current_api == :rest
 
             {
               searcher: :search

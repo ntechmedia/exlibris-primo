@@ -12,7 +12,7 @@ module Exlibris
           end
 
           def soap_call
-            return unless (Exlibris::Primo.config.api || api) == :soap
+            return unless current_api == :soap
 
             # Get the Response class that matches the Request class.
             response_klass = "Exlibris::Primo::WebService::Response::#{self.class.name.demodulize}".constantize
@@ -22,7 +22,7 @@ module Exlibris
           private :soap_call
 
           def rest_call
-            return unless (Exlibris::Primo.config.api || api) == :rest
+            return unless current_api == :rest
 
             check_class_support
             check_required_params
