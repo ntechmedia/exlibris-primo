@@ -20,7 +20,7 @@ VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
   # webmock needed for HTTPClient testing
   c.hook_into :webmock
-  c.filter_sensitive_data('<REST_API_KEY>') { ENV['REST_API_KEY'] }
+  c.filter_sensitive_data('<REST_API_KEY>') { ENV['REST_API_KEY'] || 'l7xxcb1e0f7b1d09876119edf593ec552f95d' }
   # c.debug_logger = $stderr
 end
 
@@ -79,7 +79,12 @@ class Test::Unit::TestCase
       assert_equal expected_class, response.class
     end
   end
+
   protected :assert_response
+
+  def rest_api_key
+    ENV['REST_API_KEY'] || 'l7xxcb1e0f7b1d09876119edf593ec552f95d'
+  end
 
   def strip_xml(xml)
     xml
