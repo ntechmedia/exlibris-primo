@@ -26,9 +26,18 @@ module Exlibris
 
             check_class_support
             check_required_params
+
+            response_klass = "Exlibris::Primo::WebService::Response::#{self.class.name.demodulize}".constantize
+            response_klass.new(client.send(api_action, query_params), api_action)
           end
 
           private :rest_call
+
+          def query_params
+            Hash[URI::decode_www_form(to_query_string)].merge(required_params)
+          end
+
+          private :query_params
 
           # Checks that all of the required parameters have been supplied either in the config or set on the request
           def check_required_params
