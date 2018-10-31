@@ -5,6 +5,7 @@ module WebService
       def setup
         Exlibris::Primo.configure do |config|
           config.api = :rest
+          config.sources = {}
           config.base_url = 'https://api-ap.hosted.exlibrisgroup.com/'
           config.vid = 'UB'
           config.tab = 'quicksearch'
