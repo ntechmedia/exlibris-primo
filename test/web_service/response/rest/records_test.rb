@@ -5,7 +5,6 @@ module WebService
       def setup
         Exlibris::Primo.configure do |config|
           config.api = :rest
-          config.sources = {}
           config.base_url = 'https://api-ap.hosted.exlibrisgroup.com/'
           config.vid = 'UB'
           config.tab = 'quicksearch'
@@ -52,7 +51,6 @@ module WebService
           assert_equal([], holding.coverage)
           assert_nil(holding.source_config)
           assert_nil(holding.source_class)
-          assert_equal({}, holding.source_data)
           assert_equal(holding, holding.to_source)
           assert_equal([holding], holding.expand)
           assert((not holding.eql?(Exlibris::Primo::Holding.new)))
