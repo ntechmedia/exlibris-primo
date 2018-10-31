@@ -12,31 +12,59 @@ module Exlibris
 
           self.abstract = true
 
-          attr_reader :savon_response, :api_action, :code, :body
-          protected :savon_response, :api_action
+          attr_reader :client_response, :api_action, :code, :body
+          protected :client_response, :api_action
 
-          def initialize response, api_action
+          def initialize(response, api_action)
             super
-            soap_response(response, api_action) || rest_response(response, api_action)
+            @client_response = response
+            @api_action = api_action
+
+            soap_response || rest_response
           end
 
           private
 
-          def soap_response(response, api_action)
+          def soap_response
             return unless current_api == :soap
 
-            @savon_response = response
-            @code = savon_response.http.code
-            @body = savon_response.http.body
-            @api_action = api_action
-
-            @raw_xml = savon_response.body[response_key][return_key]
+            @code = client_response.http.code
+            @body = client_response.http.body
+            @raw_xml = client_response.body[response_key][return_key]
           end
 
-          def rest_response(response, api_action)
+          def rest_response
             return unless current_api == :rest
 
-            # TODO: Processing of REST API response
+            @code = client_response.status
+            @body = client_response.body
+            @raw_xml = convert_to_xml
+          end
+
+          def convert_to_xml
+            Nokogiri::XML::Builder.new do |xml|
+              xml.PrimoNMBib(xmlns: "http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib") do
+                xml.records do
+                  records_to_process.each do |record|
+                    process_array('record', record, xml)
+                  end
+                end
+              end
+            end.to_xml
+          end
+
+          def process_array(label, data, xml)
+            if data.is_a?(Array)
+              data.each { |array_value| xml.send(label, array_value) }
+            elsif data.is_a?(Hash)
+              xml.send(label) do
+                data.each { |k, v| process_array(k, v, xml) }
+              end
+            end
+          end
+
+          def records_to_process
+            @records_to_process ||= JSON.parse(body)['docs'].map { |r| r['pnx'] }
           end
         end
       end

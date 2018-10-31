@@ -37,8 +37,6 @@ module Exlibris
             Hash[URI::decode_www_form(to_query_string)].merge(required_params)
           end
 
-          private :query_params
-
           # Checks that all of the required parameters have been supplied either in the config or set on the request
           def check_required_params
             errors = required_params.map { |param, value| raise param_errors[param] if value.nil? }.compact
