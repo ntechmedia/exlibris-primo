@@ -1,15 +1,15 @@
 module Exlibris
   module Primo
     module Pnx
-      # 
+      #
       # Handle holdings in availlibrary tags.
-      # 
+      #
       module Holdings
         #
         # Gather Holdings for this record.
         #
         def holdings
-          @holdings ||=  xml.root.xpath("display/availlibrary").collect do |availlibrary|
+          @holdings ||= xml.root.xpath("display/availlibrary").collect do |availlibrary|
             subfields = parse_subfields availlibrary.inner_text
             # Get original id for dealing w/ dedup merger records
             original_id = (subfields["O"]) ? subfields["O"] : recordid
@@ -27,8 +27,9 @@ module Exlibris
               :institution_code => subfields["I"],
               :library_code => subfields["L"],
               :collection => subfields["1"], :call_number => subfields["2"],
-              :subfields => subfields, :availability_status_code => subfields["S"])
-            end
+              :subfields => subfields, :availability_status_code => subfields["S"]
+            )
+          end
         end
       end
     end

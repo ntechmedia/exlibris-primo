@@ -46,19 +46,19 @@ module Exlibris
               xml.PrimoNMBib(xmlns: "http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib") do
                 xml.records do
                   records_to_process.each do |record|
-                    process_array('record', record, xml)
+                    process_record('record', record, xml)
                   end
                 end
               end
             end.to_xml
           end
 
-          def process_array(label, data, xml)
+          def process_record(label, data, xml)
             if data.is_a?(Array)
               data.each { |array_value| xml.send(label, array_value) }
             elsif data.is_a?(Hash)
-              xml.send(label) do
-                data.each { |k, v| process_array(k, v, xml) }
+              xml.send("#{label}_") do
+                data.each { |k, v| process_record(k, v, xml) }
               end
             end
           end
