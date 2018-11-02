@@ -12,6 +12,7 @@ module Exlibris
           include Languages
           include Locations
           include QueryTerms
+          include Facets
           include RequestParams
           include SearchElements
           include SortBys
@@ -54,11 +55,14 @@ module Exlibris
           # Returns a query string for use with the REST API
           def to_query_string
             [
+              # TODO: implement display fields & sort_bys for REST API
               request_params_string,
               query_terms_string,
               search_elements_string,
               languages_string,
-              locations_string
+              locations_string,
+              included_facets_string,
+              excluded_facets_string
             ].delete_if(&:empty?).join('&')
           end
         end
