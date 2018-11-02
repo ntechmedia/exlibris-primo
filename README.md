@@ -65,7 +65,7 @@ Or
       institution!("INSTITUTION").title_begins_with("Travels").
         creator_contains("Greene").genre_is("Book")
 
-Search can be expanded when using Ex Libris Primo Central by adding a request parametertrue
+Search can be expanded when using Ex Libris Primo Central by adding a request parameter true
 
      search = Exlibris::Primo::Search.new(:base_url => "http://primo.institution.edu",
        :institution => "INSTITUTION", :page_size => "20")
@@ -101,37 +101,56 @@ Exlibris::Primo::Config can also read in from a YAML file that specifies the var
     end
 
 ## API Choice    
-Currently Ex Libris provides a fully featured [SOAP API](https://developers.exlibrisgroup.com/primo/apis/webservices/soap) and a 
-REST API (see [Primo REST APIs](https://developers.exlibrisgroup.com/primo/apis/webservices/rest) and [Brief Search](https://developers.exlibrisgroup.com/primo/apis/search/GET/AnSF56/p3aKzRujr9pj8qtyT3YiaSYVA/f5643222-bb88-4f3d-b2d6-5029e527c515)) 
-which, at the time of writing, has limited features.  
+Currently Exlibris provides a fully featured [SOAP API](https://developers.exlibrisgroup.com/primo/apis/webservices/soap) 
+and a REST API (see [Primo REST APIs](https://developers.exlibrisgroup.com/primo/apis/webservices/rest) which, supports
+a [Brief Search](https://developers.exlibrisgroup.com/primo/apis/search/GET/AnSF56/p3aKzRujr9pj8qtyT3YiaSYVA/f5643222-bb88-4f3d-b2d6-5029e527c515)) 
+with limited features.  To choose the API you want to use you can do this at the time of instance creation for the 
+various classes (e.g.  `Exlibris::Primo::EShelf`, `Exlibris::Primo::Search`, etc) or set it globally in the `Exlibris::Primo.config`.  
 
-You can choose which API to use either are the creation of a new instance passing in the `api` option
+
+### Choosing the SOAP API
+To use the SOAP API you can specify it in your requests as follows:
+```ruby
+  eshelf = Exlibris::Primo::EShelf.new(
+    :api => :soap,
+    :user_id => "USER_ID",
+    :base_url => "http://primo.institution.edu", 
+    :insitution => "INSTITUTION"
+  )
+```
+__NB:__ If you don't provided the `api` param it will default to `:soap`  
+
+### Choosing the REST API
+To use the REST API you will need to not only provide the `api` but also the `api_key`.  Specifically for search you 
+will also need to include the `vid` (view id) and `tab` (e.g. default_search, quicksearch, etc) based on the configuration 
+of the Exlibrish Primo instance.  Following is an example
+```ruby
+  search = Exlibris::Primo::Search.new(
+    :api => :rest,
+    :api_key => 'l7xxcb1e0f7b1d9340123edf456ec789f95d',
+    :vid => 'ALL',
+    :tab => 'quicksearch',
+    :base_url => "http://primo.institution.edu",
+    :institution => "INSTITUTION"
+  )
+```
+__NB:__ If you don't provided the `api` param it will default to `:soap`  
+
+### Choosing the API via configuration
+To choose the API globally using the configuration you can use one of the two approaches:
 
 ```ruby
-    eshelf = Exlibris::Primo::EShelf.new(
-      :api => :soap,
-      :user_id => "USER_ID",
-      :base_url => "http://primo.institution.edu", 
-      :insitution => "INSTITUTION"
-    )
-
-    search = Exlibris::Primo::Search.new(
-      :api => :rest,
-      :base_url => "http://primo.institution.edu",
-      :institution => "INSTITUTION"
-    )
+  Exlibris::Primo.configure do |config|
+    config.api :rest
+  end
+    
+  # OR
+ 
+  Exlibris::Primo.config.api = :rest
 ```
 
-Or you can set it globally through the configuration (which defaults to `:soap`).
-
-```ruby
-    Exlibris::Primo.configure do |config|
-      config.api :rest
-    end
-```
-__N.B.__: As mentioned earlier the REST API only supports a subset of the features so global setting 
-should be done with caution. 
-
+__N.B.__: As mentioned earlier the REST API only supports a subset of the features provided by the SOAP API so global 
+setting should be done with caution. 
 
 
 ## Exlibris::Primo::EShelf
