@@ -205,7 +205,11 @@ module Exlibris
         #         search.records.size => 10
         #
         def page_size!(page_size)
-          request_attributes[:bulk_size] = "#{page_size}"
+          if current_api == :rest
+            request_attributes[:limit] = "#{page_size}"
+          else
+            request_attributes[:bulk_size] = "#{page_size}"
+          end
           self
         end
         alias :page_size= :page_size!
