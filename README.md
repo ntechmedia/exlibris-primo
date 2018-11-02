@@ -114,6 +114,43 @@ records.each do |record_id, record|
 end
 ```
 
+### Facets for the REST API
+The REST API implementation allows you to include or exclude facets as part of your query parameters.  To include or 
+exclude facets in your search you can do the following:
+
+```ruby
+search = Exlibris::Primo::Search.new(
+  :api => :rest,
+  :api_key => 'l7xxcb1e0f7b1d9340123edf456ec789f95d',
+  :vid => 'ALL',
+  :tab => 'quicksearch',
+  :base_url => "http://primo.institution.edu",
+  :institution => "INSTITUTION"
+)
+
+
+search.add_facet 'books', 'facet_rtype' # Implicitly include resources with the type of book
+search.add_facet 'Jack Johnson', 'facet_creator', true # Explicitly include Jack Johnson as the resource creator
+search.add_facet 'Archives', 'facet_library', false # Exclude library archives
+```
+
+Currently the following facet categories are supported:
+
+- __facet_rtype__: Resource Type
+- __facet_topic__: Subject
+- __facet_creator__: Author
+- __facet_tlevel__: Availability
+- __facet_domain__: Collection
+- __facet_library__: Library name
+- __facet_lang__: Language
+- __facet_lcc__: LCC classification
+
+You can programmatically get them from the following class method:
+
+```ruby
+Exlibris::Primo::WebService::Request::Facet.allowed_categories
+```
+
 
 ## Exlibris::Primo::Config
 Exlibris::Primo::Config allows you to specify global configuration parameter for Exlibris::Primo
