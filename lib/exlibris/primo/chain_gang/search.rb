@@ -62,6 +62,20 @@ module Exlibris
         end
 
         #
+        # Adds a facet to the search.
+        # Suitable for chaining, e.g.
+        #
+        #     Search.new
+        #       .add_facet("books", "facet_rtype")
+        #       .add_facet("Jack Johnson", "facet_creator", false)
+        #       .search
+        #
+        def add_facet(*args)
+          search_request.add_facet(*args)
+          self
+        end
+
+        #
         # Adds a query term to the search.
         # Suitable for chaining, e.g.
         #
