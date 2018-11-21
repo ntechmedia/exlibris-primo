@@ -5,17 +5,17 @@ module Exlibris
     # Primo Holding.
     #
     # Object representing a holding in Primo.
-    # 
+    #
     # Primo holdings can be extended to create Primo source holdings.
     # create a local class representing the source in the
     # module Exlibris::Primo::Source which extends Exlibris::Primo::Holding.
     # Holding methods are then available for overriding.
-    # 
+    #
     # A special use case occurs when Primo normalization rules contract record
     # holdings, e.g. in the case of multiple holdings in a single Aleph collection.
     # In these cases, a source holding can "expand" itself and return an Array of
     # holdings.
-    # 
+    #
     #     :expand -   expand holdings based on information from the source
     #                 default: [self]
     #
@@ -36,7 +36,7 @@ module Exlibris
         :source_record_id, :ils_api_id, :institution_code,
         :library_code, :availability_status_code,
         :collection, :call_number, :coverage, :notes,
-        :subfields, :source_class, :source_data
+        :subfields, :source_class, :source_data, :url
 
       alias :status_code :availability_status_code
       alias :status_code= :availability_status_code=
@@ -47,7 +47,7 @@ module Exlibris
         holding = attributes.delete(:holding)
         # Instantiate new holding from input holding
         # if it exists.
-        super((holding.nil?) ? self.class.defaults.merge(attributes) : 
+        super((holding.nil?) ? self.class.defaults.merge(attributes) :
           holding.to_h.merge(attributes))
       end
 
@@ -73,7 +73,7 @@ module Exlibris
 
       # Get the availability status from the Primo config based on availability status code, if not already set.
       def availability_status
-        @availability_status ||= 
+        @availability_status ||=
           (availability_statuses[availability_status_code] || availability_status_code)
       end
       alias :availability :availability_status
@@ -100,14 +100,14 @@ module Exlibris
 
       # Return the attribute accessible instance variables as a hash.
       def to_h
-        { 
-          :availlibrary => availlibrary, :record_id => record_id, :original_id => original_id, 
+        {
+          :availlibrary => availlibrary, :record_id => record_id, :original_id => original_id,
           :title => title, :author => author, :display_type => display_type, :source_id => source_id,
           :original_source_id => original_source_id, :source_record_id => source_record_id,
           :ils_api_id => ils_api_id, :institution_code => institution_code, :library_code => library_code,
           :availability_status_code => availability_status_code, :collection => collection,
           :call_number => call_number, :coverage => coverage, :notes => notes, :subfields => subfields,
-          :source_class => source_class, :source_data => source_data }
+          :source_class => source_class, :source_data => source_data, :url => url }
       end
     end
   end
