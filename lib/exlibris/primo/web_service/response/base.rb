@@ -45,26 +45,27 @@ module Exlibris
             Nokogiri::XML::Builder.new do |xml|
               xml.PrimoNMBib(xmlns: "http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib") do
                 xml.records do
-                  records_to_process.each do |record|
-                    process_record('record', record, xml)
+                  docs_to_process.each do |doc|
+                    doc['pnx']['delivery'].merge!(doc['delivery'])
+                    process('record', doc['pnx'], xml)
                   end
                 end
               end
             end.to_xml
           end
 
-          def process_record(label, data, xml)
+          def process(label, data, xml)
             if data.is_a?(Array)
               data.each { |array_value| xml.send(label, array_value) }
             elsif data.is_a?(Hash)
               xml.send("#{label}_") do
-                data.each { |k, v| process_record(k, v, xml) }
+                data.each { |k, v| process(k, v, xml) }
               end
             end
           end
 
-          def records_to_process
-            @records_to_process ||= JSON.parse(body)['docs'].map { |r| r['pnx'] }
+          def docs_to_process
+            @docs_to_process ||= JSON.parse(body)['docs']
           end
         end
       end
