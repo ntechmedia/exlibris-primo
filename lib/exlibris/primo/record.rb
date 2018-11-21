@@ -18,6 +18,7 @@ module Exlibris
       include Exlibris::Primo::Pnx::Links
       include Exlibris::Primo::Pnx::Openurl
       include Exlibris::Primo::Pnx::Subfields
+      include Exlibris::Primo::Api
 
       add_duplicated_control_attributes :sourcerecordids, :sourceids,
           :originalsourceids, :sourceformats, :sourcesystems, :ilsapiids
