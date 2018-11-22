@@ -46,7 +46,7 @@ module Exlibris
               xml.PrimoNMBib(xmlns: "http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib") do
                 xml.records do
                   docs_to_process.each do |doc|
-                    doc['pnx']['delivery'].merge!(doc['delivery'])
+                    merge_delivery(doc)
                     process('record', doc['pnx'], xml)
                   end
                 end
@@ -61,6 +61,14 @@ module Exlibris
               xml.send("#{label}_") do
                 data.each { |k, v| process(k, v, xml) }
               end
+            end
+          end
+
+          def merge_delivery(doc)
+            if doc['pnx']['delivery'].nil?
+              doc['pnx']['delivery'] = doc['delivery']
+            else
+              doc['pnx']['delivery'].merge!(doc['delivery'])
             end
           end
 
