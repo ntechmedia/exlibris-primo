@@ -76,6 +76,20 @@ module Exlibris
         end
 
         #
+        # Adds a multi facet to the search.
+        # Suitable for chaining, e.g.
+        #
+        #     Search.new
+        #       .add_multi_facet("books", "facet_rtype")
+        #       .add_multi_facet("Jack Johnson", "facet_creator", false)
+        #       .search
+        #
+        def add_multi_facet(*args)
+          search_request.add_multi_facet(*args)
+          self
+        end
+
+        #
         # Adds a query term to the search.
         # Suitable for chaining, e.g.
         #
