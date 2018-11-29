@@ -13,6 +13,7 @@ module Exlibris
           include Locations
           include QueryTerms
           include Facets
+          include MultiFacets
           include RequestParams
           include SearchElements
           include SortBys
