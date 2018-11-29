@@ -62,6 +62,7 @@ module Exlibris
               search_elements_string,
               languages_string,
               locations_string,
+              multi_facets_string,
               included_facets_string,
               excluded_facets_string
             ].delete_if(&:empty?).join('&')
