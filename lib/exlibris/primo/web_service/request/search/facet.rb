@@ -21,8 +21,9 @@ module Exlibris
           end
 
           # Returns a string for inclusion in the "qInclude", "qExclude" or "multiFacets" parameter for the REST API
-          def to_s
-            "#{category},exact,#{URI.encode(value.gsub(';', ''))}"
+          # @param [String] operator the operator to use when rendering the facet to a string (default: exact)
+          def to_s(operator: 'exact')
+              "#{category},#{operator},#{URI.encode(value.gsub(';', ''))}"
           end
 
           # Validates the supplied category to ensure that it is supported
