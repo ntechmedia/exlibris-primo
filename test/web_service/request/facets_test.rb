@@ -56,7 +56,7 @@ module WebService
         search = SearchDummy.new
         search.add_facet 'books', 'facet_rtype'
         search.add_facet 'Jack Johnson', 'facet_creator'
-        expected_param = "qInclude=facet_rtype,exact,books|,|facet_creator,exact,Jack%20Johnson"
+        expected_param = "qInclude=facet_rtype,exact,books%7C,%7Cfacet_creator,exact,Jack%20Johnson"
 
         assert_equal expected_param, search.to_query_string
       end
@@ -65,7 +65,7 @@ module WebService
         search = SearchDummy.new
         search.add_facet 'books', 'facet_rtype', false
         search.add_facet 'Jack Johnson', 'facet_creator', false
-        expected_param = "qExclude=facet_rtype,exact,books|,|facet_creator,exact,Jack%20Johnson"
+        expected_param = "qExclude=facet_rtype,exact,books%7C,%7Cfacet_creator,exact,Jack%20Johnson"
 
         assert_equal expected_param, search.to_query_string
       end
