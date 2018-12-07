@@ -47,6 +47,7 @@ module Exlibris
                 xml.records do
                   docs_to_process.each do |doc|
                     merge_delivery(doc)
+                    merge_links(doc)
                     process('record', doc['pnx'], xml)
                   end
                 end
@@ -70,6 +71,23 @@ module Exlibris
             else
               doc['pnx']['delivery'].merge!(doc['delivery'])
             end
+          end
+
+          def merge_links(doc)
+            doc['pnx']['links'] = flatten_links(doc['pnx']['links'], doc['delivery']['link'])
+          end
+
+          def flatten_links(existing_links, new_links)
+            hash = existing_links.nil? ? Hash.new : existing_links
+            new_links.each do |link|
+              type = link['linkType'].split('/').last
+              hash[type] ||= []
+
+              next if hash[type].any? { |l| l[link['linkURL']] }
+
+              hash[type] << "$$U#{link['linkURL']}$$D#{link['displayLabel']}"
+            end
+            hash
           end
 
           def docs_to_process

@@ -35,8 +35,8 @@ module Exlibris
         #
         # Parse links tags
         #
-        def links(link)
-          xml.root.xpath("links/#{link}").collect do |link|
+        def links(link_type)
+          xml.root.xpath("links/#{link_type}").collect do |link|
             subfields = parse_subfields link.inner_text
             # We're not interested if we don't have a URL
             next if subfields["U"].nil?
