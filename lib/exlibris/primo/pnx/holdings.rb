@@ -16,6 +16,8 @@ module Exlibris
           return unless current_api == :rest
 
           @holdings ||= xml.root.xpath("delivery/holding").collect do |holding|
+            next if holding['callNumber'].nil?
+
             Exlibris::Primo::Holding.new(
               record_id: recordid,
               original_id: recordid,
@@ -33,7 +35,7 @@ module Exlibris
               availability_status_code: holding['availabilityStatus'],
               url: holding['holdingURL']
             )
-          end
+          end.compact
         end
 
         def holdings_for_soap
