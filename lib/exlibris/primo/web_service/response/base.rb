@@ -48,6 +48,7 @@ module Exlibris
                   docs_to_process.each do |doc|
                     merge_links(doc)
                     merge_delivery(doc)
+                    doc['pnx']['context'] = [doc['context']] unless doc['context'].nil?
                     process('record', doc['pnx'], xml)
                   end
                 end
@@ -59,7 +60,7 @@ module Exlibris
             if data.is_a?(Array)
               data.each do |array_value|
                 array_value.delete_if { |k, _v| k.to_s.include? '@' } if array_value.is_a?(Hash)
-                xml.send(label, array_value)
+                xml.send("#{label}_", array_value)
               end
             elsif data.is_a?(Hash)
               xml.send("#{label}_") do
@@ -70,7 +71,7 @@ module Exlibris
                 end
               end
             else
-              xml.send(label, data)
+              xml.send("#{label}_", data)
             end
           end
 
