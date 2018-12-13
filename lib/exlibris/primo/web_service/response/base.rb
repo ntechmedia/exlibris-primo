@@ -46,8 +46,8 @@ module Exlibris
               xml.PrimoNMBib(xmlns: "http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib") do
                 xml.records do
                   docs_to_process.each do |doc|
-                    merge_delivery(doc)
                     merge_links(doc)
+                    merge_delivery(doc)
                     process('record', doc['pnx'], xml)
                   end
                 end
@@ -57,11 +57,20 @@ module Exlibris
 
           def process(label, data, xml)
             if data.is_a?(Array)
-              data.each { |array_value| xml.send(label, array_value) }
+              data.each do |array_value|
+                array_value.delete_if { |k, _v| k.to_s.include? '@' } if array_value.is_a?(Hash)
+                xml.send(label, array_value)
+              end
             elsif data.is_a?(Hash)
               xml.send("#{label}_") do
-                data.each { |k, v| process(k, v, xml) }
+                data.each do |k, v|
+                  next if k.to_s.include? '@'
+
+                  process(k, v, xml)
+                end
               end
+            else
+              xml.send(label, data)
             end
           end
 
@@ -74,7 +83,8 @@ module Exlibris
           end
 
           def merge_links(doc)
-            doc['pnx']['links'] = flatten_links(doc['pnx']['links'], doc['delivery']['link'])
+            doc['pnx']['links'] = flatten_links(doc['pnx']['links'], doc['delivery']['link'].try(:dup) || [])
+            doc['delivery']['link'] = nil
           end
 
           def flatten_links(existing_links, new_links)

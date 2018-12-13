@@ -115,7 +115,7 @@ module WebService
           response = Exlibris::Primo::WebService::Response::Search.new(client.send(api_action, request.query_params), api_action)
           records = response.records
           first_result = records.first
-          expected_urls = %w(http://www.ballarat.eblib.com.au/EBLWeb?target=patronextendedid=P_699895_0 http://www.ballarat.eblib.com.au/EBLWeb?target=patronextendedid=P_877401_0)
+          expected_urls = %w(http://www.ballarat.eblib.com.au/EBLWeb?target=patron&extendedid=P_699895_0 http://www.ballarat.eblib.com.au/EBLWeb?target=patron&extendedid=P_877401_0)
 
           assert_not_nil response.records
           assert_not_nil records
@@ -153,7 +153,7 @@ module WebService
           end
 
           fulltext = first_result.fulltexts.first
-          assert_equal 'http://ezproxy.federation.edu.au/login?url=http://www.ballarat.eblib.com.AU/EBLWeb/patron/?target=patronextendedid=P_1722038_0', fulltext.url
+          assert_equal 'http://ezproxy.federation.edu.au/login?url=http://www.ballarat.eblib.com.AU/EBLWeb/patron/?target=patron&extendedid=P_1722038_0', fulltext.url
         end
       end
     end
