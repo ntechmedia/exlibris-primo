@@ -28,6 +28,16 @@ module Exlibris
 
           protected :endpoint
 
+          def jwt_endpoint
+            @jwt_endpoint ||= URI.join(
+              URI(base_url),
+              endpoint_path[current_api],
+              'userJwt'
+            ).to_s
+          end
+
+          protected :jwt_endpoint
+
           def endpoint_path
             {
               soap: '/PrimoWebServices/services/',
