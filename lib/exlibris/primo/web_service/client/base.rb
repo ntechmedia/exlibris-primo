@@ -10,6 +10,7 @@ module Exlibris
           include ApiActions
           include Wsdl
           include Api
+          include Authorisation
 
           self.abstract = true
 
