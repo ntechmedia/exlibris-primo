@@ -1,0 +1,191 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/userJwt?apikey=<REST_ALT_API_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"viewId":"LATROBE","institution":"61LATROBE","user":"Pebbles","userName":"Murgatroyd
+        PebblePad","userGroup":"U/Grad","onCampus":"true"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - JSESSIONID=75B235428DEB4703F2C85AC032F70131; Path=/primo/v1; HttpOnly; Domain=api-ap.hosted.exlibrisgroup.com
+      - sto-id-%3FPS_PROD%3FPMT.Prod.Primo.1701-sg=DEHICAAK; Expires=Mon, 25-Jun-2029
+        07:03:57 GMT; Path=/
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Fri, 28 Jun 2019 07:03:57 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,DELETE,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '680'
+      Date:
+      - Fri, 28 Jun 2019 07:03:56 GMT
+      Server:
+      - CA-API-Gateway/9.0
+    body:
+      encoding: UTF-8
+      string: '"eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYxNzkxODM3LCJpYXQiOjE1NjE3MDU0MzcsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.A5zFxHAVfvzlkmpGaHnMyzRPrCMIV152h2HkXYa5qHDnFtm3msc_isdOUp94AXn1qA33zr5NT1gItzhEiNXd8A"'
+    http_version: 
+  recorded_at: Fri, 28 Jun 2019 07:03:57 GMT
+- request:
+    method: get
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_ALT_API_KEY>&limit=5&multiFacets=facet_rtype,include,books&offset=0&q=title,contains,An%20introduction%20to%20research%20for%20midwives,AND%3Bisbn,contains,0702034908&scope=All&tab=default_tab&vid=LATROBE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - Bearer "eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYxNzkxODM3LCJpYXQiOjE1NjE3MDU0MzcsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.A5zFxHAVfvzlkmpGaHnMyzRPrCMIV152h2HkXYa5qHDnFtm3msc_isdOUp94AXn1qA33zr5NT1gItzhEiNXd8A"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - JSESSIONID=1DD9FA2A48A3AAFB5A0D34A184B89C82; Path=/primo/v1; HttpOnly; Domain=api-ap.hosted.exlibrisgroup.com
+      - sto-id-%3FPS_PROD%3FPMT.Prod.Primo.1701-sg=DEHICAAK; Expires=Mon, 25-Jun-2029
+        07:03:58 GMT; Path=/
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Fri, 28 Jun 2019 07:03:58 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,DELETE,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 28 Jun 2019 07:03:59 GMT
+      Server:
+      - CA-API-Gateway/9.0
+    body:
+      encoding: UTF-8
+      string: '{"rtaResultsLink":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/LATROBE?recordInformation=$$V21197344510002146$$OAlmalu21197344510002146|$$V51250811530002146$$OAlmalu51250811530002146|,|$$VAlmalu$$OAlmalu21197344510002146|$$VAlmalu$$OAlmalu51250811530002146|,|$$V61LATROBE_INST$$OAlmalu21197344510002146|$$V61LATROBE_INST$$OAlmalu51250811530002146|,|$$VAlma$$OAlmalu21197344510002146|$$VAlma$$OAlmalu51250811530002146|,|dedupmrg1308757867|,|$$I61LATROBE$$LBEN_LIB$$1Bendigo
+        Main Collection$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBEN_LIB$$Zhmc$$P1$$OAlmalu21197344510002146|$$I61LATROBE$$LBUN_LIB$$1Offsite
+        Storage Books (Please place a request)$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBUN_LIB$$Zbc2$$P2$$OAlmalu21197344510002146|,|$$I61LATROBE$$Savailable|,|Alma-E|Alma-P|,|$$V61LATROBE$$OAlmalu21197344510002146|$$V61LATROBE$$OAlmalu51250811530002146|,|$$V61LATROBE_INST:21197344510002146$$OAlmalu21197344510002146|$$V61LATROBE_INST:51250811530002146$$OAlmalu51250811530002146|,|__NO_VALUE__|,|__NO_VALUE__|,|$$Vb29950247$$OAlmalu21197344510002146|$$Vb34735707$$OAlmalu51250811530002146|,|__NO_VALUE__|;|","highlights":{"vertitle":["introductions
+        to researches for midwives","introduction to research for midwive","introduction
+        to research for midwives","an introductions to researches for midwives","introduction
+        research midwives","An introduction to research for midwives","midwive","an
+        introduction to research for midwive","introductions to research for midwives","an
+        introductions to research for midwives","introduction","introductions to research
+        for midwive","an introduction to researches for midwive","researches","introduction
+        to researches for midwive","research","an introductions to research for midwive","introduction
+        to researches for midwives","midwives","introductions","an introduction to
+        research for midwives","an introduction to researches for midwives"],"termsUnion":["an
+        introductions to research for midwive","an introduction to researches for
+        midwives","introduction to researches for midwives","introduction to research
+        for midwives","midwive","an introduction to research for midwive","researches","an
+        introductions to research for midwives","introduction to research for midwive","introductions
+        to research for midwives","introduction to researches for midwive","introductions
+        to research for midwive","an introductions to researches for midwives","An
+        introduction to research for midwives","an introduction to researches for
+        midwive","introductions to researches for midwives","midwives","introductions","introduction
+        research midwives","introduction","an introduction to research for midwives","research"],"title":["research","introduction
+        research midwives","introduction to research for midwive","researches","midwive","midwives","an
+        introduction to research for midwive","introductions to researches for midwives","introduction
+        to research for midwives","an introductions to research for midwives","introduction
+        to researches for midwives","An introduction to research for midwives","introductions","an
+        introductions to research for midwive","introduction to researches for midwive","introductions
+        to research for midwives","an introduction to researches for midwives","introductions
+        to research for midwive","an introduction to researches for midwive","an introduction
+        to research for midwives","an introductions to researches for midwives","introduction"]},"docs":[{"enrichment":{"virtualBrowseObject":{"callNumber":"618.20072
+        R3282","isVirtualBrowseEnabled":true,"callNumberBrowseField":"browse_callnumber.1"}},"delivery":{"availabilityLinks":["detailsGetit1","detailsGetit1"],"physicalItemTextCodes":"delivery.code.alsophysical","displayLocation":true,"availabilityLinksUrl":["",""],"link":[{"displayLabel":"thumbnail","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:0"},{"displayLabel":"thumbnail","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:9780702051654,OCLC:,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:1"},{"displayLabel":"$$Elinktotoc","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://www.amazon.com/gp/reader/9780702051654","linkType":"http://purl.org/pnx/linkType/linktotoc","@id":"_:2"},{"displayLabel":"$$Eamazon","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://www.amazon.com/gp/product/9780702051654","linkType":"http://purl.org/pnx/linkType/linktouc","@id":"_:3"},{"displayLabel":"$$Eworldcat","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://www.worldcat.org/search?q=isbn%3A9780702051654","linkType":"http://purl.org/pnx/linkType/linktouc","@id":"_:4"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=9780702051654/SC.JPG&client=primo","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:5"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:9780702051654,OCLC:,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:6"}],"availability":["not_restricted","available_in_my_institution"],"additionalLocations":false,"displayedAvailability":"not_restricted","holding":[{"matchForHoldings":[{"holdingRecord":"852##b","matchOn":"MainLocation"}],"subLocationCode":"hmc","ilsApiId":"","libraryCode":"BEN_LIB","isValidUser":true,"mainLocation":"BEN_LIB","callNumber":"(618.20072
+        R3282 )","adaptorid":"ALMA_01","organization":"61LATROBE","holdingURL":"OVP","@id":"_:0","availabilityStatus":"available","subLocation":"Bendigo
+        Main Collection","holdId":""},{"matchForHoldings":[{"holdingRecord":"852##b","matchOn":"MainLocation"}],"subLocationCode":"bc2","ilsApiId":"","libraryCode":"BUN_LIB","isValidUser":true,"mainLocation":"BUN_LIB","callNumber":"(618.20072
+        R3282 )","adaptorid":"ALMA_01","organization":"61LATROBE","holdingURL":"OVP","@id":"_:1","availabilityStatus":"available","subLocation":"Offsite
+        Storage Books (Please place a request)","holdId":""}],"bestlocation":{"matchForHoldings":[{"holdingRecord":"852##b","matchOn":"MainLocation"}],"mainLocation":"BEN_LIB","subLocationCode":"hmc","callNumber":"(618.20072
+        R3282 )","organization":"61LATROBE","libraryCode":"BEN_LIB","@id":"_:0","availabilityStatus":"available","subLocation":"Bendigo
+        Main Collection","holdId":"","isValidUser":true},"deliveryCategory":["Alma-E","Alma-P"],"serviceMode":["activate","activate"],"feDisplayOtherLocations":false,"GetIt1":[{"links":[{"isLinktoOnline":true,"displayText":"Almaviewit","hyperlinkText":"","getItTabText":"alma_tab1_norestrict","link":"https://ap01-a.alma.exlibrisgroup.com/view/uresolver/61LATROBE_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-06-28T15%3A03%3A58IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-Almalu&req_id=&rft_dat=ie=61LATROBE_INST:21197344510002146,ie=61LATROBE_INST:51250811530002146,language=eng,view=LATROBE&svc_dat=viewit&u.ignore_date_coverage=true","@id":"_:0"}],"category":"Alma-E"},{"links":[{"isLinktoOnline":false,"displayText":"Almagetit","hyperlinkText":"","getItTabText":"alma_tab1_avail","link":"https://ap01-a.alma.exlibrisgroup.com/view/uresolver/61LATROBE_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-06-28T15%3A03%3A58IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-Almalu&req_id=&rft_dat=ie=61LATROBE_INST:21197344510002146,ie=61LATROBE_INST:51250811530002146,language=eng,view=LATROBE&svc_dat=getit&user_ip=49.176.223.69","@id":"_:0"}],"category":"Alma-P"}]},"@rta_link":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/LATROBE?recordInformation=$$V21197344510002146$$OAlmalu21197344510002146|$$V51250811530002146$$OAlmalu51250811530002146|,|$$VAlmalu$$OAlmalu21197344510002146|$$VAlmalu$$OAlmalu51250811530002146|,|$$V61LATROBE_INST$$OAlmalu21197344510002146|$$V61LATROBE_INST$$OAlmalu51250811530002146|,|$$VAlma$$OAlmalu21197344510002146|$$VAlma$$OAlmalu51250811530002146|,|dedupmrg1308757867|,|$$I61LATROBE$$LBEN_LIB$$1Bendigo
+        Main Collection$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBEN_LIB$$Zhmc$$P1$$OAlmalu21197344510002146|$$I61LATROBE$$LBUN_LIB$$1Offsite
+        Storage Books (Please place a request)$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBUN_LIB$$Zbc2$$P2$$OAlmalu21197344510002146|,|$$I61LATROBE$$Savailable|,|Alma-E|Alma-P|,|$$V61LATROBE$$OAlmalu21197344510002146|$$V61LATROBE$$OAlmalu51250811530002146|,|$$V61LATROBE_INST:21197344510002146$$OAlmalu21197344510002146|$$V61LATROBE_INST:51250811530002146$$OAlmalu51250811530002146|,|__NO_VALUE__|,|__NO_VALUE__|,|$$Vb29950247$$OAlmalu21197344510002146|$$Vb34735707$$OAlmalu51250811530002146|,|__NO_VALUE__","context":"L","adaptor":"Local
+        Search Engine","pnx":{"delivery":{"institution":["$$V61LATROBE$$OAlmalu21197344510002146","$$V61LATROBE$$OAlmalu51250811530002146"],"delcategory":["$$VAlma-P$$OAlmalu21197344510002146","$$VAlma-E$$I61LATROBE$$OAlmalu51250811530002146"]},"search":{"sourceid":["Almalu"],"creatorcontrib":["Colin.  Rees","Rees,
+        Colin.","Rees, C","Colin Rees.","Mosby, Inc."],"creationdate":["2012","2011"],"subject":["Midwifery
+        Research.","Midwifery Research Methodology.","Electronic books."],"isbn":["9780702051654","9780702034909"],"rsrctype":["book"],"toc":["Machine
+        generated contents note: 1.Midwifery, research and evidence-based practice
+        -- 2.Key concepts in research -- 3.The basic framework of research -- 4.Qualitative
+        research approaches -- 5.Critiquing research articles -- 6.Reviewing the literature
+        -- 7.The research question -- 8.Ethics and research -- 9.Surveys -- 10.Interviews
+        -- 11.Observation -- 12.Experiments -- 13.Statistics in research -- 14.Sampling
+        methods -- 15.The challenge of the future.","Midwifery, research and evidence-based
+        practice -- Key concepts in research -- The basic framework of research --
+        Qualitative research approaches -- Critiquing research articles -- Reviewing
+        the literature -- The research question -- Ethics and research -- Surveys
+        -- Interviews -- Observation -- Experiments -- Statistics in research -- Sampling
+        methods -- The challenge of the future."],"lsr02":["b29950247","b34735707"],"startdate":["20120101","20110101"],"title":["An
+        introduction to research for midwives /","An introduction to research for
+        midwives"],"addsrcrecordid":["9999478402146","9989535502146"],"recordid":["Almalu21197344510002146","Almalu51250811530002146"],"general":["Churchill
+        Livingstone/Elsevier,","Elsevier,","[electronic resource] /"],"enddate":["20121231","20111231"],"alttitle":["Research
+        for midwives."],"scope":["Almalu","BEN_LIB","BUN_LIB","LTUP","LTUPAW","61LATROBE","61LATROBE_INSTALL","61LATROBE_INSTH_MALAY","61LATROBE_INSTAUCK","61LATROBE_INSTAUSTIN","61LATROBE_INSTVIET","61LATROBE_INSTAUST","61LATROBE_INSTBEND_CLIN","61LATROBE_INSTNMIT","61LATROBE_INSTFRANCE","61LATROBE_INSTH_KONG","61LATROBE_INSTKANGAN","61LATROBE_INSTMILDURA","61LATROBE_INSTINDO","61LATROBE_INSTBUND","61LATROBE_INSTALICE","61LATROBE_INSTJAPAN","61LATROBE_INSTKUNMING","61LATROBE_INSTK_MALAY","61LATROBE_INSTR_MELB","61LATROBE_INSTAW_TAFE","61LATROBE_INSTHANOI","61LATROBE_INSTN_MALAY","61LATROBE_INSTQATAR","61LATROBE_INSTSINGA","61LATROBE_INSTEXT_DIST","61LATROBE_INSTCHISHOLM","61LATROBE_INSTBEND","61LATROBE_INSTSHEP","61LATROBE_INSTCHINA","61LATROBE_INSTMALAYSIA","61LATROBE_INSTAL_WODONGA","61LATROBE_INSTCITYF","61LATROBE_INSTCITYC","61LATROBE_INSTNORTHERN","61LATROBE_INSTBHUTAN","61LATROBE_INSTALFRED","61LATROBE_INSTOTHER","61LATROBE_INSTBOUVERIE","61LATROBE_INSTTHAI","61LATROBE_INSTMONGOLIA","61LATROBE_INSTINDIA","LTUE"]},"display":{"identifier":["$$CISBN$$V9780702051654
+        (pbk.)"],"creationdate":["2012"],"creator":["Colin. Rees$$QRees, Colin"],"availinstitution":["$$I61LATROBE$$Savailable"],"subject":["Midwifery
+        -- Research; Midwifery -- Research -- Methodology"],"format":["x, 249 p. :
+        ill. ; 24 cm.."],"edition":["3rd ed.."],"description":["Machine generated
+        contents note: 1.Midwifery, research and evidence-based practice -- 2.Key
+        concepts in research -- 3.The basic framework of research -- 4.Qualitative
+        research approaches -- 5.Critiquing research articles -- 6.Reviewing the literature
+        -- 7.The research question -- 8.Ethics and research -- 9.Surveys -- 10.Interviews
+        -- 11.Observation -- 12.Experiments -- 13.Statistics in research -- 14.Sampling
+        methods -- 15.The challenge of the future."],"language":["eng"],"availlibrary":["$$I61LATROBE$$LBEN_LIB$$1Bendigo
+        Main Collection$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBEN_LIB$$Zhmc$$P1$$OAlmalu21197344510002146","$$I61LATROBE$$LBUN_LIB$$1Offsite
+        Storage Books (Please place a request)$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBUN_LIB$$Zbc2$$P2$$OAlmalu21197344510002146"],"source":["$$VAlmalu$$OAlmalu21197344510002146","$$VAlmalu$$OAlmalu51250811530002146"],"title":["An
+        introduction to research for midwives"],"type":["book"],"version":["2"],"publisher":["Edinburgh
+        : Churchill Livingstone/Elsevier"],"availpnx":["available"]},"links":{"thumbnail":["$$Tamazon_thumb","$$Tgoogle_thumb"],"linktotoc":["$$Tamazon_toc$$Elinktotoc"],"linktouc":["$$Tamazon_uc$$Eamazon","$$Tworldcat_isbn$$Eworldcat","$$Tamazon_uc$$Eamazon","$$Tworldcat_isbn$$Eworldcat"]},"ranking":{"booster2":["1"],"booster1":["1"]},"control":{"recordid":["dedupmrg1308757867"],"sourceid":["$$VAlmalu$$OAlmalu21197344510002146","$$VAlmalu$$OAlmalu51250811530002146"],"almaid":["$$V61LATROBE_INST:21197344510002146$$OAlmalu21197344510002146","$$V61LATROBE_INST:51250811530002146$$OAlmalu51250811530002146"],"almaidthumb":["61LATROBE_INST/21197344510002146"],"originalsourceid":["$$V61LATROBE_INST$$OAlmalu21197344510002146","$$V61LATROBE_INST$$OAlmalu51250811530002146"],"sourceformat":["$$VMARC21$$OAlmalu21197344510002146","$$VMARC21$$OAlmalu51250811530002146"],"sourcerecordid":["$$V21197344510002146$$OAlmalu21197344510002146","$$V51250811530002146$$OAlmalu51250811530002146"],"sourcesystem":["$$VAlma$$OAlmalu21197344510002146","$$VAlma$$OAlmalu51250811530002146"],"addsrcrecordid":["$$Vb29950247$$OAlmalu21197344510002146","$$Vb34735707$$OAlmalu51250811530002146"]},"addata":{"date":["2012","2011"],"notes":["Includes
+        bibliographical references and index."],"aulast":["Rees"],"cop":["Edinburgh","Edinburgh
+        ; New York"],"isbn":["9780702051654","9780702034909"],"format":["book"],"ristype":["BOOK"],"mis1":["21197344510002146","51250811530002146"],"addtitle":["Research
+        for midwives"],"aufirst":["Colin."],"addau":["Mosby, Inc"],"au":["Rees, Colin"],"genre":["book"],"btitle":["An
+        introduction to research for midwives"],"risdate":["2012","2011"],"pub":["Churchill
+        Livingstone/Elsevier","Elsevier"]},"sort":{"creationdate":["2012"],"author":["Rees,
+        Colin."],"title":["introduction to research for midwives /"]},"frbr":{"t":[1],"k1":["$$Krees
+        colin$$AA"],"k3":["$$Kintroduction to research for midwives$$AT"]},"dedup":{"f10":["churchill
+        livingstone elsevier"],"f20":["9999478402146"],"f11":["rees colin"],"f3":["9780702051654"],"c2":["9780702051654"],"f5":["introductiontoresearormidwives"],"c3":["introductiontoresearormidwives"],"f6":["2012"],"c4":["2012"],"f7":["introduction
+        to research for midwives"],"c5":["9999478402146"],"f8":["stk"],"f9":["x, 249
+        p. :"],"t":[1]},"facets":{"frbrtype":["5"],"creatorcontrib":["Rees, C","Mosby,
+        Inc"],"creationdate":["2012","2011"],"newrecords":["20150123_539","20150617_482"],"rsrctype":["books"],"language":["eng"],"collection":["BEN_LIB","BUN_LIB"],"prefilter":["books"],"toplevel":["available"],"library":["BEN_LIB","BUN_LIB"],"atoz":["I"],"frbrgroupid":["1367764073"],"genre":["Electronic
+        books"],"topic":["Midwifery\u2013Research","Midwifery\u2013Research\u2013Methodology"]},"browse":{"institution":["61LATROBE"],"subject":["$$DMidwifery
+        -- Research$$EMidwifery Research$$U61LATROBE","$$DMidwifery -- Research --
+        Methodology$$EMidwifery Research Methodology$$U61LATROBE","$$DElectronic books$$EElectronic
+        books$$U61LATROBE"],"author":["$$DRees, Colin$$ERees, Colin$$U61LATROBE","$$DMosby,
+        Inc$$EMosby, Inc$$U61LATROBE"],"callnumber":["$$I61LATROBE$$D618.20072 R3282$$E000000000618.020072000000
+        r000000003282$$T1"],"title":["$$DAn introduction to research for midwives$$Eintroduction
+        to research for midwives$$U61LATROBE","$$DResearch for midwives$$EResearch
+        for midwives$$U61LATROBE"]}},"@id":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/dedupmrg1308757867"}],"timelog":{"CalculateRtaLinks1DeltaTime":30,"BriefSearchDeltaTime":779,"DoSearchPrimoResultDeltaTime":749,"StartBriefSearch":1561705438200,"retrieveHighLightsDeltaTime":30,"retrieveDidUMeanDeltaTime":30,"GetSearchStatusDeltaTime":749,"StartTranslationTime":1561705438949,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":30,"retrieveFacetsDeltaTime":30},"lang3":"eng","info":{"total":1,"last":"1","maxTotal":0,"first":"1"},"facets":[{"values":[{"count":1,"value":"Rees,
+        C"},{"count":1,"value":"Mosby, Inc"}],"name":"creator"},{"values":[{"count":1,"value":"2012"},{"count":1,"value":"2011"}],"name":"creationdate"},{"values":[{"count":1,"value":"available"}],"name":"tlevel"},{"values":[{"count":1,"value":"BEN_LIB"},{"count":1,"value":"BUN_LIB"}],"name":"library"},{"values":[{"count":1,"value":"BEN_LIB"},{"count":1,"value":"BUN_LIB"}],"name":"domain"},{"values":[{"count":1,"value":"Electronic
+        books"}],"name":"genre"},{"values":[{"count":1,"value":"Midwifery"}],"name":"topic"},{"values":[{"count":1,"value":"books"}],"name":"pfilter"},{"values":[{"count":1,"value":"eng"}],"name":"lang"}],"beaconO22":"783"}'
+    http_version: 
+  recorded_at: Fri, 28 Jun 2019 07:03:59 GMT
+recorded_with: VCR 2.9.3
