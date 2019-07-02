@@ -22,13 +22,13 @@ http_interactions:
       message: OK
     headers:
       Set-Cookie:
-      - JSESSIONID=75B235428DEB4703F2C85AC032F70131; Path=/primo/v1; HttpOnly; Domain=api-ap.hosted.exlibrisgroup.com
-      - sto-id-%3FPS_PROD%3FPMT.Prod.Primo.1701-sg=DEHICAAK; Expires=Mon, 25-Jun-2029
-        07:03:57 GMT; Path=/
+      - JSESSIONID=8F0922EC6DDDE37EC8F9750EAC9AD726; Path=/primo/v1; HttpOnly; Domain=api-ap.hosted.exlibrisgroup.com
+      - sto-id-%3FPS_PROD%3FPMT.Prod.Primo.1701-sg=DEHICAAK; Expires=Fri, 29-Jun-2029
+        05:57:08 GMT; Path=/
       Cache-Control:
       - max-age=0
       Expires:
-      - Fri, 28 Jun 2019 07:03:57 GMT
+      - Tue, 02 Jul 2019 05:57:08 GMT
       Vary:
       - Accept-Encoding
       Access-Control-Allow-Origin:
@@ -42,17 +42,17 @@ http_interactions:
       Content-Length:
       - '680'
       Date:
-      - Fri, 28 Jun 2019 07:03:56 GMT
+      - Tue, 02 Jul 2019 05:57:07 GMT
       Server:
       - CA-API-Gateway/9.0
     body:
       encoding: UTF-8
-      string: '"eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYxNzkxODM3LCJpYXQiOjE1NjE3MDU0MzcsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.A5zFxHAVfvzlkmpGaHnMyzRPrCMIV152h2HkXYa5qHDnFtm3msc_isdOUp94AXn1qA33zr5NT1gItzhEiNXd8A"'
+      string: '"eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYyMTMzNDI4LCJpYXQiOjE1NjIwNDcwMjgsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.qY46nBMVS8ZQbCvNG6DWO2Ilfq65gEpxg-EWtD66VeGcm1VFZyK_RrR6bNTynIrQ2Icxy7XDdGanHWAjSBlb1Q"'
     http_version: 
-  recorded_at: Fri, 28 Jun 2019 07:03:57 GMT
+  recorded_at: Tue, 02 Jul 2019 05:57:08 GMT
 - request:
     method: get
-    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_ALT_API_KEY>&limit=5&multiFacets=facet_rtype,include,books&offset=0&q=title,contains,An%20introduction%20to%20research%20for%20midwives,AND%3Bisbn,contains,0702034908&scope=All&tab=default_tab&vid=LATROBE
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_ALT_API_KEY>&limit=5&multiFacets=facet_rtype,include,images&offset=0&q=title,contains,Wooden%20figure%20depicting%20a%20brown%20bear&scope=All&tab=default_tab&vid=LATROBE
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.15.3
       Authorization:
-      - Bearer "eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYxNzkxODM3LCJpYXQiOjE1NjE3MDU0MzcsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.A5zFxHAVfvzlkmpGaHnMyzRPrCMIV152h2HkXYa5qHDnFtm3msc_isdOUp94AXn1qA33zr5NT1gItzhEiNXd8A"
+      - Bearer "eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYyMTMzNDI4LCJpYXQiOjE1NjIwNDcwMjgsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.qY46nBMVS8ZQbCvNG6DWO2Ilfq65gEpxg-EWtD66VeGcm1VFZyK_RrR6bNTynIrQ2Icxy7XDdGanHWAjSBlb1Q"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -71,13 +71,13 @@ http_interactions:
       message: OK
     headers:
       Set-Cookie:
-      - JSESSIONID=1DD9FA2A48A3AAFB5A0D34A184B89C82; Path=/primo/v1; HttpOnly; Domain=api-ap.hosted.exlibrisgroup.com
-      - sto-id-%3FPS_PROD%3FPMT.Prod.Primo.1701-sg=DEHICAAK; Expires=Mon, 25-Jun-2029
-        07:03:58 GMT; Path=/
+      - JSESSIONID=2AD88D811EF01843CE80B43E39048FAB; Path=/primo/v1; HttpOnly; Domain=api-ap.hosted.exlibrisgroup.com
+      - sto-id-%3FPS_PROD%3FPMT.Prod.Primo.1701-sg=DEHICAAK; Expires=Fri, 29-Jun-2029
+        05:57:09 GMT; Path=/
       Cache-Control:
       - max-age=0
       Expires:
-      - Fri, 28 Jun 2019 07:03:58 GMT
+      - Tue, 02 Jul 2019 05:57:09 GMT
       Vary:
       - Accept-Encoding
       Access-Control-Allow-Origin:
@@ -88,104 +88,41 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept, Authorization
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '7075'
       Date:
-      - Fri, 28 Jun 2019 07:03:59 GMT
+      - Tue, 02 Jul 2019 05:57:09 GMT
       Server:
       - CA-API-Gateway/9.0
     body:
       encoding: UTF-8
-      string: '{"rtaResultsLink":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/LATROBE?recordInformation=$$V21197344510002146$$OAlmalu21197344510002146|$$V51250811530002146$$OAlmalu51250811530002146|,|$$VAlmalu$$OAlmalu21197344510002146|$$VAlmalu$$OAlmalu51250811530002146|,|$$V61LATROBE_INST$$OAlmalu21197344510002146|$$V61LATROBE_INST$$OAlmalu51250811530002146|,|$$VAlma$$OAlmalu21197344510002146|$$VAlma$$OAlmalu51250811530002146|,|dedupmrg1308757867|,|$$I61LATROBE$$LBEN_LIB$$1Bendigo
-        Main Collection$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBEN_LIB$$Zhmc$$P1$$OAlmalu21197344510002146|$$I61LATROBE$$LBUN_LIB$$1Offsite
-        Storage Books (Please place a request)$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBUN_LIB$$Zbc2$$P2$$OAlmalu21197344510002146|,|$$I61LATROBE$$Savailable|,|Alma-E|Alma-P|,|$$V61LATROBE$$OAlmalu21197344510002146|$$V61LATROBE$$OAlmalu51250811530002146|,|$$V61LATROBE_INST:21197344510002146$$OAlmalu21197344510002146|$$V61LATROBE_INST:51250811530002146$$OAlmalu51250811530002146|,|__NO_VALUE__|,|__NO_VALUE__|,|$$Vb29950247$$OAlmalu21197344510002146|$$Vb34735707$$OAlmalu51250811530002146|,|__NO_VALUE__|;|","highlights":{"vertitle":["introductions
-        to researches for midwives","introduction to research for midwive","introduction
-        to research for midwives","an introductions to researches for midwives","introduction
-        research midwives","An introduction to research for midwives","midwive","an
-        introduction to research for midwive","introductions to research for midwives","an
-        introductions to research for midwives","introduction","introductions to research
-        for midwive","an introduction to researches for midwive","researches","introduction
-        to researches for midwive","research","an introductions to research for midwive","introduction
-        to researches for midwives","midwives","introductions","an introduction to
-        research for midwives","an introduction to researches for midwives"],"termsUnion":["an
-        introductions to research for midwive","an introduction to researches for
-        midwives","introduction to researches for midwives","introduction to research
-        for midwives","midwive","an introduction to research for midwive","researches","an
-        introductions to research for midwives","introduction to research for midwive","introductions
-        to research for midwives","introduction to researches for midwive","introductions
-        to research for midwive","an introductions to researches for midwives","An
-        introduction to research for midwives","an introduction to researches for
-        midwive","introductions to researches for midwives","midwives","introductions","introduction
-        research midwives","introduction","an introduction to research for midwives","research"],"title":["research","introduction
-        research midwives","introduction to research for midwive","researches","midwive","midwives","an
-        introduction to research for midwive","introductions to researches for midwives","introduction
-        to research for midwives","an introductions to research for midwives","introduction
-        to researches for midwives","An introduction to research for midwives","introductions","an
-        introductions to research for midwive","introduction to researches for midwive","introductions
-        to research for midwives","an introduction to researches for midwives","introductions
-        to research for midwive","an introduction to researches for midwive","an introduction
-        to research for midwives","an introductions to researches for midwives","introduction"]},"docs":[{"enrichment":{"virtualBrowseObject":{"callNumber":"618.20072
-        R3282","isVirtualBrowseEnabled":true,"callNumberBrowseField":"browse_callnumber.1"}},"delivery":{"availabilityLinks":["detailsGetit1","detailsGetit1"],"physicalItemTextCodes":"delivery.code.alsophysical","displayLocation":true,"availabilityLinksUrl":["",""],"link":[{"displayLabel":"thumbnail","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:0"},{"displayLabel":"thumbnail","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:9780702051654,OCLC:,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:1"},{"displayLabel":"$$Elinktotoc","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://www.amazon.com/gp/reader/9780702051654","linkType":"http://purl.org/pnx/linkType/linktotoc","@id":"_:2"},{"displayLabel":"$$Eamazon","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://www.amazon.com/gp/product/9780702051654","linkType":"http://purl.org/pnx/linkType/linktouc","@id":"_:3"},{"displayLabel":"$$Eworldcat","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://www.worldcat.org/search?q=isbn%3A9780702051654","linkType":"http://purl.org/pnx/linkType/linktouc","@id":"_:4"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=9780702051654/SC.JPG&client=primo","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:5"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:9780702051654,OCLC:,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:6"}],"availability":["not_restricted","available_in_my_institution"],"additionalLocations":false,"displayedAvailability":"not_restricted","holding":[{"matchForHoldings":[{"holdingRecord":"852##b","matchOn":"MainLocation"}],"subLocationCode":"hmc","ilsApiId":"","libraryCode":"BEN_LIB","isValidUser":true,"mainLocation":"BEN_LIB","callNumber":"(618.20072
-        R3282 )","adaptorid":"ALMA_01","organization":"61LATROBE","holdingURL":"OVP","@id":"_:0","availabilityStatus":"available","subLocation":"Bendigo
-        Main Collection","holdId":""},{"matchForHoldings":[{"holdingRecord":"852##b","matchOn":"MainLocation"}],"subLocationCode":"bc2","ilsApiId":"","libraryCode":"BUN_LIB","isValidUser":true,"mainLocation":"BUN_LIB","callNumber":"(618.20072
-        R3282 )","adaptorid":"ALMA_01","organization":"61LATROBE","holdingURL":"OVP","@id":"_:1","availabilityStatus":"available","subLocation":"Offsite
-        Storage Books (Please place a request)","holdId":""}],"bestlocation":{"matchForHoldings":[{"holdingRecord":"852##b","matchOn":"MainLocation"}],"mainLocation":"BEN_LIB","subLocationCode":"hmc","callNumber":"(618.20072
-        R3282 )","organization":"61LATROBE","libraryCode":"BEN_LIB","@id":"_:0","availabilityStatus":"available","subLocation":"Bendigo
-        Main Collection","holdId":"","isValidUser":true},"deliveryCategory":["Alma-E","Alma-P"],"serviceMode":["activate","activate"],"feDisplayOtherLocations":false,"GetIt1":[{"links":[{"isLinktoOnline":true,"displayText":"Almaviewit","hyperlinkText":"","getItTabText":"alma_tab1_norestrict","link":"https://ap01-a.alma.exlibrisgroup.com/view/uresolver/61LATROBE_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-06-28T15%3A03%3A58IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-Almalu&req_id=&rft_dat=ie=61LATROBE_INST:21197344510002146,ie=61LATROBE_INST:51250811530002146,language=eng,view=LATROBE&svc_dat=viewit&u.ignore_date_coverage=true","@id":"_:0"}],"category":"Alma-E"},{"links":[{"isLinktoOnline":false,"displayText":"Almagetit","hyperlinkText":"","getItTabText":"alma_tab1_avail","link":"https://ap01-a.alma.exlibrisgroup.com/view/uresolver/61LATROBE_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-06-28T15%3A03%3A58IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-Almalu&req_id=&rft_dat=ie=61LATROBE_INST:21197344510002146,ie=61LATROBE_INST:51250811530002146,language=eng,view=LATROBE&svc_dat=getit&user_ip=49.176.223.69","@id":"_:0"}],"category":"Alma-P"}]},"@rta_link":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/LATROBE?recordInformation=$$V21197344510002146$$OAlmalu21197344510002146|$$V51250811530002146$$OAlmalu51250811530002146|,|$$VAlmalu$$OAlmalu21197344510002146|$$VAlmalu$$OAlmalu51250811530002146|,|$$V61LATROBE_INST$$OAlmalu21197344510002146|$$V61LATROBE_INST$$OAlmalu51250811530002146|,|$$VAlma$$OAlmalu21197344510002146|$$VAlma$$OAlmalu51250811530002146|,|dedupmrg1308757867|,|$$I61LATROBE$$LBEN_LIB$$1Bendigo
-        Main Collection$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBEN_LIB$$Zhmc$$P1$$OAlmalu21197344510002146|$$I61LATROBE$$LBUN_LIB$$1Offsite
-        Storage Books (Please place a request)$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBUN_LIB$$Zbc2$$P2$$OAlmalu21197344510002146|,|$$I61LATROBE$$Savailable|,|Alma-E|Alma-P|,|$$V61LATROBE$$OAlmalu21197344510002146|$$V61LATROBE$$OAlmalu51250811530002146|,|$$V61LATROBE_INST:21197344510002146$$OAlmalu21197344510002146|$$V61LATROBE_INST:51250811530002146$$OAlmalu51250811530002146|,|__NO_VALUE__|,|__NO_VALUE__|,|$$Vb29950247$$OAlmalu21197344510002146|$$Vb34735707$$OAlmalu51250811530002146|,|__NO_VALUE__","context":"L","adaptor":"Local
-        Search Engine","pnx":{"delivery":{"institution":["$$V61LATROBE$$OAlmalu21197344510002146","$$V61LATROBE$$OAlmalu51250811530002146"],"delcategory":["$$VAlma-P$$OAlmalu21197344510002146","$$VAlma-E$$I61LATROBE$$OAlmalu51250811530002146"]},"search":{"sourceid":["Almalu"],"creatorcontrib":["Colin.  Rees","Rees,
-        Colin.","Rees, C","Colin Rees.","Mosby, Inc."],"creationdate":["2012","2011"],"subject":["Midwifery
-        Research.","Midwifery Research Methodology.","Electronic books."],"isbn":["9780702051654","9780702034909"],"rsrctype":["book"],"toc":["Machine
-        generated contents note: 1.Midwifery, research and evidence-based practice
-        -- 2.Key concepts in research -- 3.The basic framework of research -- 4.Qualitative
-        research approaches -- 5.Critiquing research articles -- 6.Reviewing the literature
-        -- 7.The research question -- 8.Ethics and research -- 9.Surveys -- 10.Interviews
-        -- 11.Observation -- 12.Experiments -- 13.Statistics in research -- 14.Sampling
-        methods -- 15.The challenge of the future.","Midwifery, research and evidence-based
-        practice -- Key concepts in research -- The basic framework of research --
-        Qualitative research approaches -- Critiquing research articles -- Reviewing
-        the literature -- The research question -- Ethics and research -- Surveys
-        -- Interviews -- Observation -- Experiments -- Statistics in research -- Sampling
-        methods -- The challenge of the future."],"lsr02":["b29950247","b34735707"],"startdate":["20120101","20110101"],"title":["An
-        introduction to research for midwives /","An introduction to research for
-        midwives"],"addsrcrecordid":["9999478402146","9989535502146"],"recordid":["Almalu21197344510002146","Almalu51250811530002146"],"general":["Churchill
-        Livingstone/Elsevier,","Elsevier,","[electronic resource] /"],"enddate":["20121231","20111231"],"alttitle":["Research
-        for midwives."],"scope":["Almalu","BEN_LIB","BUN_LIB","LTUP","LTUPAW","61LATROBE","61LATROBE_INSTALL","61LATROBE_INSTH_MALAY","61LATROBE_INSTAUCK","61LATROBE_INSTAUSTIN","61LATROBE_INSTVIET","61LATROBE_INSTAUST","61LATROBE_INSTBEND_CLIN","61LATROBE_INSTNMIT","61LATROBE_INSTFRANCE","61LATROBE_INSTH_KONG","61LATROBE_INSTKANGAN","61LATROBE_INSTMILDURA","61LATROBE_INSTINDO","61LATROBE_INSTBUND","61LATROBE_INSTALICE","61LATROBE_INSTJAPAN","61LATROBE_INSTKUNMING","61LATROBE_INSTK_MALAY","61LATROBE_INSTR_MELB","61LATROBE_INSTAW_TAFE","61LATROBE_INSTHANOI","61LATROBE_INSTN_MALAY","61LATROBE_INSTQATAR","61LATROBE_INSTSINGA","61LATROBE_INSTEXT_DIST","61LATROBE_INSTCHISHOLM","61LATROBE_INSTBEND","61LATROBE_INSTSHEP","61LATROBE_INSTCHINA","61LATROBE_INSTMALAYSIA","61LATROBE_INSTAL_WODONGA","61LATROBE_INSTCITYF","61LATROBE_INSTCITYC","61LATROBE_INSTNORTHERN","61LATROBE_INSTBHUTAN","61LATROBE_INSTALFRED","61LATROBE_INSTOTHER","61LATROBE_INSTBOUVERIE","61LATROBE_INSTTHAI","61LATROBE_INSTMONGOLIA","61LATROBE_INSTINDIA","LTUE"]},"display":{"identifier":["$$CISBN$$V9780702051654
-        (pbk.)"],"creationdate":["2012"],"creator":["Colin. Rees$$QRees, Colin"],"availinstitution":["$$I61LATROBE$$Savailable"],"subject":["Midwifery
-        -- Research; Midwifery -- Research -- Methodology"],"format":["x, 249 p. :
-        ill. ; 24 cm.."],"edition":["3rd ed.."],"description":["Machine generated
-        contents note: 1.Midwifery, research and evidence-based practice -- 2.Key
-        concepts in research -- 3.The basic framework of research -- 4.Qualitative
-        research approaches -- 5.Critiquing research articles -- 6.Reviewing the literature
-        -- 7.The research question -- 8.Ethics and research -- 9.Surveys -- 10.Interviews
-        -- 11.Observation -- 12.Experiments -- 13.Statistics in research -- 14.Sampling
-        methods -- 15.The challenge of the future."],"language":["eng"],"availlibrary":["$$I61LATROBE$$LBEN_LIB$$1Bendigo
-        Main Collection$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBEN_LIB$$Zhmc$$P1$$OAlmalu21197344510002146","$$I61LATROBE$$LBUN_LIB$$1Offsite
-        Storage Books (Please place a request)$$2(618.20072 R3282 )$$Savailable$$X61LATROBE_INST$$YBUN_LIB$$Zbc2$$P2$$OAlmalu21197344510002146"],"source":["$$VAlmalu$$OAlmalu21197344510002146","$$VAlmalu$$OAlmalu51250811530002146"],"title":["An
-        introduction to research for midwives"],"type":["book"],"version":["2"],"publisher":["Edinburgh
-        : Churchill Livingstone/Elsevier"],"availpnx":["available"]},"links":{"thumbnail":["$$Tamazon_thumb","$$Tgoogle_thumb"],"linktotoc":["$$Tamazon_toc$$Elinktotoc"],"linktouc":["$$Tamazon_uc$$Eamazon","$$Tworldcat_isbn$$Eworldcat","$$Tamazon_uc$$Eamazon","$$Tworldcat_isbn$$Eworldcat"]},"ranking":{"booster2":["1"],"booster1":["1"]},"control":{"recordid":["dedupmrg1308757867"],"sourceid":["$$VAlmalu$$OAlmalu21197344510002146","$$VAlmalu$$OAlmalu51250811530002146"],"almaid":["$$V61LATROBE_INST:21197344510002146$$OAlmalu21197344510002146","$$V61LATROBE_INST:51250811530002146$$OAlmalu51250811530002146"],"almaidthumb":["61LATROBE_INST/21197344510002146"],"originalsourceid":["$$V61LATROBE_INST$$OAlmalu21197344510002146","$$V61LATROBE_INST$$OAlmalu51250811530002146"],"sourceformat":["$$VMARC21$$OAlmalu21197344510002146","$$VMARC21$$OAlmalu51250811530002146"],"sourcerecordid":["$$V21197344510002146$$OAlmalu21197344510002146","$$V51250811530002146$$OAlmalu51250811530002146"],"sourcesystem":["$$VAlma$$OAlmalu21197344510002146","$$VAlma$$OAlmalu51250811530002146"],"addsrcrecordid":["$$Vb29950247$$OAlmalu21197344510002146","$$Vb34735707$$OAlmalu51250811530002146"]},"addata":{"date":["2012","2011"],"notes":["Includes
-        bibliographical references and index."],"aulast":["Rees"],"cop":["Edinburgh","Edinburgh
-        ; New York"],"isbn":["9780702051654","9780702034909"],"format":["book"],"ristype":["BOOK"],"mis1":["21197344510002146","51250811530002146"],"addtitle":["Research
-        for midwives"],"aufirst":["Colin."],"addau":["Mosby, Inc"],"au":["Rees, Colin"],"genre":["book"],"btitle":["An
-        introduction to research for midwives"],"risdate":["2012","2011"],"pub":["Churchill
-        Livingstone/Elsevier","Elsevier"]},"sort":{"creationdate":["2012"],"author":["Rees,
-        Colin."],"title":["introduction to research for midwives /"]},"frbr":{"t":[1],"k1":["$$Krees
-        colin$$AA"],"k3":["$$Kintroduction to research for midwives$$AT"]},"dedup":{"f10":["churchill
-        livingstone elsevier"],"f20":["9999478402146"],"f11":["rees colin"],"f3":["9780702051654"],"c2":["9780702051654"],"f5":["introductiontoresearormidwives"],"c3":["introductiontoresearormidwives"],"f6":["2012"],"c4":["2012"],"f7":["introduction
-        to research for midwives"],"c5":["9999478402146"],"f8":["stk"],"f9":["x, 249
-        p. :"],"t":[1]},"facets":{"frbrtype":["5"],"creatorcontrib":["Rees, C","Mosby,
-        Inc"],"creationdate":["2012","2011"],"newrecords":["20150123_539","20150617_482"],"rsrctype":["books"],"language":["eng"],"collection":["BEN_LIB","BUN_LIB"],"prefilter":["books"],"toplevel":["available"],"library":["BEN_LIB","BUN_LIB"],"atoz":["I"],"frbrgroupid":["1367764073"],"genre":["Electronic
-        books"],"topic":["Midwifery\u2013Research","Midwifery\u2013Research\u2013Methodology"]},"browse":{"institution":["61LATROBE"],"subject":["$$DMidwifery
-        -- Research$$EMidwifery Research$$U61LATROBE","$$DMidwifery -- Research --
-        Methodology$$EMidwifery Research Methodology$$U61LATROBE","$$DElectronic books$$EElectronic
-        books$$U61LATROBE"],"author":["$$DRees, Colin$$ERees, Colin$$U61LATROBE","$$DMosby,
-        Inc$$EMosby, Inc$$U61LATROBE"],"callnumber":["$$I61LATROBE$$D618.20072 R3282$$E000000000618.020072000000
-        r000000003282$$T1"],"title":["$$DAn introduction to research for midwives$$Eintroduction
-        to research for midwives$$U61LATROBE","$$DResearch for midwives$$EResearch
-        for midwives$$U61LATROBE"]}},"@id":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/dedupmrg1308757867"}],"timelog":{"CalculateRtaLinks1DeltaTime":30,"BriefSearchDeltaTime":779,"DoSearchPrimoResultDeltaTime":749,"StartBriefSearch":1561705438200,"retrieveHighLightsDeltaTime":30,"retrieveDidUMeanDeltaTime":30,"GetSearchStatusDeltaTime":749,"StartTranslationTime":1561705438949,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":30,"retrieveFacetsDeltaTime":30},"lang3":"eng","info":{"total":1,"last":"1","maxTotal":0,"first":"1"},"facets":[{"values":[{"count":1,"value":"Rees,
-        C"},{"count":1,"value":"Mosby, Inc"}],"name":"creator"},{"values":[{"count":1,"value":"2012"},{"count":1,"value":"2011"}],"name":"creationdate"},{"values":[{"count":1,"value":"available"}],"name":"tlevel"},{"values":[{"count":1,"value":"BEN_LIB"},{"count":1,"value":"BUN_LIB"}],"name":"library"},{"values":[{"count":1,"value":"BEN_LIB"},{"count":1,"value":"BUN_LIB"}],"name":"domain"},{"values":[{"count":1,"value":"Electronic
-        books"}],"name":"genre"},{"values":[{"count":1,"value":"Midwifery"}],"name":"topic"},{"values":[{"count":1,"value":"books"}],"name":"pfilter"},{"values":[{"count":1,"value":"eng"}],"name":"lang"}],"beaconO22":"783"}'
+      string: '{"highlights":{"vertitle":["Wooden","brown","figure","Wooden figure
+        depicting","brown bear","bear","depicting","a","wooden"],"termsUnion":["depicting","brown
+        bear","bear","brown","figure","Wooden figure depicting","wooden"],"title":["a","Wooden","depicting","figure","Wooden
+        figure depicting","wooden","brown","bear","brown bear"]},"docs":[{"enrichment":{"virtualBrowseObject":{"callNumber":"","isVirtualBrowseEnabled":false,"callNumberBrowseField":"browse_callnumber"}},"delivery":{"availabilityLinks":["directlink"],"physicalItemTextCodes":"","displayLocation":false,"availabilityLinksUrl":["http://library.artstor.org/#/asset/AHARVARDIG_10313276386&fs=true"],"link":[{"displayLabel":"openurl","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://1.1.1.1?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2019-07-02T13%3A57%3A09IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-artstor&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Wooden%20figure%20depicting%20a%20brown%20bear&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Tlingit:%20Teikweidi&rft.aucorp=&rft.date=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3Cartstor%3EAHARVARDIG_10313276386%3C/artstor%3E%3Cgrp_id%3E638715122109452657%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_galeid=&rft_cupid=&rft_eruid=&rft_nurid=&rft_ingid=","linkType":"http://purl.org/pnx/linkType/openurl","@id":"_:0"},{"displayLabel":"thumbnail","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://media.artstor.net/imgstor/size2/harvard/peabody/harv_peab_60740702_post_as_8b_srgb.jpg","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:1"},{"displayLabel":"$$EView_full_text_in_Artstor_(subscribers
+        only)","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://library.artstor.org/#/asset/AHARVARDIG_10313276386&fs=true","linkType":"http://purl.org/pnx/linkType/linktorsrc","@id":"_:2"},{"displayLabel":"openurlfulltext","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://1.1.1.1?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2019-07-02T13%3A57%3A09IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-artstor&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Wooden%20figure%20depicting%20a%20brown%20bear&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Tlingit:%20Teikweidi&rft.aucorp=&rft.date=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3Cartstor%3EAHARVARDIG_10313276386%3C/artstor%3E%3Cgrp_id%3E638715122109452657%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_galeid=&rft_cupid=&rft_eruid=&rft_nurid=&rft_ingid=","linkType":"http://purl.org/pnx/linkType/openurlfulltext","@id":"_:3"},{"displayLabel":"thumbnail","linkURL":"http://media.artstor.net/imgstor/size2/harvard/peabody/harv_peab_60740702_post_as_8b_srgb.jpg","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:4"}],"availability":["fulltext_linktorsrc"],"additionalLocations":false,"displayedAvailability":"fulltext_linktorsrc","holding":[],"deliveryCategory":["Remote
+        Search Resource"],"serviceMode":["display"],"feDisplayOtherLocations":false,"GetIt1":[{"links":[{"isLinktoOnline":true,"displayText":"$$EView_full_text_in_Artstor_(subscribers
+        only)","hyperlinkText":"tab1_full","getItTabText":"alma_tab1_fulltextlinktorsrc","link":"http://library.artstor.org/#/asset/AHARVARDIG_10313276386&fs=true","@id":"_:0"}],"category":"Remote
+        Search Resource"}]},"context":"PC","adaptor":"primo_central_multiple_fe","pnx":{"delivery":{"delcategory":["Remote
+        Search Resource"],"fulltext":["fulltext_linktorsrc"]},"search":{"recordid":["artstorAHARVARDIG_10313276386"],"lsr40":["Wood"],"sourceid":["artstor"],"creatorcontrib":["Tlingit:
+        Teikweidi"],"creationdate":["19th century"],"scope":["artstor"],"rsrctype":["image"],"title":["Wooden
+        figure depicting a brown bear"]},"display":{"coverage":["Peabody Museum of
+        Archaeology and Ethnology"],"creationdate":["19th century"],"creator":["Tlingit:
+        Teikweidi"],"rights":["Please note that if this image is under copyright,
+        you may need to contact one or more copyright owners for any use that is not
+        permitted under the ARTstor Terms and Conditions of Use or not otherwise permitted
+        by law. While ARTstor tries to update contact information, it cannot guarantee
+        that such information is always accurate. Determining whether those permissions
+        are necessary, and obtaining such permissions, is your sole responsibility."],"format":["Wood"],"source":["via
+        ARTstor"],"title":["Wooden figure depicting a brown bear"],"type":["image"]},"links":{"openurl":["$$Topenurl_article"],"thumbnail":["$$Uhttp://media.artstor.net/imgstor/size2/harvard/peabody/harv_peab_60740702_post_as_8b_srgb.jpg"],"linktorsrc":["$$Uhttp://library.artstor.org/#/asset/AHARVARDIG_10313276386&fs=true$$EView_full_text_in_Artstor_(subscribers
+        only)"],"openurlfulltext":["$$Topenurlfull_article"]},"control":{"recordid":["TN_artstorAHARVARDIG_10313276386"],"sourceid":["artstor"],"sourceformat":["DC"],"sourcerecordid":["AHARVARDIG_10313276386"],"sourcesystem":["Other"]},"addata":{"notes":["Wood;
+        Peabody Museum of Archaeology and Ethnology"],"au":["Tlingit: Teikweidi"],"format":["book"],"genre":["unknown"],"ristype":["GEN"],"btitle":["Wooden
+        figure depicting a brown bear"]},"sort":{"author":["Tlingit: Teikweidi"],"title":["Wooden
+        figure depicting a brown bear"]},"facets":{"frbrtype":["6"],"creatorcontrib":["Tlingit:
+        Teikweidi"],"creationdate":["0000"],"frbrgroupid":["638715122109452657"],"rsrctype":["images"],"collection":["The
+        ARTstor Digital Library"],"prefilter":["images"]}},"@id":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_artstorAHARVARDIG_10313276386"}],"timelog":{"BriefSearchDeltaTime":375,"DoSearchPrimoResultDeltaTime":358,"StartBriefSearch":1562047029253,"retrieveHighLightsDeltaTime":17,"retrieveDidUMeanDeltaTime":17,"GetSearchStatusDeltaTime":358,"StartTranslationTime":1562047029611,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":17,"retrieveFacetsDeltaTime":17},"lang3":"eng","info":{"total":1,"last":"1","maxTotal":0,"first":"1"},"facets":[{"values":[{"count":1,"value":"Tlingit:
+        Teikweidi"}],"name":"creator"},{"values":[{"count":1,"value":"online_resources"}],"name":"tlevel"},{"values":[{"count":1,"value":"The
+        ARTstor Digital Library"}],"name":"domain"},{"values":[{"count":1,"value":"images"}],"name":"pfilter"}],"beaconO22":"377"}'
     http_version: 
-  recorded_at: Fri, 28 Jun 2019 07:03:59 GMT
+  recorded_at: Tue, 02 Jul 2019 05:57:09 GMT
 recorded_with: VCR 2.9.3
