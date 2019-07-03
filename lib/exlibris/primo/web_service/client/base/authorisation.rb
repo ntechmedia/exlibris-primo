@@ -4,7 +4,7 @@ module Exlibris
       module Client
         module Authorisation
           def jwt_bearer
-            return unless current_api == :rest &&
+            return '' unless current_api == :rest &&
               Exlibris::Primo.config.jwt_authorisation &&
               [:primo, :primo_ve].include?(Exlibris::Primo.config.primo_version)
 
@@ -45,7 +45,7 @@ module Exlibris
               user: Exlibris::Primo.config.jwt_user,
               userName: Exlibris::Primo.config.jwt_user_name,
               userGroup: Exlibris::Primo.config.jwt_user_group,
-              onCampus: Exlibris::Primo.config.jwt_on_campus.to_s,
+              onCampus: Exlibris::Primo.config.jwt_authorisation.to_s,
             }.delete_if { |_k, v| v.nil? }.to_json
           end
 
@@ -61,7 +61,7 @@ module Exlibris
               userName: Exlibris::Primo.config.jwt_user,
               displayName: Exlibris::Primo.config.jwt_user_name,
               userGroup: Exlibris::Primo.config.jwt_user_group,
-              onCampus: Exlibris::Primo.config.jwt_on_campus,
+              onCampus: Exlibris::Primo.config.jwt_authorisation,
             }.delete_if { |_k, v| v.nil? }.to_json
           end
 

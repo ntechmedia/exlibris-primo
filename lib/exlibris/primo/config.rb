@@ -29,7 +29,7 @@ module Exlibris
                       :jwt_user_name,
                       :jwt_user_group,
                       :jwt_language,
-                      :jwt_on_campus
+                      :jwt_authorisation
 
         def load_yaml file
           write_attributes YAML.load(ERB.new(File.read(file)).result)
@@ -102,8 +102,8 @@ module Exlibris
           @jwt_language ||= config.jwt_language.to_s
         end
 
-        def jwt_on_campus
-          @jwt_on_campus ||= config.jwt_on_campus.to_s
+        def jwt_authorisation
+          @jwt_authorisation ||= config.jwt_authorisation.to_s
         end
 
         def libraries

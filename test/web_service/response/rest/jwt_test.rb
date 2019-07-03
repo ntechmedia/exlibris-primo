@@ -24,7 +24,7 @@ module WebService
       end
 
       def test_results_using_jwt_authorisation
-        Exlibris::Primo.config.jwt_on_campus = true
+        Exlibris::Primo.config.jwt_authorisation = true
         VCR.use_cassette('rest/response/results_using_jwt_authorisation') do
           api_action = :search
           request = Exlibris::Primo::WebService::Request::Search.new
@@ -43,7 +43,7 @@ module WebService
       end
 
       def test_results_without_jwt_authorisation
-        Exlibris::Primo.config.jwt_on_campus = false
+        Exlibris::Primo.config.jwt_authorisation = false
         VCR.use_cassette('rest/response/results_without_jwt_authorisation') do
           api_action = :search
           request = Exlibris::Primo::WebService::Request::Search.new
