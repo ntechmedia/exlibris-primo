@@ -8,6 +8,8 @@ class SearchPrimoCentralTest < Test::Unit::TestCase
   end
 
   def test_primo_central
+    omit('Need to find new example and ensure everying is recorded')
+
     VCR.use_cassette('search primo central') do
       search = Exlibris::Primo::Search.new.base_url!(@base_url).
         institution!(@institution).add_adaptor_location('primo_central_multiple_fe').any_contains(@search_term)
@@ -25,6 +27,8 @@ class SearchPrimoCentralTest < Test::Unit::TestCase
   end
 
   def test_mla_source
+    omit('Need to find new example and ensure everying is recorded')
+
     VCR.use_cassette('search primo central mla') do
       search = Exlibris::Primo::Search.new.base_url!(@base_url).
         institution!(@institution).add_adaptor_location('primo_central_multiple_fe').add_query_term(@mla_doc_id, "rid", "exact").on_campus
