@@ -102,10 +102,6 @@ module Exlibris
           @jwt_language ||= config.jwt_language.to_s
         end
 
-        def jwt_authorisation
-          @jwt_authorisation ||= config.jwt_authorisation.to_s
-        end
-
         def libraries
           @libraries ||= (config.libraries) ? config.libraries.dup : {}
         end
