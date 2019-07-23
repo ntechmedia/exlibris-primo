@@ -7,6 +7,7 @@ class SearchPrimoCentralTest < Test::Unit::TestCase
     @mla_doc_id = "mla2012444463"
   end
 
+  # TODO: Need to find new test data
   def test_primo_central
     omit('Need to find new example and ensure everying is recorded')
 
