@@ -21,6 +21,7 @@ VCR.configure do |c|
   # webmock needed for HTTPClient testing
   c.hook_into :webmock
   c.filter_sensitive_data('<REST_API_KEY>') { ENV['REST_API_KEY'] || 'l7xxcb1e0f7b1d09876119edf593ec552f95d' }
+  c.filter_sensitive_data('<REST_ALT_API_KEY>') { ENV['REST_ALT_API_KEY'] || 'l7xxcb1e0f7b1d09876119edf593ec552f95d' }
   # c.debug_logger = $stderr
 end
 

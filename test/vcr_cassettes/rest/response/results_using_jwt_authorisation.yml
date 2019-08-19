@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/userJwt?apikey=<REST_ALT_API_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"viewId":"LATROBE","institution":"61LATROBE","user":"Pebbles","userName":"Murgatroyd
+        PebblePad","userGroup":"U/Grad","onCampus":"true"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - JSESSIONID=8F0922EC6DDDE37EC8F9750EAC9AD726; Path=/primo/v1; HttpOnly; Domain=api-ap.hosted.exlibrisgroup.com
+      - sto-id-%3FPS_PROD%3FPMT.Prod.Primo.1701-sg=DEHICAAK; Expires=Fri, 29-Jun-2029
+        05:57:08 GMT; Path=/
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Tue, 02 Jul 2019 05:57:08 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,DELETE,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '680'
+      Date:
+      - Tue, 02 Jul 2019 05:57:07 GMT
+      Server:
+      - CA-API-Gateway/9.0
+    body:
+      encoding: UTF-8
+      string: '"eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYyMTMzNDI4LCJpYXQiOjE1NjIwNDcwMjgsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.qY46nBMVS8ZQbCvNG6DWO2Ilfq65gEpxg-EWtD66VeGcm1VFZyK_RrR6bNTynIrQ2Icxy7XDdGanHWAjSBlb1Q"'
+    http_version: 
+  recorded_at: Tue, 02 Jul 2019 05:57:08 GMT
+- request:
+    method: get
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_ALT_API_KEY>&limit=5&multiFacets=facet_rtype,include,images&offset=0&q=title,contains,Wooden%20figure%20depicting%20a%20brown%20bear&scope=All&tab=default_tab&vid=LATROBE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - Bearer "eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYyMTMzNDI4LCJpYXQiOjE1NjIwNDcwMjgsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.qY46nBMVS8ZQbCvNG6DWO2Ilfq65gEpxg-EWtD66VeGcm1VFZyK_RrR6bNTynIrQ2Icxy7XDdGanHWAjSBlb1Q"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - JSESSIONID=2AD88D811EF01843CE80B43E39048FAB; Path=/primo/v1; HttpOnly; Domain=api-ap.hosted.exlibrisgroup.com
+      - sto-id-%3FPS_PROD%3FPMT.Prod.Primo.1701-sg=DEHICAAK; Expires=Fri, 29-Jun-2029
+        05:57:09 GMT; Path=/
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Tue, 02 Jul 2019 05:57:09 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,DELETE,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '7075'
+      Date:
+      - Tue, 02 Jul 2019 05:57:09 GMT
+      Server:
+      - CA-API-Gateway/9.0
+    body:
+      encoding: UTF-8
+      string: '{"highlights":{"vertitle":["Wooden","brown","figure","Wooden figure
+        depicting","brown bear","bear","depicting","a","wooden"],"termsUnion":["depicting","brown
+        bear","bear","brown","figure","Wooden figure depicting","wooden"],"title":["a","Wooden","depicting","figure","Wooden
+        figure depicting","wooden","brown","bear","brown bear"]},"docs":[{"enrichment":{"virtualBrowseObject":{"callNumber":"","isVirtualBrowseEnabled":false,"callNumberBrowseField":"browse_callnumber"}},"delivery":{"availabilityLinks":["directlink"],"physicalItemTextCodes":"","displayLocation":false,"availabilityLinksUrl":["http://library.artstor.org/#/asset/AHARVARDIG_10313276386&fs=true"],"link":[{"displayLabel":"openurl","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://1.1.1.1?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2019-07-02T13%3A57%3A09IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-artstor&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Wooden%20figure%20depicting%20a%20brown%20bear&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Tlingit:%20Teikweidi&rft.aucorp=&rft.date=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3Cartstor%3EAHARVARDIG_10313276386%3C/artstor%3E%3Cgrp_id%3E638715122109452657%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_galeid=&rft_cupid=&rft_eruid=&rft_nurid=&rft_ingid=","linkType":"http://purl.org/pnx/linkType/openurl","@id":"_:0"},{"displayLabel":"thumbnail","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://media.artstor.net/imgstor/size2/harvard/peabody/harv_peab_60740702_post_as_8b_srgb.jpg","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:1"},{"displayLabel":"$$EView_full_text_in_Artstor_(subscribers
+        only)","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://library.artstor.org/#/asset/AHARVARDIG_10313276386&fs=true","linkType":"http://purl.org/pnx/linkType/linktorsrc","@id":"_:2"},{"displayLabel":"openurlfulltext","hyperlinkText":"","inst4opac":"61LATROBE","linkURL":"http://1.1.1.1?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2019-07-02T13%3A57%3A09IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-artstor&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Wooden%20figure%20depicting%20a%20brown%20bear&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Tlingit:%20Teikweidi&rft.aucorp=&rft.date=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3Cartstor%3EAHARVARDIG_10313276386%3C/artstor%3E%3Cgrp_id%3E638715122109452657%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_galeid=&rft_cupid=&rft_eruid=&rft_nurid=&rft_ingid=","linkType":"http://purl.org/pnx/linkType/openurlfulltext","@id":"_:3"},{"displayLabel":"thumbnail","linkURL":"http://media.artstor.net/imgstor/size2/harvard/peabody/harv_peab_60740702_post_as_8b_srgb.jpg","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:4"}],"availability":["fulltext_linktorsrc"],"additionalLocations":false,"displayedAvailability":"fulltext_linktorsrc","holding":[],"deliveryCategory":["Remote
+        Search Resource"],"serviceMode":["display"],"feDisplayOtherLocations":false,"GetIt1":[{"links":[{"isLinktoOnline":true,"displayText":"$$EView_full_text_in_Artstor_(subscribers
+        only)","hyperlinkText":"tab1_full","getItTabText":"alma_tab1_fulltextlinktorsrc","link":"http://library.artstor.org/#/asset/AHARVARDIG_10313276386&fs=true","@id":"_:0"}],"category":"Remote
+        Search Resource"}]},"context":"PC","adaptor":"primo_central_multiple_fe","pnx":{"delivery":{"delcategory":["Remote
+        Search Resource"],"fulltext":["fulltext_linktorsrc"]},"search":{"recordid":["artstorAHARVARDIG_10313276386"],"lsr40":["Wood"],"sourceid":["artstor"],"creatorcontrib":["Tlingit:
+        Teikweidi"],"creationdate":["19th century"],"scope":["artstor"],"rsrctype":["image"],"title":["Wooden
+        figure depicting a brown bear"]},"display":{"coverage":["Peabody Museum of
+        Archaeology and Ethnology"],"creationdate":["19th century"],"creator":["Tlingit:
+        Teikweidi"],"rights":["Please note that if this image is under copyright,
+        you may need to contact one or more copyright owners for any use that is not
+        permitted under the ARTstor Terms and Conditions of Use or not otherwise permitted
+        by law. While ARTstor tries to update contact information, it cannot guarantee
+        that such information is always accurate. Determining whether those permissions
+        are necessary, and obtaining such permissions, is your sole responsibility."],"format":["Wood"],"source":["via
+        ARTstor"],"title":["Wooden figure depicting a brown bear"],"type":["image"]},"links":{"openurl":["$$Topenurl_article"],"thumbnail":["$$Uhttp://media.artstor.net/imgstor/size2/harvard/peabody/harv_peab_60740702_post_as_8b_srgb.jpg"],"linktorsrc":["$$Uhttp://library.artstor.org/#/asset/AHARVARDIG_10313276386&fs=true$$EView_full_text_in_Artstor_(subscribers
+        only)"],"openurlfulltext":["$$Topenurlfull_article"]},"control":{"recordid":["TN_artstorAHARVARDIG_10313276386"],"sourceid":["artstor"],"sourceformat":["DC"],"sourcerecordid":["AHARVARDIG_10313276386"],"sourcesystem":["Other"]},"addata":{"notes":["Wood;
+        Peabody Museum of Archaeology and Ethnology"],"au":["Tlingit: Teikweidi"],"format":["book"],"genre":["unknown"],"ristype":["GEN"],"btitle":["Wooden
+        figure depicting a brown bear"]},"sort":{"author":["Tlingit: Teikweidi"],"title":["Wooden
+        figure depicting a brown bear"]},"facets":{"frbrtype":["6"],"creatorcontrib":["Tlingit:
+        Teikweidi"],"creationdate":["0000"],"frbrgroupid":["638715122109452657"],"rsrctype":["images"],"collection":["The
+        ARTstor Digital Library"],"prefilter":["images"]}},"@id":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_artstorAHARVARDIG_10313276386"}],"timelog":{"BriefSearchDeltaTime":375,"DoSearchPrimoResultDeltaTime":358,"StartBriefSearch":1562047029253,"retrieveHighLightsDeltaTime":17,"retrieveDidUMeanDeltaTime":17,"GetSearchStatusDeltaTime":358,"StartTranslationTime":1562047029611,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":17,"retrieveFacetsDeltaTime":17},"lang3":"eng","info":{"total":1,"last":"1","maxTotal":0,"first":"1"},"facets":[{"values":[{"count":1,"value":"Tlingit:
+        Teikweidi"}],"name":"creator"},{"values":[{"count":1,"value":"online_resources"}],"name":"tlevel"},{"values":[{"count":1,"value":"The
+        ARTstor Digital Library"}],"name":"domain"},{"values":[{"count":1,"value":"images"}],"name":"pfilter"}],"beaconO22":"377"}'
+    http_version: 
+  recorded_at: Tue, 02 Jul 2019 05:57:09 GMT
+recorded_with: VCR 2.9.3

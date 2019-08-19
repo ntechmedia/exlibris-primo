@@ -53,8 +53,6 @@ module Exlibris
             }
           end
 
-          private :required_params
-
           def param_errors
             {
               vid: 'The vid (view ID) config attribute must be set. (e.g. ExlibrisPrimo.config.vid = "Auto1")',

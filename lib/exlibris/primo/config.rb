@@ -7,8 +7,29 @@ module Exlibris
     module Config
       class << self
         include WriteAttributes
-        attr_accessor :api, :vid, :tab, :api_key, :base_url, :proxy_url, :institution, :institutions, :libraries, :availability_statuses, :sources,
-          :facet_labels, :facet_top_level, :facet_collections, :facet_resource_types, :load_time
+        attr_accessor :api,
+                      :primo_version,
+                      :vid,
+                      :tab,
+                      :api_key,
+                      :base_url,
+                      :proxy_url,
+                      :institution,
+                      :institutions,
+                      :libraries,
+                      :availability_statuses,
+                      :sources,
+                      :facet_labels,
+                      :facet_top_level,
+                      :facet_collections,
+                      :facet_resource_types,
+                      :load_time,
+                      :jwt_authorisation,
+                      :jwt_user,
+                      :jwt_user_name,
+                      :jwt_user_group,
+                      :jwt_language,
+                      :jwt_authorisation
 
         def load_yaml file
           write_attributes YAML.load(ERB.new(File.read(file)).result)
@@ -49,12 +70,36 @@ module Exlibris
           @proxy_url ||= config.proxy_url
         end
 
+        def primo_version
+          @primo_version ||= config.primo_version || :primo
+        end
+
         def institution
           @institution ||= String.new config.institution.to_s
         end
 
+        def jwt_authorisation
+          @jwt_authorisation ||= config.jwt_authorisation || false
+        end
+
         def institutions
           @institutions ||= (config.institutions) ? config.institutions.dup : {}
+        end
+
+        def jwt_user
+          @jwt_user ||= config.jwt_user.to_s
+        end
+
+        def jwt_user_name
+          @jwt_user_name ||= config.jwt_user_name.to_s
+        end
+
+        def jwt_user_group
+          @jwt_user_group ||= config.jwt_user_group.to_s
+        end
+
+        def jwt_language
+          @jwt_language ||= config.jwt_language.to_s
         end
 
         def libraries

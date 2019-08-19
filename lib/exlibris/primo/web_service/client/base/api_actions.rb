@@ -52,7 +52,10 @@ module Exlibris
           def perform_rest_call(params)
             return unless current_api == :rest
 
-            client.get { |request| request.params = params }
+            client.get do |request|
+              request.headers['Authorization'] = jwt_bearer
+              request.params = params
+            end
           end
 
           #

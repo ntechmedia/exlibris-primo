@@ -43,7 +43,7 @@ module WebService
           config.api_key = ENV['REST_API_KEY']
         end
 
-        request = Exlibris::Primo::WebService::Request::Search.new :base_url => @base_url
+        request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
         request.add_query_term @issn, "isbn", "exact"
         request.add_location 'local', 'scope:(UB_local_PC)'
         expected_message = 'The vid (view ID) config attribute must be set. (e.g. ExlibrisPrimo.config.vid = "Auto1")'
@@ -59,7 +59,7 @@ module WebService
           config.api_key = ENV['REST_API_KEY']
         end
 
-        request = Exlibris::Primo::WebService::Request::Search.new :base_url => @base_url
+        request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
         request.add_query_term @issn, "isbn", "exact"
         request.add_location 'local', 'scope:(UB_local_PC)'
         expected_message = 'The tab search tab (tab) config attribute must be set. (e.g. ExlibrisPrimo.config.tab = "quicksearch")'
@@ -75,7 +75,7 @@ module WebService
           config.api_key = nil
         end
 
-        request = Exlibris::Primo::WebService::Request::Search.new :base_url => @base_url
+        request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
         request.add_query_term @issn, "isbn", "exact"
         request.add_location 'local', 'scope:(UB_local_PC)'
         expected_message = 'The apikey config attribute must be set. (e.g. ExlibrisPrimo.config.apikey = "l7xxcb1e0f7b1d09876119edf593ec552f95d")'
@@ -91,7 +91,7 @@ module WebService
           config.api_key = rest_api_key
         end
 
-        request = Exlibris::Primo::WebService::Request::Search.new :base_url => @base_url
+        request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
         request.institution = @institution
         request.add_query_term @title, "title", "contains"
         request.add_location 'local', 'scope:(UB_local_PC)'
