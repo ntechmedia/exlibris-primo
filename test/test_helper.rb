@@ -596,6 +596,10 @@ class Test::Unit::TestCase
     File.read(File.expand_path("../xml/record_other_sourcesystem.xml", __FILE__))
   end
 
+  def record_with_ampersand_xml
+    File.read(File.expand_path("../fixtures/results/result_with_ampersands.xml", __FILE__))
+  end
+
   def record_invalid_frbr_xml
     "<record>" +
       "<control>" +

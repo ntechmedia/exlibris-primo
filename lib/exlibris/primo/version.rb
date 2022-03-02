@@ -1,5 +1,5 @@
 module Exlibris
   module Primo
-    VERSION = '2.2.5'
+    VERSION = '2.2.6'
   end
 end
