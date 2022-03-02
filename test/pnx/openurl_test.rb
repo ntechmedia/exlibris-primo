@@ -6,5 +6,12 @@ module Pnx
       assert_not_nil record.openurl
       assert((not record.openurl.blank?))
     end
+
+    def test_openurl_encoding
+      record = Exlibris::Primo::Record.new(:raw_xml => record_with_ampersand_xml)
+      journal_title = record.xml.root.xpath("addata/jtitle").text
+      assert_not_nil record.openurl
+      assert(record.openurl.include CGI.escape(journal_title))
+    end
   end
 end
