@@ -36,6 +36,10 @@ if !defined? VCR
   end
 end
 
+Exlibris::Primo.configure do |config|
+  config.api = :soap
+end
+
 class Test::Unit::TestCase
   def assert_request_children(request, expected_root, &block)
     document = Nokogiri::XML(request.to_xml)
@@ -103,7 +107,7 @@ class Test::Unit::TestCase
 
   def reset_primo_configuration
     Exlibris::Primo.configure do |config|
-      config.base_url = nil
+      config.base_url = :soap
       config.proxy_url = nil
       config.institution = nil
       config.institutions = nil
