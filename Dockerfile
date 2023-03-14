@@ -16,4 +16,6 @@ WORKDIR $APP_HOME
 
 COPY . $APP_HOME
 RUN gem install ruby-debug-ide --pre
-RUN gem install bundler -v 2.3.14 && bundle config set gems.railslts.com $RAILS_LTS && bundle install
+RUN gem install bundler -v 2.3.14 && \
+    bundle config set gems.railslts.com $RAILS_LTS && \
+    bundle install
