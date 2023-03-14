@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  dev:
+    build:
+      context: .
+    command: $BACKEND_DC_COMMAND
+    env_file:
+      - ".env"
+    volumes:
+      - ".:/app"
