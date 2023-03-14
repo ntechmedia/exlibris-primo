@@ -3,6 +3,8 @@ services:
   dev:
     build:
       context: .
+      args:
+        RAILS_LTS: $RAILS_LTS
     command: $BACKEND_DC_COMMAND
     env_file:
       - ".env"

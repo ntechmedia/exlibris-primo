@@ -1,5 +1,6 @@
 FROM --platform=$BUILDPLATFORM ruby:2.7.7
 ARG REST_API_KEY
+ARG RAILS_LTS
 ENV APP_HOME /app
 RUN apt-get update -qq && apt-get install -y build-essential
 
@@ -15,4 +16,4 @@ WORKDIR $APP_HOME
 
 COPY . $APP_HOME
 RUN gem install ruby-debug-ide --pre
-RUN gem install bundler -v 2.3.14 && bundle install
+RUN gem install bundler -v 2.3.14 && bundle config set gems.railslts.com $RAILS_LTS && bundle install
