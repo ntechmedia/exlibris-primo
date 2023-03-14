@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM ruby:2.3.7
+FROM --platform=$BUILDPLATFORM ruby:2.7.7
 ARG REST_API_KEY
 ENV APP_HOME /app
 RUN apt-get update -qq && apt-get install -y build-essential
