@@ -12,7 +12,7 @@ source 'https://gems.railslts.com' do
 end
 
 group :test do
-  gem "coveralls", "~> 0.8.23", :require => false
+  gem 'simplecov', '~> 0.20', require: false
 end
 
 platforms :rbx do

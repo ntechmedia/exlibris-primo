@@ -1,5 +1,3 @@
-require 'coveralls'
-Coveralls.wear!
 require 'test/unit'
 require File.expand_path("../../lib/exlibris-primo.rb", __FILE__)
 
@@ -11,6 +9,9 @@ require File.expand_path("../../lib/exlibris-primo.rb", __FILE__)
 # and re-used.
 require 'vcr'
 require 'webmock'
+require 'simplecov'
+
+SimpleCov.start
 
 # To allow us to do real HTTP requests in a VCR.turned_off, we
 # have to tell webmock to let us.
@@ -74,7 +75,7 @@ class Test::Unit::TestCase
 
   protected :assert_request
 
-  def assert_response(request:, vcr_cassette:, expected_class: )
+  def assert_response(request:, vcr_cassette:, expected_class:)
     VCR.use_cassette(vcr_cassette) do
       response = nil
       assert_nothing_raised {
@@ -229,193 +230,193 @@ class Test::Unit::TestCase
       "<addtitle>New York times on the web.</addtitle>" +
       "<addtitle>New York times large type weekly</addtitle>" +
       "<addtitle>New-York semi-weekly times</addtitle>" +
-      "<addtitle>New-York weekly times</addtitle>" +
-      "<addtitle>Semi-weekly times (New York, N.Y.)</addtitle>" +
-      "<addtitle>New York times on the Web</addtitle>" +
-      "<addtitle>Little times</addtitle>" +
-      "<addtitle>New-York daily times</addtitle>" +
-      "<searchscope>BWEB</searchscope>" +
-      "<searchscope>BWEB Internet Resources</searchscope>" +
-      "<searchscope>nyu_aleph</searchscope>" +
-      "<searchscope>NYU</searchscope>" +
-      "<searchscope>NYUAD</searchscope>" +
-      "<searchscope>BOBST</searchscope>" +
-      "<searchscope>IFA</searchscope>" +
-      "<searchscope>IFAC</searchscope>" +
-      "<searchscope>ISAW</searchscope>" +
-      "<searchscope>COUR</searchscope>" +
-      "<searchscope>REI</searchscope>" +
-      "<scope>BWEB</scope>" +
-      "<scope>BWEB Internet Resources</scope>" +
-      "<scope>nyu_aleph</scope>" +
-      "<scope>NYU</scope>" +
-      "<scope>NYUAD</scope>" +
-      "<scope>BOBST</scope>" +
-      "<scope>IFA</scope>" +
-      "<scope>IFAC</scope>" +
-      "<scope>ISAW</scope>" +
-      "<scope>COUR</scope>" +
-      "<scope>REI</scope>" +
-      "<alttitle>Combined New York morning newspapers</alttitle>" +
-      "<alttitle>Combined New York Sunday newspapers</alttitle>" +
-      "<lsr01>Newspaper</lsr01>" +
-      "<lsr02>H.J. Raymond &amp; Co.],</lsr02>" +
-      "<title>The New York times.</title>" +
-      "<subject>History</subject>" +
-      "<subject>History  Africa</subject>" +
-      "<subject>History  East Asia</subject>" +
-      "<subject>History  Europe</subject>" +
-      "<subject>History  Latin America and Caribbean</subject>" +
-      "<subject>History  Middle East</subject>" +
-      "<subject>History  North America</subject>" +
-      "<subject>History  Slavic</subject>" +
-      "<subject>Dance</subject>" +
-      "<subject>Performing arts</subject>" +
-      "<subject>Theater</subject>" +
-      "<subject>Government information  New York State and City Recommended</subject>" +
-      "<subject>Electronic indexes</subject>" +
-      "<subject>Electronic newspapers</subject>" +
-      "<subject>Dancing</subject>" +
-      "<subject>Information, Government</subject>" +
-      "<subject>Show business</subject>" +
-      "<subject>Professional theater</subject>" +
-      "<subject>Theatre</subject>" +
-      "<subject>Dramatics</subject>" +
-      "<recordid>nyu_aleph002959842</recordid>" +
-      "<addtitle>New York semi-weekly times</addtitle>" +
-      "<addtitle>New York times on the web</addtitle>" +
-      "<searchscope>BOBST Microform</searchscope>" +
-      "<searchscope>CU</searchscope>" +
-      "<searchscope>CU Microform Periodicals</searchscope>" +
-      "<searchscope>CU Periodicals</searchscope>" +
-      "<searchscope>NREI</searchscope>" +
-      "<searchscope>NREI Reference</searchscope>" +
-      "<searchscope>TNSSC</searchscope>" +
-      "<searchscope>TNSSC Periodicals</searchscope>" +
-      "<searchscope>NS</searchscope>" +
-      "<searchscope>NSSC</searchscope>" +
-      "<searchscope>CPER</searchscope>" +
-      "<scope>BOBST Microform</scope>" +
-      "<scope>CU</scope>" +
-      "<scope>CU Microform Periodicals</scope>" +
-      "<scope>CU Periodicals</scope>" +
-      "<scope>NREI</scope>" +
-      "<scope>NREI Reference</scope>" +
-      "<scope>TNSSC</scope>" +
-      "<scope>TNSSC Periodicals</scope>" +
-      "<scope>NS</scope>" +
-      "<scope>NSSC</scope>" +
-      "<scope>CPER</scope>" +
-      "<alttitle>N.Y. times</alttitle>" +
-      "<lsr01>Film/Per</lsr01>" +
-      "</search>" +
-      "<sort>" +
-      "<title>New York times</title>" +
-      "<creationdate>1857</creationdate>" +
-      "<lso01>1857</lso01>" +
-      "</sort>" +
-      "<facets>" +
-      "<language>eng</language>" +
-      "<creationdate>1857</creationdate>" +
-      "<topic>New York (N.Y.)&#x2013;Newspapers</topic>" +
-      "<topic>New York County (N.Y.)&#x2013;Newspapers</topic>" +
-      "<toplevel>available</toplevel>" +
-      "<toplevel>online_resources</toplevel>" +
-      "<prefilter>journals</prefilter>" +
-      "<rsrctype>journals</rsrctype>" +
-      "<genre>Newspapers</genre>" +
-      "<genre>Electronic journals</genre>" +
-      "<library>BOBST</library>" +
-      "<library>IFA</library>" +
-      "<library>IFAC</library>" +
-      "<library>ISAW</library>" +
-      "<library>COUR</library>" +
+        "<addtitle>New-York weekly times</addtitle>" +
+        "<addtitle>Semi-weekly times (New York, N.Y.)</addtitle>" +
+        "<addtitle>New York times on the Web</addtitle>" +
+        "<addtitle>Little times</addtitle>" +
+        "<addtitle>New-York daily times</addtitle>" +
+        "<searchscope>BWEB</searchscope>" +
+        "<searchscope>BWEB Internet Resources</searchscope>" +
+        "<searchscope>nyu_aleph</searchscope>" +
+        "<searchscope>NYU</searchscope>" +
+        "<searchscope>NYUAD</searchscope>" +
+        "<searchscope>BOBST</searchscope>" +
+        "<searchscope>IFA</searchscope>" +
+        "<searchscope>IFAC</searchscope>" +
+        "<searchscope>ISAW</searchscope>" +
+        "<searchscope>COUR</searchscope>" +
+        "<searchscope>REI</searchscope>" +
+        "<scope>BWEB</scope>" +
+        "<scope>BWEB Internet Resources</scope>" +
+        "<scope>nyu_aleph</scope>" +
+        "<scope>NYU</scope>" +
+        "<scope>NYUAD</scope>" +
+        "<scope>BOBST</scope>" +
+        "<scope>IFA</scope>" +
+        "<scope>IFAC</scope>" +
+        "<scope>ISAW</scope>" +
+        "<scope>COUR</scope>" +
+        "<scope>REI</scope>" +
+        "<alttitle>Combined New York morning newspapers</alttitle>" +
+        "<alttitle>Combined New York Sunday newspapers</alttitle>" +
+        "<lsr01>Newspaper</lsr01>" +
+        "<lsr02>H.J. Raymond &amp; Co.],</lsr02>" +
+        "<title>The New York times.</title>" +
+        "<subject>History</subject>" +
+        "<subject>History  Africa</subject>" +
+        "<subject>History  East Asia</subject>" +
+        "<subject>History  Europe</subject>" +
+        "<subject>History  Latin America and Caribbean</subject>" +
+        "<subject>History  Middle East</subject>" +
+        "<subject>History  North America</subject>" +
+        "<subject>History  Slavic</subject>" +
+        "<subject>Dance</subject>" +
+        "<subject>Performing arts</subject>" +
+        "<subject>Theater</subject>" +
+        "<subject>Government information  New York State and City Recommended</subject>" +
+        "<subject>Electronic indexes</subject>" +
+        "<subject>Electronic newspapers</subject>" +
+        "<subject>Dancing</subject>" +
+        "<subject>Information, Government</subject>" +
+        "<subject>Show business</subject>" +
+        "<subject>Professional theater</subject>" +
+        "<subject>Theatre</subject>" +
+        "<subject>Dramatics</subject>" +
+        "<recordid>nyu_aleph002959842</recordid>" +
+        "<addtitle>New York semi-weekly times</addtitle>" +
+        "<addtitle>New York times on the web</addtitle>" +
+        "<searchscope>BOBST Microform</searchscope>" +
+        "<searchscope>CU</searchscope>" +
+        "<searchscope>CU Microform Periodicals</searchscope>" +
+        "<searchscope>CU Periodicals</searchscope>" +
+        "<searchscope>NREI</searchscope>" +
+        "<searchscope>NREI Reference</searchscope>" +
+        "<searchscope>TNSSC</searchscope>" +
+        "<searchscope>TNSSC Periodicals</searchscope>" +
+        "<searchscope>NS</searchscope>" +
+        "<searchscope>NSSC</searchscope>" +
+        "<searchscope>CPER</searchscope>" +
+        "<scope>BOBST Microform</scope>" +
+        "<scope>CU</scope>" +
+        "<scope>CU Microform Periodicals</scope>" +
+        "<scope>CU Periodicals</scope>" +
+        "<scope>NREI</scope>" +
+        "<scope>NREI Reference</scope>" +
+        "<scope>TNSSC</scope>" +
+        "<scope>TNSSC Periodicals</scope>" +
+        "<scope>NS</scope>" +
+        "<scope>NSSC</scope>" +
+        "<scope>CPER</scope>" +
+        "<alttitle>N.Y. times</alttitle>" +
+        "<lsr01>Film/Per</lsr01>" +
+        "</search>" +
+        "<sort>" +
+        "<title>New York times</title>" +
+        "<creationdate>1857</creationdate>" +
+        "<lso01>1857</lso01>" +
+        "</sort>" +
+        "<facets>" +
+        "<language>eng</language>" +
+        "<creationdate>1857</creationdate>" +
+        "<topic>New York (N.Y.)&#x2013;Newspapers</topic>" +
+        "<topic>New York County (N.Y.)&#x2013;Newspapers</topic>" +
+        "<toplevel>available</toplevel>" +
+        "<toplevel>online_resources</toplevel>" +
+        "<prefilter>journals</prefilter>" +
+        "<rsrctype>journals</rsrctype>" +
+        "<genre>Newspapers</genre>" +
+        "<genre>Electronic journals</genre>" +
+        "<library>BOBST</library>" +
+        "<library>IFA</library>" +
+        "<library>IFAC</library>" +
+        "<library>ISAW</library>" +
+        "<library>COUR</library>" +
       "<library>REI</library>" +
-      "<lfc01>Internet Resources</lfc01>" +
-      "<lfc04>United States</lfc04>" +
-      "<lfc04>New York</lfc04>" +
-      "<lfc04>New York.</lfc04>" +
-      "<topic>History</topic>" +
-      "<topic>History&#x2013;Africa</topic>" +
-      "<topic>History&#x2013;East Asia</topic>" +
-      "<topic>History&#x2013;Europe</topic>" +
-      "<topic>History&#x2013;Latin America and Caribbean</topic>" +
-      "<topic>History&#x2013;Middle East</topic>" +
-      "<topic>History&#x2013;North America</topic>" +
-      "<topic>History&#x2013;Slavic</topic>" +
-      "<topic>Dance</topic>" +
-      "<topic>Performing arts</topic>" +
-      "<topic>Theater</topic>" +
-      "<topic>Government information&#x2013;New York State and City&#x2013;Recommended</topic>" +
-      "<collection>BOBST</collection>" +
-      "<collection>CU</collection>" +
-      "<collection>NREI</collection>" +
-      "<collection>NSSC</collection>" +
-      "<genre>Electronic indexes</genre>" +
-      "<genre>Electronic newspapers</genre>" +
-      "<library>NSSC</library>" +
-      "<library>CPER</library>" +
-      "<lfc01>Microform</lfc01>" +
-      "<lfc01>Microform Periodicals</lfc01>" +
-      "<lfc01>Periodicals</lfc01>" +
-      "<lfc01>Reference</lfc01>" +
-      "<frbrgroupid>21490924</frbrgroupid>" +
-      "<frbrtype>5</frbrtype>" +
-      "</facets>" +
-      "<dedup>" +
-      "<t>2</t>" +
-      "<c2>0362-4331</c2>" +
-      "<c3>newyorktimes</c3>" +
-      "<c4>new</c4>" +
-      "<f4>0362-4331</f4>" +
-      "<f6>1857</f6>" +
-      "<f7>new york times</f7>" +
-      "<f8>new york times</f8>" +
-      "<f9>nyu</f9>" +
-      "<f10>new</f10>" +
-      "</dedup>" +
-      "<frbr>" +
-      "<t>1</t>" +
-      "<k3>$$Knew york times$$AT</k3>" +
-      "</frbr>" +
-      "<delivery>" +
-      "<institution>$$VNYU$$Onyu_aleph000932393</institution>" +
-      "<institution>$$VNYUAD$$Onyu_aleph000932393</institution>" +
-      "<delcategory>$$VOnline Resource$$Onyu_aleph000932393</delcategory>" +
-      "<institution>$$VNYU$$Onyu_aleph002959842</institution>" +
-      "<institution>$$VCU$$Onyu_aleph002959842</institution>" +
-      "<institution>$$VNS$$Onyu_aleph002959842</institution>" +
-      "<institution>$$VNYUAD$$Onyu_aleph002959842</institution>" +
-      "<delcategory>$$VOnline Resource$$Onyu_aleph002959842</delcategory>" +
-      "</delivery>" +
-      "<enrichment>" +
-      "<classificationlcc>Newspaper</classificationlcc>" +
-      "</enrichment>" +
-      "<ranking>" +
-      "<booster1>1</booster1>" +
-      "<booster2>1</booster2>" +
-      "</ranking>" +
-      "<addata>" +
-      "<jtitle>The New York times</jtitle>" +
-      "<addtitle>Combined New York morning newspapers</addtitle>" +
-      "<date>1857</date>" +
-      "<risdate>1857-</risdate>" +
-      "<coden>NYTIAO</coden>" +
-      "<format>journal</format>" +
-      "<genre>journal</genre>" +
-      "<ristype>JOUR</ristype>" +
-      "<cop>New-York [N.Y.</cop>" +
-      "<pub>H.J. Raymond &amp; Co.]</pub>" +
-      "<lad01>BWEB</lad01>" +
-      "<lad01>Online Resource</lad01>" +
-      "<jtitle>The New York times.</jtitle>" +
-      "<stitle>N.Y. times</stitle>" +
-      "<issn>0362-4331</issn>" +
-      "<oclcid>1645522</oclcid>" +
-      "<lccn>sn 78004456</lccn>" +
-      "<lad01>BOBSTBOBSTBWEBNREICUCUTNSSC</lad01>" +
-      "</addata>" +
-      "</record>"
+        "<lfc01>Internet Resources</lfc01>" +
+        "<lfc04>United States</lfc04>" +
+        "<lfc04>New York</lfc04>" +
+        "<lfc04>New York.</lfc04>" +
+        "<topic>History</topic>" +
+        "<topic>History&#x2013;Africa</topic>" +
+        "<topic>History&#x2013;East Asia</topic>" +
+        "<topic>History&#x2013;Europe</topic>" +
+        "<topic>History&#x2013;Latin America and Caribbean</topic>" +
+        "<topic>History&#x2013;Middle East</topic>" +
+        "<topic>History&#x2013;North America</topic>" +
+        "<topic>History&#x2013;Slavic</topic>" +
+        "<topic>Dance</topic>" +
+        "<topic>Performing arts</topic>" +
+        "<topic>Theater</topic>" +
+        "<topic>Government information&#x2013;New York State and City&#x2013;Recommended</topic>" +
+        "<collection>BOBST</collection>" +
+        "<collection>CU</collection>" +
+        "<collection>NREI</collection>" +
+        "<collection>NSSC</collection>" +
+        "<genre>Electronic indexes</genre>" +
+        "<genre>Electronic newspapers</genre>" +
+        "<library>NSSC</library>" +
+        "<library>CPER</library>" +
+        "<lfc01>Microform</lfc01>" +
+        "<lfc01>Microform Periodicals</lfc01>" +
+        "<lfc01>Periodicals</lfc01>" +
+        "<lfc01>Reference</lfc01>" +
+        "<frbrgroupid>21490924</frbrgroupid>" +
+        "<frbrtype>5</frbrtype>" +
+        "</facets>" +
+        "<dedup>" +
+        "<t>2</t>" +
+        "<c2>0362-4331</c2>" +
+        "<c3>newyorktimes</c3>" +
+        "<c4>new</c4>" +
+        "<f4>0362-4331</f4>" +
+        "<f6>1857</f6>" +
+        "<f7>new york times</f7>" +
+        "<f8>new york times</f8>" +
+        "<f9>nyu</f9>" +
+        "<f10>new</f10>" +
+        "</dedup>" +
+        "<frbr>" +
+        "<t>1</t>" +
+        "<k3>$$Knew york times$$AT</k3>" +
+        "</frbr>" +
+        "<delivery>" +
+        "<institution>$$VNYU$$Onyu_aleph000932393</institution>" +
+        "<institution>$$VNYUAD$$Onyu_aleph000932393</institution>" +
+        "<delcategory>$$VOnline Resource$$Onyu_aleph000932393</delcategory>" +
+        "<institution>$$VNYU$$Onyu_aleph002959842</institution>" +
+        "<institution>$$VCU$$Onyu_aleph002959842</institution>" +
+        "<institution>$$VNS$$Onyu_aleph002959842</institution>" +
+        "<institution>$$VNYUAD$$Onyu_aleph002959842</institution>" +
+        "<delcategory>$$VOnline Resource$$Onyu_aleph002959842</delcategory>" +
+        "</delivery>" +
+        "<enrichment>" +
+        "<classificationlcc>Newspaper</classificationlcc>" +
+        "</enrichment>" +
+        "<ranking>" +
+        "<booster1>1</booster1>" +
+        "<booster2>1</booster2>" +
+        "</ranking>" +
+        "<addata>" +
+        "<jtitle>The New York times</jtitle>" +
+        "<addtitle>Combined New York morning newspapers</addtitle>" +
+        "<date>1857</date>" +
+        "<risdate>1857-</risdate>" +
+        "<coden>NYTIAO</coden>" +
+        "<format>journal</format>" +
+        "<genre>journal</genre>" +
+        "<ristype>JOUR</ristype>" +
+        "<cop>New-York [N.Y.</cop>" +
+        "<pub>H.J. Raymond &amp; Co.]</pub>" +
+        "<lad01>BWEB</lad01>" +
+        "<lad01>Online Resource</lad01>" +
+        "<jtitle>The New York times.</jtitle>" +
+        "<stitle>N.Y. times</stitle>" +
+        "<issn>0362-4331</issn>" +
+        "<oclcid>1645522</oclcid>" +
+        "<lccn>sn 78004456</lccn>" +
+        "<lad01>BOBSTBOBSTBWEBNREICUCUTNSSC</lad01>" +
+        "</addata>" +
+        "</record>"
   end
 
   def record_xml
@@ -522,78 +523,78 @@ class Test::Unit::TestCase
       "<facets>" +
       "<language>eng</language>" +
       "<creationdate>2004</creationdate>" +
-      "<topic>British&#x2013;Foreign countries&#x2013;Fiction</topic>" +
-      "<topic>Women travelers&#x2013;Fiction</topic>" +
-      "<topic>Older women&#x2013;Fiction</topic>" +
-      "<topic>Travelers&#x2013;Fiction</topic>" +
-      "<topic>Retirees&#x2013;Fiction</topic>" +
-      "<topic>Aunts&#x2013;Fiction</topic>" +
-      "<collection>BOBST</collection>" +
-      "<prefilter>books</prefilter>" +
-      "<rsrctype>books</rsrctype>" +
-      "<creatorcontrib>Greene, G</creatorcontrib>" +
-      "<genre>Fiction</genre>" +
-      "<genre>Humorous stories</genre>" +
-      "<library>BOBST</library>" +
-      "<lfc01>Main Collection</lfc01>" +
-      "<classificationlcc>P - Language and literature.&#x2013;English literature</classificationlcc>" +
-      "<frbrgroupid>49340863</frbrgroupid>" +
-      "<frbrtype>5</frbrtype>" +
-      "</facets>" +
-      "<dedup>" +
-      "<t>1</t>" +
-      "<c1>2004559272</c1>" +
-      "<c2>0143039008;9780143039006</c2>" +
-      "<c3>travelswithmyaunt</c3>" +
-      "<c4>2004</c4>" +
-      "<f1>2004559272</f1>" +
-      "<f3>0143039008;9780143039006</f3>" +
-      "<f5>travelswithmyaunt</f5>" +
-      "<f6>2004</f6>" +
-      "<f7>travels with my aunt</f7>" +
-      "<f8>nyu</f8>" +
-      "<f9>xvi, 254 p. ;</f9>" +
-      "<f10>penguin books</f10>" +
-      "<f11>greene graham 1904 1991</f11>" +
-      "</dedup>" +
-      "<frbr>" +
-      "<t>1</t>" +
-      "<k1>$$Kgreene graham 1904 1991$$AA</k1>" +
-      "<k3>$$Kbooktravels with my aunt$$AT</k3>" +
-      "</frbr>" +
-      "<delivery>" +
-      "<institution>NYU</institution>" +
-      "<delcategory>Physical Item</delcategory>" +
-      "</delivery>" +
-      "<enrichment>" +
-      "<classificationlcc>PR6013.R44</classificationlcc>" +
-      "</enrichment>" +
-      "<ranking>" +
-      "<booster1>1</booster1>" +
-      "<booster2>1</booster2>" +
-      "</ranking>" +
-      "<addata>" +
-      "<aulast>Greene</aulast>" +
-      "<aufirst>Graham,</aufirst>" +
-      "<au>Greene, Graham, 1904-1991</au>" +
-      "<btitle>Travels with my aunt</btitle>" +
-      "<seriestitle>Penguin classics</seriestitle>" +
-      "<date>2004</date>" +
-      "<risdate>2004.</risdate>" +
-      "<isbn>0143039008</isbn>" +
-      "<isbn>9780143039006</isbn>" +
-      "<format>book</format>" +
-      "<genre>book</genre>" +
-      "<ristype>BOOK</ristype>" +
-      "<notes>Includes bibliographical references (p. xv-xvi).</notes>" +
-      "<cop>New York</cop>" +
-      "<pub>Penguin Books</pub>" +
-      "<oclcid>56781200</oclcid>" +
-      "<lccn>2004559272</lccn>" +
-      "<lad01>BOBST</lad01>" +
-      "<lad01>Physical Item</lad01>" +
-      "</addata>" +
-      "</record>"
+        "<topic>British&#x2013;Foreign countries&#x2013;Fiction</topic>" +
+        "<topic>Women travelers&#x2013;Fiction</topic>" +
+        "<topic>Older women&#x2013;Fiction</topic>" +
+        "<topic>Travelers&#x2013;Fiction</topic>" +
+        "<topic>Retirees&#x2013;Fiction</topic>" +
+        "<topic>Aunts&#x2013;Fiction</topic>" +
+        "<collection>BOBST</collection>" +
+        "<prefilter>books</prefilter>" +
+        "<rsrctype>books</rsrctype>" +
+        "<creatorcontrib>Greene, G</creatorcontrib>" +
+        "<genre>Fiction</genre>" +
+        "<genre>Humorous stories</genre>" +
+        "<library>BOBST</library>" +
+        "<lfc01>Main Collection</lfc01>" +
+        "<classificationlcc>P - Language and literature.&#x2013;English literature</classificationlcc>" +
+        "<frbrgroupid>49340863</frbrgroupid>" +
+        "<frbrtype>5</frbrtype>" +
+        "</facets>" +
+        "<dedup>" +
+        "<t>1</t>" +
+        "<c1>2004559272</c1>" +
+        "<c2>0143039008;9780143039006</c2>" +
+        "<c3>travelswithmyaunt</c3>" +
+        "<c4>2004</c4>" +
+        "<f1>2004559272</f1>" +
+        "<f3>0143039008;9780143039006</f3>" +
+        "<f5>travelswithmyaunt</f5>" +
+        "<f6>2004</f6>" +
+        "<f7>travels with my aunt</f7>" +
+        "<f8>nyu</f8>" +
+        "<f9>xvi, 254 p. ;</f9>" +
+        "<f10>penguin books</f10>" +
+        "<f11>greene graham 1904 1991</f11>" +
+        "</dedup>" +
+        "<frbr>" +
+        "<t>1</t>" +
+        "<k1>$$Kgreene graham 1904 1991$$AA</k1>" +
+        "<k3>$$Kbooktravels with my aunt$$AT</k3>" +
+        "</frbr>" +
+        "<delivery>" +
+        "<institution>NYU</institution>" +
+        "<delcategory>Physical Item</delcategory>" +
+        "</delivery>" +
+        "<enrichment>" +
+        "<classificationlcc>PR6013.R44</classificationlcc>" +
+        "</enrichment>" +
+        "<ranking>" +
+        "<booster1>1</booster1>" +
+        "<booster2>1</booster2>" +
+        "</ranking>" +
+        "<addata>" +
+        "<aulast>Greene</aulast>" +
+        "<aufirst>Graham,</aufirst>" +
+        "<au>Greene, Graham, 1904-1991</au>" +
+        "<btitle>Travels with my aunt</btitle>" +
+        "<seriestitle>Penguin classics</seriestitle>" +
+        "<date>2004</date>" +
+        "<risdate>2004.</risdate>" +
+        "<isbn>0143039008</isbn>" +
+        "<isbn>9780143039006</isbn>" +
+        "<format>book</format>" +
+        "<genre>book</genre>" +
+        "<ristype>BOOK</ristype>" +
+        "<notes>Includes bibliographical references (p. xv-xvi).</notes>" +
+        "<cop>New York</cop>" +
+        "<pub>Penguin Books</pub>" +
+        "<oclcid>56781200</oclcid>" +
+        "<lccn>2004559272</lccn>" +
+        "<lad01>BOBST</lad01>" +
+        "<lad01>Physical Item</lad01>" +
+        "</addata>" +
+        "</record>"
   end
 
   def record_other_source_xml
@@ -708,78 +709,78 @@ class Test::Unit::TestCase
       "<facets>" +
       "<language>eng</language>" +
       "<creationdate>2004</creationdate>" +
-      "<topic>British&#x2013;Foreign countries&#x2013;Fiction</topic>" +
-      "<topic>Women travelers&#x2013;Fiction</topic>" +
-      "<topic>Older women&#x2013;Fiction</topic>" +
-      "<topic>Travelers&#x2013;Fiction</topic>" +
-      "<topic>Retirees&#x2013;Fiction</topic>" +
-      "<topic>Aunts&#x2013;Fiction</topic>" +
-      "<collection>BOBST</collection>" +
-      "<prefilter>books</prefilter>" +
-      "<rsrctype>books</rsrctype>" +
-      "<creatorcontrib>Greene, G</creatorcontrib>" +
-      "<genre>Fiction</genre>" +
-      "<genre>Humorous stories</genre>" +
-      "<library>BOBST</library>" +
-      "<lfc01>Main Collection</lfc01>" +
-      "<classificationlcc>P - Language and literature.&#x2013;English literature</classificationlcc>" +
-      "<frbrgroupid>49340863</frbrgroupid>" +
-      "<frbrtype>6</frbrtype>" +
-      "</facets>" +
-      "<dedup>" +
-      "<t>1</t>" +
-      "<c1>2004559272</c1>" +
-      "<c2>0143039008;9780143039006</c2>" +
-      "<c3>travelswithmyaunt</c3>" +
-      "<c4>2004</c4>" +
-      "<f1>2004559272</f1>" +
-      "<f3>0143039008;9780143039006</f3>" +
-      "<f5>travelswithmyaunt</f5>" +
-      "<f6>2004</f6>" +
-      "<f7>travels with my aunt</f7>" +
-      "<f8>nyu</f8>" +
-      "<f9>xvi, 254 p. ;</f9>" +
-      "<f10>penguin books</f10>" +
-      "<f11>greene graham 1904 1991</f11>" +
-      "</dedup>" +
-      "<frbr>" +
-      "<t>1</t>" +
-      "<k1>$$Kgreene graham 1904 1991$$AA</k1>" +
-      "<k3>$$Kbooktravels with my aunt$$AT</k3>" +
-      "</frbr>" +
-      "<delivery>" +
-      "<institution>NYU</institution>" +
-      "<delcategory>Physical Item</delcategory>" +
-      "</delivery>" +
-      "<enrichment>" +
-      "<classificationlcc>PR6013.R44</classificationlcc>" +
-      "</enrichment>" +
-      "<ranking>" +
-      "<booster1>1</booster1>" +
-      "<booster2>1</booster2>" +
-      "</ranking>" +
-      "<addata>" +
-      "<aulast>Greene</aulast>" +
-      "<aufirst>Graham,</aufirst>" +
-      "<au>Greene, Graham, 1904-1991</au>" +
-      "<btitle>Travels with my aunt</btitle>" +
-      "<seriestitle>Penguin classics</seriestitle>" +
-      "<date>2004</date>" +
-      "<risdate>2004.</risdate>" +
-      "<isbn>0143039008</isbn>" +
-      "<isbn>9780143039006</isbn>" +
-      "<format>book</format>" +
-      "<genre>book</genre>" +
-      "<ristype>BOOK</ristype>" +
-      "<notes>Includes bibliographical references (p. xv-xvi).</notes>" +
-      "<cop>New York</cop>" +
-      "<pub>Penguin Books</pub>" +
-      "<oclcid>56781200</oclcid>" +
-      "<lccn>2004559272</lccn>" +
-      "<lad01>BOBST</lad01>" +
-      "<lad01>Physical Item</lad01>" +
-      "</addata>" +
-      "</record>"
+        "<topic>British&#x2013;Foreign countries&#x2013;Fiction</topic>" +
+        "<topic>Women travelers&#x2013;Fiction</topic>" +
+        "<topic>Older women&#x2013;Fiction</topic>" +
+        "<topic>Travelers&#x2013;Fiction</topic>" +
+        "<topic>Retirees&#x2013;Fiction</topic>" +
+        "<topic>Aunts&#x2013;Fiction</topic>" +
+        "<collection>BOBST</collection>" +
+        "<prefilter>books</prefilter>" +
+        "<rsrctype>books</rsrctype>" +
+        "<creatorcontrib>Greene, G</creatorcontrib>" +
+        "<genre>Fiction</genre>" +
+        "<genre>Humorous stories</genre>" +
+        "<library>BOBST</library>" +
+        "<lfc01>Main Collection</lfc01>" +
+        "<classificationlcc>P - Language and literature.&#x2013;English literature</classificationlcc>" +
+        "<frbrgroupid>49340863</frbrgroupid>" +
+        "<frbrtype>6</frbrtype>" +
+        "</facets>" +
+        "<dedup>" +
+        "<t>1</t>" +
+        "<c1>2004559272</c1>" +
+        "<c2>0143039008;9780143039006</c2>" +
+        "<c3>travelswithmyaunt</c3>" +
+        "<c4>2004</c4>" +
+        "<f1>2004559272</f1>" +
+        "<f3>0143039008;9780143039006</f3>" +
+        "<f5>travelswithmyaunt</f5>" +
+        "<f6>2004</f6>" +
+        "<f7>travels with my aunt</f7>" +
+        "<f8>nyu</f8>" +
+        "<f9>xvi, 254 p. ;</f9>" +
+        "<f10>penguin books</f10>" +
+        "<f11>greene graham 1904 1991</f11>" +
+        "</dedup>" +
+        "<frbr>" +
+        "<t>1</t>" +
+        "<k1>$$Kgreene graham 1904 1991$$AA</k1>" +
+        "<k3>$$Kbooktravels with my aunt$$AT</k3>" +
+        "</frbr>" +
+        "<delivery>" +
+        "<institution>NYU</institution>" +
+        "<delcategory>Physical Item</delcategory>" +
+        "</delivery>" +
+        "<enrichment>" +
+        "<classificationlcc>PR6013.R44</classificationlcc>" +
+        "</enrichment>" +
+        "<ranking>" +
+        "<booster1>1</booster1>" +
+        "<booster2>1</booster2>" +
+        "</ranking>" +
+        "<addata>" +
+        "<aulast>Greene</aulast>" +
+        "<aufirst>Graham,</aufirst>" +
+        "<au>Greene, Graham, 1904-1991</au>" +
+        "<btitle>Travels with my aunt</btitle>" +
+        "<seriestitle>Penguin classics</seriestitle>" +
+        "<date>2004</date>" +
+        "<risdate>2004.</risdate>" +
+        "<isbn>0143039008</isbn>" +
+        "<isbn>9780143039006</isbn>" +
+        "<format>book</format>" +
+        "<genre>book</genre>" +
+        "<ristype>BOOK</ristype>" +
+        "<notes>Includes bibliographical references (p. xv-xvi).</notes>" +
+        "<cop>New York</cop>" +
+        "<pub>Penguin Books</pub>" +
+        "<oclcid>56781200</oclcid>" +
+        "<lccn>2004559272</lccn>" +
+        "<lad01>BOBST</lad01>" +
+        "<lad01>Physical Item</lad01>" +
+        "</addata>" +
+        "</record>"
   end
 end
 
