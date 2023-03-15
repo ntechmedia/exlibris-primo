@@ -18,16 +18,8 @@ blocks:
             - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             - chmod +x ./cc-test-reporter
             - ./cc-test-reporter before-build
-            - cache delete gems-$SEMAPHORE_GIT_PR_BRANCH
-            - gem install bundler:2.3.14
-            - 'bundle config set gems.railslts.com $ERESERVE_RAILS_LTS'
-            - bundle config set --local path 'vendor/bundle'
-            - bundle install
-            - cache store gems-$SEMAPHORE_GIT_PR_BRANCH vendor/bundle
       secrets:
-        - name: aws
         - name: code_climate
-        - name: rails_lts
   - name: tests
     dependencies: ['code coverage setup']
     task:
@@ -47,7 +39,7 @@ blocks:
           - gem install bundler:2.3.14
           - 'bundle config set gems.railslts.com $ERESERVE_RAILS_LTS'
           - bundle config set --local path 'vendor/bundle'
-          - gem install semaphore_test_boosters
+          - bundle install
       secrets:
         - name: aws
         - name: code_climate
