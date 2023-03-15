@@ -25,6 +25,7 @@ module Exlibris
       include ChainGang::Search
       include RequestAttributes
       include WriteAttributes
+      include Api
 
       #
       # Returns the Response from the search.

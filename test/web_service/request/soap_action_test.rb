@@ -14,22 +14,34 @@ module WebService
         @folder_to_remove = "377473116"
       end
 
-      def test_eshelf_soap_action
-        assert_equal :get_eshelf_structure,
-          Exlibris::Primo::WebService::Request::GetEshelfStructure.soap_action
-        assert_equal :get_eshelf,
-          Exlibris::Primo::WebService::Request::GetEshelf.soap_action
-        assert_equal :add_to_eshelf,
-          Exlibris::Primo::WebService::Request::AddToEshelf.soap_action
-        assert_equal :remove_from_eshelf,
-          Exlibris::Primo::WebService::Request::RemoveFromEshelf.soap_action
-        assert_equal :add_folder_to_eshelf,
-          Exlibris::Primo::WebService::Request::AddFolderToEshelf.soap_action
-        assert_equal :remove_folder_from_eshelf,
-          Exlibris::Primo::WebService::Request::RemoveFolderFromEshelf.soap_action
+      def test_eshelf_api_action
+        assert_equal(
+          { soap: :get_eshelf_structure },
+          Exlibris::Primo::WebService::Request::GetEshelfStructure.base_api_action
+        )
+        assert_equal(
+          { soap: :get_eshelf },
+          Exlibris::Primo::WebService::Request::GetEshelf.base_api_action
+        )
+        assert_equal(
+          { soap: :add_to_eshelf },
+          Exlibris::Primo::WebService::Request::AddToEshelf.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_from_eshelf },
+          Exlibris::Primo::WebService::Request::RemoveFromEshelf.base_api_action
+        )
+        assert_equal(
+          { soap: :add_folder_to_eshelf },
+          Exlibris::Primo::WebService::Request::AddFolderToEshelf.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_folder_from_eshelf },
+          Exlibris::Primo::WebService::Request::RemoveFolderFromEshelf.base_api_action
+        )
       end
 
-      def test_call_eshelf_soap_action
+      def test_call_eshelf_api_action
         assert_nothing_raised {
           VCR.use_cassette('request get eshelf structure') do
             Exlibris::Primo::WebService::Request::GetEshelfStructure.new(:base_url => @base_url,
@@ -58,14 +70,18 @@ module WebService
         }
       end
 
-      def test_search_soap_action
-        assert_equal :search_brief,
-          Exlibris::Primo::WebService::Request::Search.soap_action
-        assert_equal :get_record,
-          Exlibris::Primo::WebService::Request::FullView.soap_action
+      def test_search_api_action
+        assert_equal(
+          { soap: :search_brief, rest: :search },
+          Exlibris::Primo::WebService::Request::Search.base_api_action
+        )
+        assert_equal(
+          { soap: :get_record },
+          Exlibris::Primo::WebService::Request::FullView.base_api_action
+        )
       end
 
-      def test_call_search_soap_action
+      def test_call_search_api_action
         assert_nothing_raised {
           VCR.use_cassette('request search isbn') do
             request = Exlibris::Primo::WebService::Request::Search.new(:base_url => @base_url, :institution => @institution)
@@ -78,42 +94,64 @@ module WebService
         }
       end
 
-      def test_reviews_soap_action
-        assert_equal :get_reviews,
-          Exlibris::Primo::WebService::Request::GetReviews.soap_action
-        assert_equal :get_all_my_reviews,
-          Exlibris::Primo::WebService::Request::GetAllMyReviews.soap_action
-        assert_equal :get_reviews_for_record,
-          Exlibris::Primo::WebService::Request::GetReviewsForRecord.soap_action
-        assert_equal :get_reviews_by_rating,
-          Exlibris::Primo::WebService::Request::GetReviewsByRating.soap_action
-        assert_equal :add_review,
-          Exlibris::Primo::WebService::Request::AddReview.soap_action
-        assert_equal :remove_review,
-          Exlibris::Primo::WebService::Request::RemoveReview.soap_action
+      def test_reviews_api_action
+        assert_equal(
+          { soap: :get_reviews },
+          Exlibris::Primo::WebService::Request::GetReviews.base_api_action
+        )
+        assert_equal(
+          { soap: :get_all_my_reviews },
+          Exlibris::Primo::WebService::Request::GetAllMyReviews.base_api_action
+        )
+        assert_equal(
+          { soap: :get_reviews_for_record },
+          Exlibris::Primo::WebService::Request::GetReviewsForRecord.base_api_action
+        )
+        assert_equal(
+          { soap: :get_reviews_by_rating },
+          Exlibris::Primo::WebService::Request::GetReviewsByRating.base_api_action
+        )
+        assert_equal(
+          { soap: :add_review },
+          Exlibris::Primo::WebService::Request::AddReview.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_review },
+          Exlibris::Primo::WebService::Request::RemoveReview.base_api_action
+        )
       end
 
-      def test_tags_soap_action
-        assert_equal :get_tags,
-          Exlibris::Primo::WebService::Request::GetTags.soap_action
-        assert_equal :get_all_my_tags,
-          Exlibris::Primo::WebService::Request::GetAllMyTags.soap_action
-        assert_equal :get_tags_for_record,
-          Exlibris::Primo::WebService::Request::GetTagsForRecord.soap_action
-        assert_equal :remove_tag,
-          Exlibris::Primo::WebService::Request::RemoveTag.soap_action
-        assert_equal :remove_user_tags,
-          Exlibris::Primo::WebService::Request::RemoveUserTags.soap_action
+      def test_tags_api_action
+        assert_equal(
+          { soap: :get_tags },
+          Exlibris::Primo::WebService::Request::GetTags.base_api_action
+        )
+        assert_equal(
+          { soap: :get_all_my_tags },
+          Exlibris::Primo::WebService::Request::GetAllMyTags.base_api_action
+        )
+        assert_equal(
+          { soap: :get_tags_for_record },
+          Exlibris::Primo::WebService::Request::GetTagsForRecord.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_tag },
+          Exlibris::Primo::WebService::Request::RemoveTag.base_api_action
+        )
+        assert_equal(
+          { soap: :remove_user_tags },
+          Exlibris::Primo::WebService::Request::RemoveUserTags.base_api_action
+        )
       end
 
       def test_undefined_action
-        Exlibris::Primo::WebService::Request::Search.send(:soap_action=, :undefined_action)
+        Exlibris::Primo::WebService::Request::Search.send(:set_base_api_action, { soap: :undefined_action })
         assert_raise(NoMethodError) {
           VCR.use_cassette('request undefined action call') do
             Exlibris::Primo::WebService::Request::Search.new(:base_url => @base_url).call
           end
         }
-        Exlibris::Primo::WebService::Request::Search.send(:soap_action=, :search_brief)
+        Exlibris::Primo::WebService::Request::Search.send(:set_base_api_action, { soap: :search_brief, rest: :search })
       end
     end
   end

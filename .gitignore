@@ -2,5 +2,8 @@ Gemfile.lock
 pkg/
 *.bak
 coverage/
+.ruby-gemset
 .ruby-version
 *.gem
+.idea
+sandpit

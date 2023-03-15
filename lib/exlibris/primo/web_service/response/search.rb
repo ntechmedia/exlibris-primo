@@ -22,7 +22,6 @@ module Exlibris
           def initialize *args
             super
             @record = records.first
-            # @record = records.first.last
             @local = parse_local(search_doc["LOCAL"]) if search_doc
           end
 

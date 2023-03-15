@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_API_KEY>&limit=5&multiFacets=facet_rtype,include,books&offset=0&q=title,contains,An%20introduction%20to%20research%20for%20midwives,AND%3Bisbn,contains,0702034908&scope=UB_local_PC&tab=quicksearch&vid=UB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Fri, 07 Dec 2018 02:03:35 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,DELETE,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Set-Cookie:
+      - JSESSIONID=5388AAC20EDCB9A0EE9E229ACF2C6C7C; Domain=api-ap.hosted.exlibrisgroup.com;
+        Path=/primo/v1
+      - sto-id-%3FPS_PROD%3FPTC.Prod.Primo.1701-sg=DKHICAAK; Domain=api-ap.hosted.exlibrisgroup.com;
+        Expires=Mon, 04-Dec-2028 02:03:34 GMT; Path=/primo/v1
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 07 Dec 2018 02:03:35 GMT
+    body:
+      encoding: UTF-8
+      string: '{"rtaResultsLink":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/UB?recordInformation=$$V.b24001272$$OUB_MILLENNIUM.b24001272|$$V.b16121156$$OUB_MILLENNIUM.b16121156|,|$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b24001272|$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b16121156|,|__NO_VALUE__|,|$$VIII$$OUB_MILLENNIUM.b24001272|$$VIII$$OUB_MILLENNIUM.b16121156|,|dedupmrg696852256|,|$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b24001272|$$IBALLARAT$$Lmall$$1Main$$2(618.2
+        R259i3 )$$Savailable$$31$$40$$OUB_MILLENNIUM.b16121156|$$IBALLARAT$$Lgall$$1Main$$2(618.20072
+        R328.I 2011 )$$Savailable$$31$$40$$OUB_MILLENNIUM.b16121156|,|$$IBALLARAT$$Savailable|,|Online
+        Resource|Physical Item|,|$$VBALLARAT$$OUB_MILLENNIUM.b24001272|$$VBALLARAT$$OUB_MILLENNIUM.b16121156|,|__NO_VALUE__|,|$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b24001272|$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b16121156|,|__NO_VALUE__|,|$$Vb2400127$$OUB_MILLENNIUM.b24001272|$$Vb1612115$$OUB_MILLENNIUM.b16121156|,|__NO_VALUE__|;|","highlights":{"vertitle":["introduction
+        research midwives","researches","introduction to research for midwives","introduction","introductions","An
+        introduction to research for midwives","midwive","an introduction to research
+        for midwives","midwives","research"],"termsUnion":["introductions","researches","introduction
+        research midwives","midwives","introduction to research for midwives","an
+        introduction to research for midwives","research","introduction","An introduction
+        to research for midwives","midwive"],"title":["introduction research midwives","An
+        introduction to research for midwives","research","introduction to research
+        for midwives","midwive","an introduction to research for midwives","introductions","introduction","midwives","researches"]},"docs":[{"enrichment":{"virtualBrowseObject":{"callNumber":"","isVirtualBrowseEnabled":false,"callNumberBrowseField":"browse_callnumber"}},"delivery":{"availabilityLinks":["directlink","directlink"],"physicalItemTextCodes":"delivery.code.alsophysical","displayLocation":true,"availabilityLinksUrl":["http://ezproxy.federation.edu.au/login?url=http://www.ballarat.eblib.com.AU/EBLWeb/patron/?target=patron&extendedid=P_1722038_0","http://innopac.ballarat.edu.au/record=b1612115"],"link":[{"displayLabel":"openurl","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-12-07T10%3A03%3A35IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=An%20introduction%20to%20research%20for%20midwives&rft.aulast=Rees&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Rees,%20Colin&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9780702034909&rft.isbn=0702045926&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CUB_MILLENNIUM%3E.b24001272%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E450327913%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_%3Cprovider_id%3E={{control/%3Cprovider_id%3E}}","linkType":"http://purl.org/pnx/linkType/openurl","@id":"_:0"},{"displayLabel":"openurl","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-12-07T10%3A03%3A35IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=An%20introduction%20to%20research%20for%20midwives&rft.aulast=Rees&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Rees,%20Colin&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9780702034909&rft.isbn=0702045926&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CUB_MILLENNIUM%3E.b16121156%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E450327913%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_%3Cprovider_id%3E={{control/%3Cprovider_id%3E}}","linkType":"http://purl.org/pnx/linkType/openurl","@id":"_:1"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:2"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=0702045926/SC.JPG&client=CLIENT","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:3"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:0702045926,OCLC:678397565,LCCN:2010046474&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:4"},{"displayLabel":"See
+        Holdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2400127","linkType":"http://purl.org/pnx/linkType/backlink","@id":"_:5"},{"displayLabel":"See
+        Holdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b1612115","linkType":"http://purl.org/pnx/linkType/backlink","@id":"_:6"},{"displayLabel":"linktorequest","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2400127","linkType":"http://purl.org/pnx/linkType/linktorequest","@id":"_:7"},{"displayLabel":"linktorequest","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b1612115","linkType":"http://purl.org/pnx/linkType/linktorequest","@id":"_:8"},{"displayLabel":"This
+        item in Google books","inst4opac":"BALLARAT","linkURL":"http://books.google.com/books?vid=ISBN0702045926","linkType":"http://purl.org/pnx/linkType/lln02","@id":"_:9"},{"displayLabel":"This
+        item in Trove","inst4opac":"BALLARAT","linkURL":"http://trove.nla.gov.au/result?q=0702045926","linkType":"http://purl.org/pnx/linkType/lln02","@id":"_:10"},{"displayLabel":"Click
+        here to view book","inst4opac":"BALLARAT","linkURL":"http://ezproxy.federation.edu.au/login?url=http://www.ballarat.eblib.com.AU/EBLWeb/patron/?target=patron&extendedid=P_1722038_0","linkType":"http://purl.org/pnx/linkType/linktorsrc","@id":"_:11"},{"displayLabel":"Find
+        this item in BONUS+","inst4opac":"BALLARAT","linkURL":"http://bonus.newcastle.edu.au/search~S0/?searchtype=t&searcharg=An%20introduction%20to%20research%20for%20midwives&sortdropdown=-&SORT=D&extended=0&SUBMIT=Search","linkType":"http://purl.org/pnx/linkType/lln01","@id":"_:12"},{"displayLabel":"linktoholdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2400127","linkType":"http://purl.org/pnx/linkType/linktoholdings","@id":"_:13"},{"displayLabel":"linktoholdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b1612115","linkType":"http://purl.org/pnx/linkType/linktoholdings","@id":"_:14"},{"displayLabel":"openurlfulltext","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-12-07T10%3A03%3A35IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=An%20introduction%20to%20research%20for%20midwives&rft.aulast=Rees&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Rees,%20Colin&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9780702034909&rft.isbn=0702045926&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3CUB_MILLENNIUM%3E.b24001272%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E450327913%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_%3Cprovider_id%3E={{control/%3Cprovider_id%3E}}","linkType":"http://purl.org/pnx/linkType/openurlfulltext","@id":"_:15"},{"displayLabel":"openurlfulltext","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-12-07T10%3A03%3A35IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=An%20introduction%20to%20research%20for%20midwives&rft.aulast=Rees&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Rees,%20Colin&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9780702034909&rft.isbn=0702045926&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3CUB_MILLENNIUM%3E.b16121156%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E450327913%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_%3Cprovider_id%3E={{control/%3Cprovider_id%3E}}","linkType":"http://purl.org/pnx/linkType/openurlfulltext","@id":"_:16"},{"displayLabel":"$$Eworldcat","inst4opac":"BALLARAT","linkURL":"http://www.worldcat.org/search?q=isbn%3A0702045926","linkType":"http://purl.org/pnx/linkType/linktouc","@id":"_:17"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=0702045926/SC.JPG&client=primo","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:18"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=0702045926/SC.JPG&client=CLIENT","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:19"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:0702045926,OCLC:678397565,LCCN:2010046474&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:20"}],"availability":["not_restricted","available_in_institution"],"additionalLocations":false,"displayedAvailability":"not_restricted","holding":[{"matchForHoldings":[],"subLocationCode":"","ilsApiId":"","libraryCode":"gall","isValidUser":true,"mainLocation":"","callNumber":"(618.20072
+        R328.I 2011 )","adaptorid":"","organization":"BALLARAT","holdingURL":"http://innopac.ballarat.edu.au/record=b1612115","@id":"_:0","availabilityStatus":"available","subLocation":"Main","holdId":""},{"matchForHoldings":[],"subLocationCode":"","ilsApiId":"","libraryCode":"mall","isValidUser":true,"mainLocation":"","callNumber":"(618.2
+        R259i3 )","adaptorid":"","organization":"BALLARAT","holdingURL":"http://innopac.ballarat.edu.au/record=b1612115","@id":"_:1","availabilityStatus":"available","subLocation":"Main","holdId":""}],"bestlocation":{"matchForHoldings":[],"mainLocation":"","subLocationCode":"","callNumber":"(618.2
+        R259i3 )","organization":"BALLARAT","libraryCode":"mall","@id":"_:0","availabilityStatus":"available","subLocation":"Main","holdId":"","isValidUser":true},"deliveryCategory":["Online
+        Resource","Physical Item"],"serviceMode":["display","ovl"],"feDisplayOtherLocations":false,"GetIt2":{"isLinktoOnline":false,"displayText":"openurl","hyperlinkText":"","getItTabText":"tab2_norestrict","link":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-12-07T10%3A03%3A35IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=An%20introduction%20to%20research%20for%20midwives&rft.aulast=Rees&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Rees,%20Colin&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9780702034909&rft.isbn=0702045926&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CUB_MILLENNIUM%3E.b24001272%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E450327913%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_%3Cprovider_id%3E={{control/%3Cprovider_id%3E}}","@id":"_:0","serviceModeGetit2":"display"},"GetIt1":[{"links":[{"isLinktoOnline":true,"displayText":"Click
+        here to view book","hyperlinkText":"Click here to view book","getItTabText":"tab1_onl_norestrict","link":"http://ezproxy.federation.edu.au/login?url=http://www.ballarat.eblib.com.AU/EBLWeb/patron/?target=patron&extendedid=P_1722038_0","@id":"_:0"}],"category":"Online
+        Resource"},{"links":[{"isLinktoOnline":false,"displayText":"linktoholdings","hyperlinkText":"tab1_avail","getItTabText":"tab1_avail","link":"http://innopac.ballarat.edu.au/record=b1612115","@id":"_:0"}],"category":"Physical
+        Item"}]},"@rta_link":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/UB?recordInformation=$$V.b24001272$$OUB_MILLENNIUM.b24001272|$$V.b16121156$$OUB_MILLENNIUM.b16121156|,|$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b24001272|$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b16121156|,|__NO_VALUE__|,|$$VIII$$OUB_MILLENNIUM.b24001272|$$VIII$$OUB_MILLENNIUM.b16121156|,|dedupmrg696852256|,|$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b24001272|$$IBALLARAT$$Lmall$$1Main$$2(618.2
+        R259i3 )$$Savailable$$31$$40$$OUB_MILLENNIUM.b16121156|$$IBALLARAT$$Lgall$$1Main$$2(618.20072
+        R328.I 2011 )$$Savailable$$31$$40$$OUB_MILLENNIUM.b16121156|,|$$IBALLARAT$$Savailable|,|Online
+        Resource|Physical Item|,|$$VBALLARAT$$OUB_MILLENNIUM.b24001272|$$VBALLARAT$$OUB_MILLENNIUM.b16121156|,|__NO_VALUE__|,|$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b24001272|$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b16121156|,|__NO_VALUE__|,|$$Vb2400127$$OUB_MILLENNIUM.b24001272|$$Vb1612115$$OUB_MILLENNIUM.b16121156|,|__NO_VALUE__","context":"L","adaptor":"Local
+        Search Engine","pnx":{"delivery":{"institution":["$$VBALLARAT$$OUB_MILLENNIUM.b24001272","$$VBALLARAT$$OUB_MILLENNIUM.b16121156"],"delcategory":["$$VOnline
+        Resource$$OUB_MILLENNIUM.b24001272","$$VPhysical Item$$OUB_MILLENNIUM.b16121156"]},"display":{"lds06":["Edinburgh
+        : Churchill Livingstone/Elsevier"],"identifier":["$$CISBN$$V0702045926 (electronic
+        bk.); $$CISBN$$V9780702045929 (electronic bk.)"],"creator":["Rees, Colin"],"creationdate":["2011"],"availinstitution":["$$IBALLARAT$$Savailable"],"subject":["Midwifery
+        -- Research; Midwifery; Research -- methods"],"format":["1 online resource
+        (x, 249 p.) : ill.."],"edition":["3rd ed.."],"description":["Midwifery, research
+        and evidence-based practice -- Key concepts in research -- The basic framework
+        of research -- Qualitative research approaches -- Critiquing research articles
+        -- Reviewing the literature -- The research question -- Ethics and research
+        -- Surveys -- Interviews -- Observation -- Experiments -- Statistics in research
+        -- Sampling methods -- The challenge of the future."],"availlibrary":["$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b24001272","$$IBALLARAT$$Lmall$$1Main$$2(618.2
+        R259i3 )$$Savailable$$31$$40$$OUB_MILLENNIUM.b16121156","$$IBALLARAT$$Lgall$$1Main$$2(618.20072
+        R328.I 2011 )$$Savailable$$31$$40$$OUB_MILLENNIUM.b16121156"],"language":["eng"],"source":["$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b24001272","$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b16121156"],"title":["An
+        introduction to research for midwives"],"type":["book"],"version":["2"],"contributor":["Ebooks
+        Corporation."],"publisher":["Churchill Livingstone/Elsevier"],"availpnx":["available"],"lds01":["Includes
+        bibliographical references and index.; Electronic reproduction.; Ebook access
+        requires you to log in as a Federation University Australia library user.","Previous
+        ed.: Edinburgh: Books for Midwives, 2003.; Includes bibliographical references
+        and index."]},"control":{"recordid":["dedupmrg696852256"],"sourceid":["$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b24001272","$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b16121156"],"sourceformat":["$$VMARC
+        Exchange$$OUB_MILLENNIUM.b24001272","$$VMARC Exchange$$OUB_MILLENNIUM.b16121156"],"sourcerecordid":["$$V.b24001272$$OUB_MILLENNIUM.b24001272","$$V.b16121156$$OUB_MILLENNIUM.b16121156"],"sourcesystem":["$$VIII$$OUB_MILLENNIUM.b24001272","$$VIII$$OUB_MILLENNIUM.b16121156"],"addsrcrecordid":["$$Vb2400127$$OUB_MILLENNIUM.b24001272","$$Vb1612115$$OUB_MILLENNIUM.b16121156"]},"sort":{"creationdate":["2011"],"author":["Rees,
+        Colin."],"title":["introduction to research for midwives"]},"frbr":{"t":[1],"k1":["$$Kballaratrees
+        colin$$AA"],"k3":["$$Kballaratintroduction to research for midwives$$AT"]},"dedup":{"f10":["churchill
+        livingstone elsevier"],"f20":["BALLARAT"],"f11":["rees colin"],"f3":["0702045926;9780702045929"],"c2":["0702045926;9780702045929"],"f5":["introductiontoresearormidwives"],"c3":["introductiontoresearormidwives"],"f6":["2011"],"c4":["2011"],"f7":["introduction
+        to research for midwives"],"f8":["stk"],"f9":["1 online resource (x, 249 p.)
+        :"],"t":[1]},"facets":{"frbrtype":["5"],"creatorcontrib":["Rees, C","Ebooks
+        Corporation"],"creationdate":["2011"],"toplevel":["online_resources","available"],"newrecords":["20151012_811","20110624_420"],"frbrgroupid":["450327913"],"rsrctype":["books"],"topic":["Midwifery\u2013Research","Midwifery","Research\u2013methods"],"classificationlcc":["R
+        - Medicine.\u2013Gynecology and obstetrics\u2013Obstetrics\u2013Maternal care.
+        Prenatal care services"],"language":["eng"],"prefilter":["books"]},"enrichment":{"classificationlcc":["RG950"]},"search":{"recordid":["UB_MILLENNIUM.b24001272","UB_MILLENNIUM.b16121156"],"sourceid":["UB_MILLENNIUM"],"general":["Churchill
+        Livingstone/Elsevier,","[electronic resource] /"],"creatorcontrib":["Colin.  Rees","Rees,
+        C","Colin Rees.","Ebooks Corporation."],"creationdate":["2011"],"subject":["Midwifery
+        Research.","Midwifery.","Research methods."],"isbn":["0702045926","9780702045929","9780702034909","0702034908"],"scope":["UB_MILLENNIUM","BALLARAT"],"rsrctype":["book"],"toc":["Midwifery,
+        research and evidence-based practice -- Key concepts in research -- The basic
+        framework of research -- Qualitative research approaches -- Critiquing research
+        articles -- Reviewing the literature -- The research question -- Ethics and
+        research -- Surveys -- Interviews -- Observation -- Experiments -- Statistics
+        in research -- Sampling methods -- The challenge of the future."],"title":["An
+        introduction to research for midwives","An introduction to research for midwives
+        /"]},"links":{"openurl":["$$V$$Topenurl_journal$$OUB_MILLENNIUM.b24001272","$$V$$Topenurl_journal$$OUB_MILLENNIUM.b16121156"],"linktoexcerpt":["$$Tsyndetics_excerpt$$Elinktoexcerpt"],"thumbnail":["$$Tamazon_thumb","$$Tsyndetics_thumb","$$Tgoogle_thumb"],"linktorequest":["$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b24001272","$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b16121156"],"backlink":["$$V$$TBALLARAT_III_holdings$$DSee
+        Holdings$$OUB_MILLENNIUM.b24001272","$$V$$TBALLARAT_III_holdings$$DSee Holdings$$OUB_MILLENNIUM.b16121156"],"lln02":["$$Tgoogle_books$$DThis
+        item in Google books$$OUB_MILLENNIUM.b24001272","$$Ttrove$$DThis item in Trove$$OUB_MILLENNIUM.b24001272","$$Tgoogle_books$$DThis
+        item in Google books$$OUB_MILLENNIUM.b16121156","$$Ttrove$$DThis item in Trove$$OUB_MILLENNIUM.b16121156"],"linktorsrc":["$$V$$Uhttp://ezproxy.federation.edu.au/login?url=http://www.ballarat.eblib.com.AU/EBLWeb/patron/?target=patron&extendedid=P_1722038_0$$DClick
+        here to view book$$OUB_MILLENNIUM.b24001272"],"lln01":["$$Tbonus_title$$DFind
+        this item in BONUS+$$OUB_MILLENNIUM.b24001272","$$Tbonus_title$$DFind this
+        item in BONUS+$$OUB_MILLENNIUM.b16121156"],"linktoholdings":["$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b24001272","$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b16121156"],"openurlfulltext":["$$V$$Topenurlfull_journal$$OUB_MILLENNIUM.b24001272","$$V$$Topenurlfull_journal$$OUB_MILLENNIUM.b16121156"],"linktouc":["$$Tworldcat_isbn$$Eworldcat","$$Tworldcat_isbn$$Eworldcat"]},"ranking":{"booster2":["1"],"booster1":["1"]},"addata":{"date":["2011"],"notes":["Includes
+        bibliographical references and index."],"aulast":["Rees"],"cop":["Edinburgh]"],"isbn":["0702045926","9780702045929","9780702034909","0702034908"],"format":["book"],"ristype":["BOOK"],"oclcid":["678397565"],"eissn":["9780702034909"],"aufirst":["Colin."],"lccn":["2010046474"],"addau":["Ebooks
+        Corporation"],"au":["Rees, Colin"],"genre":["book"],"btitle":["An introduction
+        to research for midwives"],"risdate":["2011."],"pub":["Churchill Livingstone/Elsevier"]},"browse":{"callnumber":["$$IPRIMO"]}},"@id":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/dedupmrg696852256"}],"timelog":{"CalculateRtaLinks1DeltaTime":48,"BriefSearchDeltaTime":661,"DoSearchPrimoResultDeltaTime":613,"StartBriefSearch":1544148215287,"retrieveHighLightsDeltaTime":48,"retrieveDidUMeanDeltaTime":48,"GetSearchStatusDeltaTime":613,"StartTranslationTime":1544148215900,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":48,"retrieveFacetsDeltaTime":48},"lang3":"eng","info":{"total":1,"last":"1","maxTotal":0,"first":"1"},"facets":[{"values":[{"count":1,"value":"Rees,
+        C"},{"count":1,"value":"Ebooks Corporation"}],"name":"creator"},{"values":[{"count":1,"value":"2011"}],"name":"creationdate"},{"values":[{"count":1,"value":"online_resources"},{"count":1,"value":"available"}],"name":"tlevel"},{"values":[{"count":1,"value":"Midwifery"},{"count":1,"value":"Research"}],"name":"topic"},{"values":[{"count":2,"value":"eng"}],"name":"lang"},{"values":[{"count":1,"value":"R
+        - Medicine."}],"name":"lcc"}],"beaconO22":"669"}'
+    http_version: 
+  recorded_at: Fri, 07 Dec 2018 02:03:36 GMT
+recorded_with: VCR 2.9.3

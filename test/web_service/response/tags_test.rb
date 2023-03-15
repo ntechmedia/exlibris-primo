@@ -15,12 +15,12 @@ module WebService
 
       def test_get_tags
         VCR.use_cassette('response get tags') {
-          soap_action = :get_tags
-          request = Exlibris::Primo::WebService::Request::GetTags.new(:user_id => @user_id, 
+          api_action = :get_tags
+          request = Exlibris::Primo::WebService::Request::GetTags.new(:user_id => @user_id,
             :institution => @institution)
           client = Exlibris::Primo::WebService::Client::Tags.new(:base_url => @base_url)
           response = Exlibris::Primo::WebService::Response::GetTags.new(
-            client.send(soap_action, request.to_xml), soap_action)
+            client.send(api_action, request.to_xml), api_action)
         }
       end
     end

@@ -2,21 +2,26 @@ module Exlibris
   module Primo
     module WebService
       module Request
-        # 
-        # 
-        # 
+        #
+        #
+        #
         class QueryTerm
           include WriteAttributes
           include XmlUtil
           attr_accessor :index, :precision, :value
           attr_writer :include_values, :exclude_values
-          
+
           def include_values
             @include_values ||= []
           end
 
           def exclude_values
             @exclude_values ||= []
+          end
+
+          # Returns a string for inclusion in the "q" parameter for the REST API
+          def to_s
+            "#{index},#{precision},#{URI.encode(value.gsub(';', ''))}"
           end
 
           def to_xml

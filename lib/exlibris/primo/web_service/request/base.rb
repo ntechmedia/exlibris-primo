@@ -2,9 +2,9 @@ module Exlibris
   module Primo
     module WebService
       module Request
-        # 
+        #
         # Abstract base class for Primo interactions
-        # 
+        #
         class Base
           include Abstract
           include BaseElements
@@ -12,11 +12,13 @@ module Exlibris
           include Call
           include Config::Attributes
           include Namespaces
-          include SoapAction
+          include ApiAction
           include WriteAttributes
           include XmlUtil
+          include Api
+
           self.abstract = true
-          self.add_base_elements :institution, :ip, :group, 
+          self.add_base_elements :institution, :ip, :group,
             :on_campus, :is_logged_in, :pds_handle
 
           DEFAULT_WRAPPER = :request
@@ -45,27 +47,27 @@ module Exlibris
           end
         end
 
-        # 
+        #
         # Abstract class for Primo user interactions
-        # 
+        #
         class UserBase < Base
           # Add user_id to the base elements
           self.add_base_elements :user_id
           self.abstract = true
         end
 
-        # 
+        #
         # Abstract class for Primo record interactions
-        # 
+        #
         class Record < Base
           # Add doc_id to the base elements
           self.add_base_elements :doc_id
           self.abstract = true
         end
 
-        # 
+        #
         # Abstract class for Primo user/record interactions
-        # 
+        #
         class UserRecord < Record
           # Add user_id to the base elements
           self.add_base_elements :user_id
