@@ -14,14 +14,14 @@ require 'webmock'
 
 # To allow us to do real HTTP requests in a VCR.turned_off, we
 # have to tell webmock to let us.
-WebMock.allow_net_connect!(:net_http_connect_on_start => true)
+WebMock.allow_net_connect!(:net_http_connect_on_start => ENV['WEBMOCK_ALLOW_HTTP_CONNECT'])
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
   # webmock needed for HTTPClient testing
   c.hook_into :webmock
-  c.filter_sensitive_data('<REST_API_KEY>') { ENV['REST_API_KEY'] || 'l7xxcb1e0f7b1d09876119edf593ec552f95d' }
-  c.filter_sensitive_data('<REST_ALT_API_KEY>') { ENV['REST_ALT_API_KEY'] || 'l7xxcb1e0f7b1d09876119edf593ec552f95d' }
+  c.filter_sensitive_data('<GEM_REST_API_KEY>') { ENV['GEM_REST_API_KEY'] }
+  c.filter_sensitive_data('<GEM_REST_ALT_API_KEY>') { ENV['GEM_REST_ALT_API_KEY'] }
   # c.debug_logger = $stderr
 end
 
@@ -34,6 +34,10 @@ if !defined? VCR
       yield
     end
   end
+end
+
+Exlibris::Primo.configure do |config|
+  config.api = :soap
 end
 
 class Test::Unit::TestCase
@@ -84,7 +88,7 @@ class Test::Unit::TestCase
   protected :assert_response
 
   def rest_api_key
-    ENV['REST_API_KEY'] || 'l7xxcb1e0f7b1d09876119edf593ec552f95d'
+    ENV['GEM_REST_API_KEY'] || 'l7xxcb1e0f7b1d09876119edf593ec552f95d'
   end
 
   def strip_xml(xml)
@@ -103,7 +107,7 @@ class Test::Unit::TestCase
 
   def reset_primo_configuration
     Exlibris::Primo.configure do |config|
-      config.base_url = nil
+      config.base_url = :soap
       config.proxy_url = nil
       config.institution = nil
       config.institutions = nil
