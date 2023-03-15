@@ -9,7 +9,7 @@ class SearchPrimoCentralTest < Test::Unit::TestCase
 
   # TODO: Need to find new test data
   def test_primo_central
-    omit('Need to find new example and ensure everying is recorded')
+    omit('Skipped test until new example for Primo Central can be identified')
 
     VCR.use_cassette('search primo central') do
       search = Exlibris::Primo::Search.new.base_url!(@base_url).
@@ -28,7 +28,7 @@ class SearchPrimoCentralTest < Test::Unit::TestCase
   end
 
   def test_mla_source
-    omit('Need to find new example and ensure everying is recorded')
+    omit('Skipped test until new example for Primo Central MLA can be identified')
 
     VCR.use_cassette('search primo central mla') do
       search = Exlibris::Primo::Search.new.base_url!(@base_url).
