@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_API_KEY>&limit=5&multiFacets=facet_rtype,include,books&offset=0&q=title,contains,Introduction%20to%20education%20studies,AND%3Bisbn,contains,0857029126&scope=UB_local_PC&tab=quicksearch&vid=UB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Fri, 07 Dec 2018 01:19:12 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,DELETE,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Set-Cookie:
+      - JSESSIONID=9B218ACD62F800846F99B420FBC76207; Domain=api-ap.hosted.exlibrisgroup.com;
+        Path=/primo/v1
+      - sto-id-%3FPS_PROD%3FPTC.Prod.Primo.1701-sg=DLHICAAK; Domain=api-ap.hosted.exlibrisgroup.com;
+        Expires=Mon, 04-Dec-2028 01:19:10 GMT; Path=/primo/v1
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 07 Dec 2018 01:19:12 GMT
+    body:
+      encoding: UTF-8
+      string: '{"rtaResultsLink":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/UB?recordInformation=.b1743399x|,|UB_MILLENNIUM|,|__NO_VALUE__|,|III|,|UB_MILLENNIUM.b1743399x|,|$$IBALLARAT$$Lmall$$1Main$$2(378.007
+        B2847i3 )$$Savailable$$31$$40|$$IBALLARAT$$Lball$$1Main$$2(370.71 B291.I 2012
+        )$$Savailable$$31$$40|$$IBALLARAT$$Lgall$$1Main$$2(370.71 B291.I 2012 )$$Savailable$$31$$40|,|$$IBALLARAT$$Savailable|,|Physical
+        Item|,|BALLARAT|,|__NO_VALUE__|,|$$TBALLARAT_III_holdings|,|__NO_VALUE__|,|b1743399|,|__NO_VALUE__|;|","highlights":{"vertitle":["introduction
+        to education study","introduction to education studies","studies","introductions","introduction
+        education studies","study","introduction","educations","Introduction to education
+        studies","education"],"termsUnion":["education","introductions","introduction","introduction
+        to education studies","introduction to education study","Introduction to education
+        studies","introduction education studies","educations","study","studies","Education
+        studies"],"title":["education","introductions","studies","introduction education
+        studies","introduction to education studies","educations","Introduction to
+        education studies","introduction","study","introduction to education study"],"relation":["Education
+        studies"]},"docs":[{"enrichment":{"virtualBrowseObject":{"callNumber":"","isVirtualBrowseEnabled":false,"callNumberBrowseField":"browse_callnumber"}},"delivery":{"availabilityLinks":["directlink"],"physicalItemTextCodes":"","displayLocation":true,"availabilityLinksUrl":["http://innopac.ballarat.edu.au/record=b1743399"],"link":[{"displayLabel":"openurl","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-12-07T09%3A19%3A12IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Introduction%20to%20education%20studies.&rft.aulast=Bartlett&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Bartlett,%20Steve&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780857029119&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CUB_MILLENNIUM%3E.b1743399x%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E450320428%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_%3Cprovider_id%3E={{control/%3Cprovider_id%3E}}","linkType":"http://purl.org/pnx/linkType/openurl","@id":"_:0"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:1"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=9780857029119/SC.JPG&client=CLIENT","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:2"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:9780857029119,OCLC:762990241,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:3"},{"displayLabel":"See
+        Holdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b1743399","linkType":"http://purl.org/pnx/linkType/backlink","@id":"_:4"},{"displayLabel":"linktorequest","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b1743399","linkType":"http://purl.org/pnx/linkType/linktorequest","@id":"_:5"},{"displayLabel":"This
+        item in Google books","inst4opac":"BALLARAT","linkURL":"http://books.google.com/books?vid=ISBN9780857029119","linkType":"http://purl.org/pnx/linkType/lln02","@id":"_:6"},{"displayLabel":"This
+        item in Trove","inst4opac":"BALLARAT","linkURL":"http://trove.nla.gov.au/result?q=9780857029119","linkType":"http://purl.org/pnx/linkType/lln02","@id":"_:7"},{"displayLabel":"Find
+        this item in BONUS+","inst4opac":"BALLARAT","linkURL":"http://bonus.newcastle.edu.au/search~S0/?searchtype=t&searcharg=Introduction%20to%20education%20studies.&sortdropdown=-&SORT=D&extended=0&SUBMIT=Search","linkType":"http://purl.org/pnx/linkType/lln01","@id":"_:8"},{"displayLabel":"linktoholdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b1743399","linkType":"http://purl.org/pnx/linkType/linktoholdings","@id":"_:9"},{"displayLabel":"openurlfulltext","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-12-07T09%3A19%3A12IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Introduction%20to%20education%20studies.&rft.aulast=Bartlett&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Bartlett,%20Steve&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780857029119&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3CUB_MILLENNIUM%3E.b1743399x%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E450320428%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_%3Cprovider_id%3E={{control/%3Cprovider_id%3E}}","linkType":"http://purl.org/pnx/linkType/openurlfulltext","@id":"_:10"},{"displayLabel":"$$Eworldcat","inst4opac":"BALLARAT","linkURL":"http://www.worldcat.org/search?q=isbn%3A9780857029119","linkType":"http://purl.org/pnx/linkType/linktouc","@id":"_:11"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=9780857029119/SC.JPG&client=primo","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:12"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=9780857029119/SC.JPG&client=CLIENT","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:13"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:9780857029119,OCLC:762990241,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:14"}],"availability":["available_in_institution"],"additionalLocations":true,"displayedAvailability":"available_in_institution","holding":[{"matchForHoldings":[],"subLocationCode":"","ilsApiId":"","libraryCode":"ball","isValidUser":true,"mainLocation":"","callNumber":"(370.71
+        B291.I 2012 )","adaptorid":"","organization":"BALLARAT","holdingURL":"http://innopac.ballarat.edu.au/record=b1743399","@id":"_:0","availabilityStatus":"available","subLocation":"Main","holdId":""},{"matchForHoldings":[],"subLocationCode":"","ilsApiId":"","libraryCode":"gall","isValidUser":true,"mainLocation":"","callNumber":"(370.71
+        B291.I 2012 )","adaptorid":"","organization":"BALLARAT","holdingURL":"http://innopac.ballarat.edu.au/record=b1743399","@id":"_:1","availabilityStatus":"available","subLocation":"Main","holdId":""},{"matchForHoldings":[],"subLocationCode":"","ilsApiId":"","libraryCode":"mall","isValidUser":true,"mainLocation":"","callNumber":"(378.007
+        B2847i3 )","adaptorid":"","organization":"BALLARAT","holdingURL":"http://innopac.ballarat.edu.au/record=b1743399","@id":"_:2","availabilityStatus":"available","subLocation":"Main","holdId":""}],"bestlocation":{"matchForHoldings":[],"mainLocation":"","subLocationCode":"","callNumber":"(378.007
+        B2847i3 )","organization":"BALLARAT","libraryCode":"mall","@id":"_:0","availabilityStatus":"available","subLocation":"Main","holdId":"","isValidUser":true},"deliveryCategory":["Physical
+        Item"],"serviceMode":["ovl"],"feDisplayOtherLocations":true,"GetIt2":{"isLinktoOnline":false,"displayText":"openurl","hyperlinkText":"","getItTabText":"tab2_avail","link":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-12-07T09%3A19%3A12IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Introduction%20to%20education%20studies.&rft.aulast=Bartlett&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Bartlett,%20Steve&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780857029119&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CUB_MILLENNIUM%3E.b1743399x%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E450320428%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/&rft_%3Cprovider_id%3E={{control/%3Cprovider_id%3E}}","@id":"_:0","serviceModeGetit2":"display"},"GetIt1":[{"links":[{"isLinktoOnline":false,"displayText":"linktoholdings","hyperlinkText":"tab1_avail","getItTabText":"tab1_avail","link":"http://innopac.ballarat.edu.au/record=b1743399","@id":"_:0"}],"category":"Physical
+        Item"}]},"@rta_link":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/UB?recordInformation=.b1743399x|,|UB_MILLENNIUM|,|__NO_VALUE__|,|III|,|UB_MILLENNIUM.b1743399x|,|$$IBALLARAT$$Lmall$$1Main$$2(378.007
+        B2847i3 )$$Savailable$$31$$40|$$IBALLARAT$$Lball$$1Main$$2(370.71 B291.I 2012
+        )$$Savailable$$31$$40|$$IBALLARAT$$Lgall$$1Main$$2(370.71 B291.I 2012 )$$Savailable$$31$$40|,|$$IBALLARAT$$Savailable|,|Physical
+        Item|,|BALLARAT|,|__NO_VALUE__|,|$$TBALLARAT_III_holdings|,|__NO_VALUE__|,|b1743399|,|__NO_VALUE__","context":"L","adaptor":"Local
+        Search Engine","pnx":{"delivery":{"institution":["BALLARAT"],"delcategory":["Physical
+        Item"]},"display":{"lds06":["London ; Thousand Oaks, Calif. : SAGE"],"identifier":["$$CISBN$$V9780857029119;
+        $$CISBN$$V0857029118; $$CISBN$$V9780857029126 (pbk.); $$CISBN$$V0857029126
+        (pbk.)"],"creator":["Bartlett, Steve"],"creationdate":["c2012"],"availinstitution":["$$IBALLARAT$$Savailable"],"subject":["Education
+        -- Study and teaching"],"format":["xii, 384 p. ; 24 cm.."],"edition":["3rd
+        ed. / Steve Bartlett and Diana Burton.."],"language":["eng"],"availlibrary":["$$IBALLARAT$$Lmall$$1Main$$2(378.007
+        B2847i3 )$$Savailable$$31$$40","$$IBALLARAT$$Lball$$1Main$$2(370.71 B291.I
+        2012 )$$Savailable$$31$$40","$$IBALLARAT$$Lgall$$1Main$$2(370.71 B291.I 2012
+        )$$Savailable$$31$$40"],"source":["UB_MILLENNIUM"],"title":["Introduction
+        to education studies."],"type":["book"],"version":["3"],"relation":["$$C series
+        $$V Education studies, key issues."],"contributor":["Diana Burton (Diana M.)"],"publisher":["SAGE"],"availpnx":["available"],"lds01":["Includes
+        bibliographical references and index."]},"control":{"recordid":["UB_MILLENNIUM.b1743399x"],"sourceid":["UB_MILLENNIUM"],"sourceformat":["MARC
+        Exchange"],"sourcerecordid":[".b1743399x"],"sourcesystem":["III"],"addsrcrecordid":["b1743399"]},"sort":{"creationdate":["2012"],"author":["Bartlett,
+        Steve."],"title":["Introduction to education studies."]},"frbr":{"t":[1],"k1":["$$Kballaratbartlett
+        steve$$AA"],"k3":["$$Kballaratintroduction to education studies$$AT"]},"dedup":{"f10":["sage"],"f20":["BALLARAT"],"f11":["bartlett
+        steve"],"f3":["9780857029119;0857029118;9780857029126;0857029126"],"c2":["9780857029119;0857029118;9780857029126;0857029126"],"f5":["introductiontoeducationstudies"],"c3":["introductiontoeducationstudies"],"f6":["2012"],"c4":["2012"],"f7":["introduction
+        to education studies"],"f8":["enk"],"f9":["xii, 384 p. ;"],"t":[1]},"facets":{"frbrtype":["5"],"creatorcontrib":["Bartlett,
+        S","Burton, D"],"creationdate":["2012"],"newrecords":["20120928_572"],"rsrctype":["books"],"classificationlcc":["L
+        - Education.\u2013Theory and practice of education\u2013General"],"language":["eng"],"lfc01":["Berwick
+        Campus Library"],"prefilter":["books"],"toplevel":["available"],"library":["Berwick
+        Campus Library"],"frbrgroupid":["450320428"],"topic":["Education\u2013Study
+        and teaching"]},"enrichment":{"classificationlcc":["LB17"]},"search":{"recordid":["UB_MILLENNIUM.b1743399x"],"sourceid":["UB_MILLENNIUM"],"general":["SAGE,"],"creatorcontrib":["Steve.  Bartlett","Bartlett,
+        S","Diana  Burton  (Diana M.)","Burton, D"],"creationdate":["2012"],"subject":["Education
+        Study and teaching."],"isbn":["9780857029119","0857029118","9780857029126","0857029126"],"scope":["UB_MILLENNIUM","BALLARAT"],"rsrctype":["book"],"title":["Introduction
+        to education studies."],"addtitle":["Education studies : key issues series.","Education
+        studies, key issues."]},"ranking":{"booster2":["1"],"booster1":["1"]},"links":{"openurl":["$$Topenurl_journal"],"linktoexcerpt":["$$Tsyndetics_excerpt$$Elinktoexcerpt"],"thumbnail":["$$Tamazon_thumb","$$Tsyndetics_thumb","$$Tgoogle_thumb"],"lln02":["$$Tgoogle_books$$DThis
+        item in Google books","$$Ttrove$$DThis item in Trove"],"linktorequest":["$$TBALLARAT_III_holdings"],"backlink":["$$TBALLARAT_III_holdings$$DSee
+        Holdings"],"lln01":["$$Tbonus_title$$DFind this item in BONUS+"],"linktoholdings":["$$TBALLARAT_III_holdings"],"openurlfulltext":["$$Topenurlfull_journal"],"linktouc":["$$Tworldcat_isbn$$Eworldcat"]},"addata":{"date":["2012"],"notes":["Includes
+        bibliographical references and index."],"aulast":["Bartlett"],"cop":["London
+        ; Thousand Oaks, Calif."],"isbn":["9780857029119","0857029118","9780857029126","0857029126"],"format":["book"],"ristype":["BOOK"],"oclcid":["762990241"],"aufirst":["Steve."],"addau":["Burton,
+        Diana (Diana M.)"],"seriestitle":["Education studies, key issues"],"au":["Bartlett,
+        Steve"],"genre":["book"],"btitle":["Introduction to education studies."],"risdate":["c2012."],"pub":["SAGE"]},"browse":{"author":["$$DBartlett,
+        Steve$$EBartlett, Steve","$$DBurton, Diana (Diana M.)$$EBurton, Diana (Diana
+        M.)"],"subject":["$$DEducation -- Study and teaching$$EEducation Study and
+        teaching"],"callnumber":["$$IPRIMO"],"title":["$$DIntroduction to education
+        studies$$EIntroduction to education studies","$$DEducation studies : key issues
+        series$$EEducation studies : key issues series","$$DEducation studies, key
+        issues$$EEducation studies, key issues"]}},"@id":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/UB_MILLENNIUM.b1743399x"}],"timelog":{"CalculateRtaLinks1DeltaTime":47,"BriefSearchDeltaTime":965,"DoSearchPrimoResultDeltaTime":918,"StartBriefSearch":1544145551568,"retrieveHighLightsDeltaTime":47,"retrieveDidUMeanDeltaTime":47,"GetSearchStatusDeltaTime":918,"StartTranslationTime":1544145552486,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":46,"retrieveFacetsDeltaTime":47},"lang3":"eng","info":{"total":1,"last":"1","maxTotal":0,"first":"1"},"facets":[{"values":[{"count":1,"value":"Berwick
+        Campus Library"}],"name":"local1"},{"values":[{"count":1,"value":"Burton,
+        D"},{"count":1,"value":"Bartlett, S"}],"name":"creator"},{"values":[{"count":1,"value":"2012"}],"name":"creationdate"},{"values":[{"count":1,"value":"available"}],"name":"tlevel"},{"values":[{"count":1,"value":"Education"}],"name":"topic"},{"values":[{"count":2,"value":"eng"}],"name":"lang"},{"values":[{"count":1,"value":"L
+        - Education."}],"name":"lcc"}],"beaconO22":"975"}'
+    http_version: 
+  recorded_at: Fri, 07 Dec 2018 01:19:12 GMT
+recorded_with: VCR 2.9.3

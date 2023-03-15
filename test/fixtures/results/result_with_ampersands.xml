@@ -1,0 +1,208 @@
+<record>
+  <delivery>
+    <fulltext>fulltext</fulltext>
+    <delcategory>Remote Search Resource</delcategory>
+    <availabilityLinks>detailsGetit1</availabilityLinks>
+    <physicalItemTextCodes/>
+    <displayLocation>false</displayLocation>
+    <availabilityLinksUrl/>
+    <link/>
+    <availability>fulltext</availability>
+    <additionalLocations>false</additionalLocations>
+    <displayedAvailability>fulltext</displayedAvailability>
+    <deliveryCategory>Remote Search Resource</deliveryCategory>
+    <serviceMode>activate</serviceMode>
+    <feDisplayOtherLocations>false</feDisplayOtherLocations>
+    <GetIt1 links="[{&quot;isLinktoOnline&quot;=&gt;true, &quot;displayText&quot;=&gt;&quot;Almaviewit_remote&quot;, &quot;hyperlinkText&quot;=&gt;&quot;&quot;, &quot;getItTabText&quot;=&gt;&quot;alma_tab1_full&quot;, &quot;link&quot;=&gt;&quot;https://unisa.alma.exlibrisgroup.com/view/uresolver/61USOUTHAUS_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&amp;ctx_id=10_1&amp;ctx_tim=2022-03-02T09%3A11%3A51IST&amp;ctx_ver=Z39.88-2004&amp;url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&amp;url_ver=Z39.88-2004&amp;rfr_id=info:sid/primo.exlibrisgroup.com-webofscience_scopu&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:journal&amp;rft.genre=article&amp;rft.atitle=Stakeholder%20Analysis%20and%20Social%20Network%20Analysis%20in%20Natural%20Resource%20Management&amp;rft.jtitle=Society%20%26%20natural%20resources&amp;rft.au=Prell,%20Christina&amp;rft.date=2009-06-04&amp;rft.volume=22&amp;rft.issue=6&amp;rft.spage=501&amp;rft.epage=518&amp;rft.pages=501-518&amp;rft.issn=0894-1920&amp;rft.eissn=1521-0723&amp;rft_id=info:doi/10.1080/08941920802199202&amp;rft.pub=Taylor%20&amp;%20Francis%20Group&amp;rft.place=PHILADELPHIA&amp;rft.stitle=SOC%20NATUR%20RESOUR&amp;rft_id=info:bibcode/&amp;rft_id=info:hdl/&amp;rft_id=info:lccn/&amp;rft_id=info:oclcnum/&amp;rft_id=info:pmid/&amp;rft_id=info:eric/&amp;rft_dat=%3Cwebofscience_scopu%3E000268235700001%3C/webofscience_scopu%3E%3Curl%3E%3C/url%3E,language=eng,view=UNISA&amp;svc_dat=viewit&quot;, &quot;@id&quot;=&gt;&quot;_:0&quot;}]"
+            category="Remote Search Resource"/>
+  </delivery>
+  <search>
+    <sourceid>BKL</sourceid>
+    <sourceid>EGQ</sourceid>
+    <creatorcontrib>Prell, Christina</creatorcontrib>
+    <creatorcontrib>Hubacek, Klaus</creatorcontrib>
+    <creatorcontrib>Reed, Mark</creatorcontrib>
+    <creationdate>2009</creationdate>
+    <creator>Prell, Christina</creator>
+    <creator>Hubacek, Klaus</creator>
+    <creator>Reed, Mark</creator>
+    <subject>Development Studies</subject>
+    <subject>Environmental Sciences &amp; Ecology</subject>
+    <subject>Environmental Studies</subject>
+    <subject>Life Sciences &amp; Biomedicine</subject>
+    <subject>Participatory resource management</subject>
+    <subject>Public Administration</subject>
+    <subject>Regional &amp; Urban Planning</subject>
+    <subject>Science &amp; Technology</subject>
+    <subject>Social network analysis</subject>
+    <subject>Social Sciences</subject>
+    <subject>Sociology</subject>
+    <subject>Stakeholder analysis</subject>
+    <rsrctype>article</rsrctype>
+    <description>The increasing use of stakeholder analysis in natural resource management reflects a growing
+      recognition that stakeholders can and should influence environmental decision making. Stakeholder analysis can be
+      used to avoid inflaming conflicts, ensure that the marginalization of certain groups is not reinforced, and fairly
+      represent diverse interests. We present a case study from the Peak District National Park in the United Kingdom,
+      where we used social network analysis to inform stakeholder analysis. This information helped us identify which
+      individuals and categories of stakeholder played more central roles in the network and which were more peripheral.
+      This information guided our next steps for stakeholder selection. The article ends with a discussion on the
+      strengths and limitations of combining social network analysis with stakeholder analysis.
+    </description>
+    <startdate>20090604</startdate>
+    <title>Stakeholder Analysis and Social Network Analysis in Natural Resource Management</title>
+    <title>Society &amp; natural resources</title>
+    <addtitle>SOC NATUR RESOUR</addtitle>
+    <recordid>
+      eNqNkUlrHDEQRkVIIGPHP8An991pR0urpQZfzJDF4AW8nEW1llhxj2QkNc78-2gY4xxsk5yqoN4rVJ920B7M5c6G4jUUaxDaJ_iIYIm_YDl0ZKC1pWSolb5DC8IpabGg7D1abObtBviIdnL-hTFmsqMLdHld4N7excnY1JwEmNbZ5waCaa6j9jA1F7Y8xnT_d-ZDcwFlTnV2ZXOck7bNOQT4aVf1YZ_QBwdTtntPdRfdfvt6s_zRnl1-P12enLWEDV1pO0IMiE6bERxorkGYftSUEsmEwW7EgnedpG4cJQZtTc-5ddxyQ0CMmgDbRWS7V6eYc7JOPSS_grRWBKtNIupFItU53DqPdowua2-Dts9ejYT2kjIuaodJpeX_00tfoPgYlnEOpaoHWzXr-DDnZ4nxTg5MDkMlPr9KUJWpwqoXPce0opyp8nuzUGxxH1xMK6g_MhlVYD3F5BIE7fPLe5_M43-a7O3I_gBr7rkg
+    </recordid>
+    <general>Taylor &amp; Francis Group</general>
+    <general>TAYLOR &amp; FRANCIS INC</general>
+    <enddate>20090604</enddate>
+    <issn>0894-1920</issn>
+    <issn>1521-0723</issn>
+    <orcidid>https://orcid.org/0000-0003-2561-6090</orcidid>
+    <orcidid>https://orcid.org/0000-0002-8958-8474</orcidid>
+    <scope>BKL</scope>
+    <scope>17B</scope>
+    <scope>DVR</scope>
+    <scope>EGQ</scope>
+    <scope>JWLSN</scope>
+    <scope>AAYXX</scope>
+    <scope>CITATION</scope>
+    <recordtype>article</recordtype>
+    <fulltext>true</fulltext>
+  </search>
+  <display>
+    <identifier>ISSN: 0894-1920</identifier>
+    <identifier>EISSN: 1521-0723</identifier>
+    <identifier>DOI: 10.1080/08941920802199202</identifier>
+    <creator>Prell, Christina ; Hubacek, Klaus ; Reed, Mark</creator>
+    <citedby>FETCH-LOGICAL-1394t-411da74cdbafac5ca7d6bc221837d0fb0754482fbb80aced655ef5e5d1a7bc1a3</citedby>
+    <subject>Development Studies ; Environmental Sciences &amp; Ecology ; Environmental Studies ; Life Sciences &amp;
+      Biomedicine ; Participatory resource management ; Public Administration ; Regional &amp; Urban Planning ; Science
+      &amp; Technology ; Social network analysis ; Social Sciences ; Sociology ; Stakeholder analysis
+    </subject>
+    <ispartof>Society &amp; natural resources, 2009-06-04, Vol.22 (6), p.501-518</ispartof>
+    <description>The increasing use of stakeholder analysis in natural resource management reflects a growing
+      recognition that stakeholders can and should influence environmental decision making. Stakeholder analysis can be
+      used to avoid inflaming conflicts, ensure that the marginalization of certain groups is not reinforced, and fairly
+      represent diverse interests. We present a case study from the Peak District National Park in the United Kingdom,
+      where we used social network analysis to inform stakeholder analysis. This information helped us identify which
+      individuals and categories of stakeholder played more central roles in the network and which were more peripheral.
+      This information guided our next steps for stakeholder selection. The article ends with a discussion on the
+      strengths and limitations of combining social network analysis with stakeholder analysis.
+    </description>
+    <language>eng</language>
+    <source>Scopus</source>
+    <source>Web of Science&lt;img src="http://exlibris-pub.s3.amazonaws.com/fromwos-v2.jpg" /&gt;</source>
+    <source>Taylor &amp; Francis Online 2021 - CAUL</source>
+    <title>Stakeholder Analysis and Social Network Analysis in Natural Resource Management</title>
+    <type>article</type>
+    <scopuscitedreferencesoriginalsourcerecordid>scopus2-s2.0-67650293853</scopuscitedreferencesoriginalsourcerecordid>
+    <woscitedreferencescount>446</woscitedreferencescount>
+    <scopuscitedreferencescount>479</scopuscitedreferencescount>
+    <woscitedreferencesoriginalsourcerecordid>wos000268235700001</woscitedreferencesoriginalsourcerecordid>
+    <lds50>peer_reviewed</lds50>
+    <rights>Copyright Taylor &amp; Francis Group, LLC 2009</rights>
+    <rights>Copyright 2009 Elsevier B.V., All rights reserved.</rights>
+    <cites>FETCH-LOGICAL-1394t-411da74cdbafac5ca7d6bc221837d0fb0754482fbb80aced655ef5e5d1a7bc1a3</cites>
+    <publisher>PHILADELPHIA: Taylor &amp; Francis Group</publisher>
+  </display>
+  <control>
+    <recordid>TN_cdi_webofscience_primary_000268235700001</recordid>
+    <sourceid>webofscience_scopu</sourceid>
+    <recordtype>article</recordtype>
+    <originalsourceid>FETCH-LOGICAL-1394t-411da74cdbafac5ca7d6bc221837d0fb0754482fbb80aced655ef5e5d1a7bc1a3
+    </originalsourceid>
+    <sourceformat>XML</sourceformat>
+    <sourcetype>Aggregation Database</sourcetype>
+    <sourcerecordid>000268235700001</sourcerecordid>
+    <sourcesystem>PC</sourcesystem>
+    <addsrcrecordid>
+      eNqNkUlrHDEQRkVIIGPHP8An991pR0urpQZfzJDF4AW8nEW1llhxj2QkNc78-2gY4xxsk5yqoN4rVJ920B7M5c6G4jUUaxDaJ_iIYIm_YDl0ZKC1pWSolb5DC8IpabGg7D1abObtBviIdnL-hTFmsqMLdHld4N7excnY1JwEmNbZ5waCaa6j9jA1F7Y8xnT_d-ZDcwFlTnV2ZXOck7bNOQT4aVf1YZ_QBwdTtntPdRfdfvt6s_zRnl1-P12enLWEDV1pO0IMiE6bERxorkGYftSUEsmEwW7EgnedpG4cJQZtTc-5ddxyQ0CMmgDbRWS7V6eYc7JOPSS_grRWBKtNIupFItU53DqPdowua2-Dts9ejYT2kjIuaodJpeX_00tfoPgYlnEOpaoHWzXr-DDnZ4nxTg5MDkMlPr9KUJWpwqoXPce0opyp8nuzUGxxH1xMK6g_MhlVYD3F5BIE7fPLe5_M43-a7O3I_gBr7rkg
+    </addsrcrecordid>
+  </control>
+  <links>
+    <openurl>$$Topenurl_article</openurl>
+    <openurl>$$Uhttp://1.1.1.1?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2022-03-02T09%3A11%3A51IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-webofscience_scopu&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:journal&amp;rft.genre=article&amp;rft.atitle=Stakeholder%20Analysis%20and%20Social%20Network%20Analysis%20in%20Natural%20Resource%20Management&amp;rft.jtitle=Society%20%26%20natural%20resources&amp;rft.au=Prell,%20Christina&amp;rft.date=2009-06-04&amp;rft.volume=22&amp;rft.issue=6&amp;rft.spage=501&amp;rft.epage=518&amp;rft.pages=501-518&amp;rft.issn=0894-1920&amp;rft.eissn=1521-0723&amp;rft_id=info:doi/10.1080/08941920802199202&amp;rft_dat=%3Cwebofscience_scopu%3E000268235700001%3C/webofscience_scopu%3E%3Cgrp_id%3Ecdi_FETCH-LOGICAL-1394t-411da74cdbafac5ca7d6bc221837d0fb0754482fbb80aced655ef5e5d1a7bc1a3%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&amp;rft_id=info:oai/&amp;rft_id=info:pmid/$$Dopenurl
+    </openurl>
+    <thumbnail>$$Usyndetics_thumb_exl</thumbnail>
+    <thumbnail>$$Uhttp://syndetics_thumb_exl$$Dthumbnail</thumbnail>
+    <openurlfulltext>$$Topenurlfull_article</openurlfulltext>
+    <openurlfulltext>$$Uhttp://1.1.1.1?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2022-03-02T09%3A11%3A51IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-webofscience_scopu&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:journal&amp;rft.genre=article&amp;rft.atitle=Stakeholder%20Analysis%20and%20Social%20Network%20Analysis%20in%20Natural%20Resource%20Management&amp;rft.jtitle=Society%20%26%20natural%20resources&amp;rft.au=Prell,%20Christina&amp;rft.date=2009-06-04&amp;rft.volume=22&amp;rft.issue=6&amp;rft.spage=501&amp;rft.epage=518&amp;rft.pages=501-518&amp;rft.issn=0894-1920&amp;rft.eissn=1521-0723&amp;rft_id=info:doi/10.1080/08941920802199202&amp;svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&amp;svc.fulltext=yes&amp;rft_dat=%3Cwebofscience_scopu%3E000268235700001%3C/webofscience_scopu%3E%3Cgrp_id%3Ecdi_FETCH-LOGICAL-1394t-411da74cdbafac5ca7d6bc221837d0fb0754482fbb80aced655ef5e5d1a7bc1a3%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&amp;rft_id=info:oai/&amp;rft_id=info:pmid/$$Dopenurlfulltext
+    </openurlfulltext>
+  </links>
+  <sort>
+    <creationdate>20090604</creationdate>
+    <author>Prell, Christina ; Hubacek, Klaus ; Reed, Mark</author>
+    <title>Stakeholder Analysis and Social Network Analysis in Natural Resource Management</title>
+  </sort>
+  <addata>
+    <date>2009-06-04</date>
+    <issue>6</issue>
+    <cop>PHILADELPHIA</cop>
+    <format>journal</format>
+    <ristype>JOUR</ristype>
+    <eissn>1521-0723</eissn>
+    <spage>501</spage>
+    <abstract>The increasing use of stakeholder analysis in natural resource management reflects a growing recognition
+      that stakeholders can and should influence environmental decision making. Stakeholder analysis can be used to
+      avoid inflaming conflicts, ensure that the marginalization of certain groups is not reinforced, and fairly
+      represent diverse interests. We present a case study from the Peak District National Park in the United Kingdom,
+      where we used social network analysis to inform stakeholder analysis. This information helped us identify which
+      individuals and categories of stakeholder played more central roles in the network and which were more peripheral.
+      This information guided our next steps for stakeholder selection. The article ends with a discussion on the
+      strengths and limitations of combining social network analysis with stakeholder analysis.
+    </abstract>
+    <atitle>Stakeholder Analysis and Social Network Analysis in Natural Resource Management</atitle>
+    <volume>22</volume>
+    <pages>501-518</pages>
+    <au>Prell, Christina</au>
+    <au>Hubacek, Klaus</au>
+    <au>Reed, Mark</au>
+    <issn>0894-1920</issn>
+    <stitle>SOC NATUR RESOUR</stitle>
+    <orcidid>https://orcid.org/0000-0003-2561-6090</orcidid>
+    <orcidid>https://orcid.org/0000-0002-8958-8474</orcidid>
+    <epage>518</epage>
+    <genre>article</genre>
+    <tpages>18</tpages>
+    <jtitle>Society &amp; natural resources</jtitle>
+    <pub>Taylor &amp; Francis Group</pub>
+    <risdate>2009</risdate>
+    <doi>10.1080/08941920802199202</doi>
+  </addata>
+  <facets>
+    <frbrtype>5</frbrtype>
+    <creatorcontrib>Prell, Christina</creatorcontrib>
+    <creatorcontrib>Hubacek, Klaus</creatorcontrib>
+    <creatorcontrib>Reed, Mark</creatorcontrib>
+    <creationdate>2009</creationdate>
+    <toplevel>peer_reviewed</toplevel>
+    <toplevel>online_resources</toplevel>
+    <frbrgroupid>cdi_FETCH-LOGICAL-1394t-411da74cdbafac5ca7d6bc221837d0fb0754482fbb80aced655ef5e5d1a7bc1a3</frbrgroupid>
+    <rsrctype>articles</rsrctype>
+    <topic>Development Studies</topic>
+    <topic>Environmental Sciences &amp; Ecology</topic>
+    <topic>Environmental Studies</topic>
+    <topic>Life Sciences &amp; Biomedicine</topic>
+    <topic>Participatory resource management</topic>
+    <topic>Public Administration</topic>
+    <topic>Regional &amp; Urban Planning</topic>
+    <topic>Science &amp; Technology</topic>
+    <topic>Social network analysis</topic>
+    <topic>Social Sciences</topic>
+    <topic>Sociology</topic>
+    <topic>Stakeholder analysis</topic>
+    <language>eng</language>
+    <collection>Scopus</collection>
+    <collection>Web of Knowledge</collection>
+    <collection>Social Sciences Citation Index</collection>
+    <collection>Web of Science</collection>
+    <collection>Web of Science - Social Sciences Citation Index - 2009</collection>
+    <collection>CrossRef</collection>
+    <jtitle>Society &amp; natural resources</jtitle>
+    <prefilter>articles</prefilter>
+  </facets>
+  <context>PC</context>
+</record>

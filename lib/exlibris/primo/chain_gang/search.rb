@@ -62,6 +62,34 @@ module Exlibris
         end
 
         #
+        # Adds a facet to the search.
+        # Suitable for chaining, e.g.
+        #
+        #     Search.new
+        #       .add_facet("books", "facet_rtype")
+        #       .add_facet("Jack Johnson", "facet_creator", false)
+        #       .search
+        #
+        def add_facet(*args)
+          search_request.add_facet(*args)
+          self
+        end
+
+        #
+        # Adds a multi facet to the search.
+        # Suitable for chaining, e.g.
+        #
+        #     Search.new
+        #       .add_multi_facet("books", "facet_rtype")
+        #       .add_multi_facet("Jack Johnson", "facet_creator", false)
+        #       .search
+        #
+        def add_multi_facet(*args)
+          search_request.add_multi_facet(*args)
+          self
+        end
+
+        #
         # Adds a query term to the search.
         # Suitable for chaining, e.g.
         #
@@ -73,14 +101,28 @@ module Exlibris
           self
         end
 
-        # 
-        # Dynamically sets chainable accessor for indexes and 
+        #
+        # Adds a request param to the search.
+        # Suitable for chaining, e.g.
+        #
+        #     Search.new
+        #       .add_request_param("pc_availability_ind", "true")
+        #       .add_request_param("pyrCategories", "medicine;business")
+        #       .search
+        #
+        def add_request_param(*args)
+          search_request.add_request_param(*args)
+          self
+        end
+
+        #
+        # Dynamically sets chainable accessor for indexes and
         # precisions
         # Suitable for chaining, e.g.
         #
         #     Search.new.title_begins_with("Travels").
         #       creator_contains("Greene").search
-        # 
+        #
         def method_missing(method, *args, &block)
           if matches? method
             self.class.send(:define_method, method) { |value|
@@ -177,7 +219,11 @@ module Exlibris
         #         search.records.size => 10
         #
         def page_size!(page_size)
-          request_attributes[:bulk_size] = "#{page_size}"
+          if current_api == :rest
+            request_attributes[:limit] = "#{page_size}"
+          else
+            request_attributes[:bulk_size] = "#{page_size}"
+          end
           self
         end
         alias :page_size= :page_size!

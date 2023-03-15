@@ -15,12 +15,12 @@ module WebService
 
       def test_get_eshelf
         VCR.use_cassette('response get eshelf') {
-          soap_action = :get_eshelf
-          request = Exlibris::Primo::WebService::Request::GetEshelf.new(:user_id => @user_id, 
+          api_action = :get_eshelf
+          request = Exlibris::Primo::WebService::Request::GetEshelf.new(:user_id => @user_id,
             :institution => @institution)
           client = Exlibris::Primo::WebService::Client::Eshelf.new(:base_url => @base_url)
           response = Exlibris::Primo::WebService::Response::GetEshelf.new(
-            client.send(soap_action, request.to_xml), soap_action)
+            client.send(api_action, request.to_xml), api_action)
         }
       end
     end

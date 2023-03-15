@@ -6,9 +6,11 @@ module Exlibris
           include Abstract
           include Config::Attributes
           include Endpoint
-          include SavonClient
-          include SoapActions
+          include ApiClient
+          include ApiActions
           include Wsdl
+          include Api
+          include Authorisation
 
           self.abstract = true
 

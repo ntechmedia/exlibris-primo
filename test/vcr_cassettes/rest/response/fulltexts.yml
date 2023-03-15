@@ -1,0 +1,293 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_API_KEY>&limit=5&offset=0&q=title,contains,Misbehavior%20online%20in%20higher%20education&scope=UB_local_PC&tab=quicksearch&vid=UB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Wed, 31 Oct 2018 01:59:33 GMT
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,DELETE,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Set-Cookie:
+      - JSESSIONID=EEBCDFBCA631D7795BCD2C6AE6828A2F; Domain=api-ap.hosted.exlibrisgroup.com;
+        Path=/primo/v1
+      - sto-id-%3FPS_PROD%3FPTC.Prod.Primo.1701-sg=DLHICAAK; Domain=api-ap.hosted.exlibrisgroup.com;
+        Expires=Sat, 28-Oct-2028 01:59:32 GMT; Path=/primo/v1
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 31 Oct 2018 01:59:33 GMT
+    body:
+      encoding: UTF-8
+      string: '{"rtaResultsLink":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/UB?recordInformation=$$V.b27288316$$OUB_MILLENNIUM.b27288316|$$V.b26773934$$OUB_MILLENNIUM.b26773934|,|$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b27288316|$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|,|$$VIII$$OUB_MILLENNIUM.b27288316|$$VIII$$OUB_MILLENNIUM.b26773934|,|dedupmrg1317898213|,|$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b27288316|$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|,|Online
+        Resource|,|$$VBALLARAT$$OUB_MILLENNIUM.b27288316|$$VBALLARAT$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|,|$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b27288316|$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|,|$$Vb2728831$$OUB_MILLENNIUM.b27288316|$$Vb2677393$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|;|","highlights":{"ispartof":["Education","Higher","Higher
+        Education"],"vertitle":["misbehavior online higher education","higher","misbehavior","Higher
+        Education","in","educations","misbehaviour","Online","Misbehavior online in
+        higher education","online","online","misbehavior","education","misbehaviors","onlines","highers","Misbehavior","misbehavior
+        online in higher education","education","Education","Misbehavior Online","Higher","misbehaviour","higher"],"termsUnion":["misbehavior","Higher
+        Education","education","onlines","Misbehavior Online","misbehaviour","Misbehavior
+        online in higher education","misbehaviors","misbehavior","highers","educations","misbehavior
+        online higher education","misbehaviour","online","higher","education","in
+        higher education","online","higher","misbehavior online in higher education"],"title":["misbehavior","Online","misbehaviour","onlines","education","Education","educations","Misbehavior
+        online in higher education","in","misbehavior online higher education","education","misbehaviour","Misbehavior","highers","online","higher","Misbehavior
+        Online","misbehavior online in higher education","misbehavior","Higher Education","Higher","higher","online","misbehaviors"],"addtitle":["Higher","Education"],"relation":["in
+        higher education"]},"docs":[{"enrichment":{"virtualBrowseObject":{"callNumber":"","isVirtualBrowseEnabled":false,"callNumberBrowseField":"browse_callnumber"}},"delivery":{"availabilityLinks":["detailsGetit1"],"physicalItemTextCodes":"","displayLocation":false,"availabilityLinksUrl":[""],"link":[{"displayLabel":"openurl","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Misbehavior%20online%20in%20higher%20education&rft.aulast=Wankel&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9781780524566&rft.isbn=9781780524573&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CUB_MILLENNIUM%3E.b27288316%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E1320740292%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/","linkType":"http://purl.org/pnx/linkType/openurl","@id":"_:0"},{"displayLabel":"openurl","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Misbehavior%20online%20in%20higher%20education&rft.aulast=Wankel&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9781780524566&rft.isbn=9781780524573&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CUB_MILLENNIUM%3E.b26773934%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E1320740292%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/","linkType":"http://purl.org/pnx/linkType/openurl","@id":"_:1"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:2"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=9781780524573/SC.JPG&client=CLIENT","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:3"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:9781780524573,OCLC:,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:4"},{"displayLabel":"See
+        Holdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2728831","linkType":"http://purl.org/pnx/linkType/backlink","@id":"_:5"},{"displayLabel":"See
+        Holdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2677393","linkType":"http://purl.org/pnx/linkType/backlink","@id":"_:6"},{"displayLabel":"linktorequest","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2728831","linkType":"http://purl.org/pnx/linkType/linktorequest","@id":"_:7"},{"displayLabel":"linktorequest","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2677393","linkType":"http://purl.org/pnx/linkType/linktorequest","@id":"_:8"},{"displayLabel":"This
+        item in Google books","inst4opac":"BALLARAT","linkURL":"http://books.google.com/books?vid=ISBN9781780524573","linkType":"http://purl.org/pnx/linkType/lln02","@id":"_:9"},{"displayLabel":"This
+        item in Trove","inst4opac":"BALLARAT","linkURL":"http://trove.nla.gov.au/result?q=9781780524573","linkType":"http://purl.org/pnx/linkType/lln02","@id":"_:10"},{"displayLabel":"Access
+        eBook online","inst4opac":"BALLARAT","linkURL":"http://ezproxy.federation.edu.au/login?url=http://www.emeraldinsight.com/2044-9968/5","linkType":"http://purl.org/pnx/linkType/linktorsrc","@id":"_:11"},{"displayLabel":"Click
+        here to view book","inst4opac":"BALLARAT","linkURL":"http://ebookcentral.proquest.com/lib/ballarat/detail.action?docID=862260","linkType":"http://purl.org/pnx/linkType/linktorsrc","@id":"_:12"},{"displayLabel":"Find
+        this item in BONUS+","inst4opac":"BALLARAT","linkURL":"http://bonus.newcastle.edu.au/search~S0/?searchtype=t&searcharg=Misbehavior%20online%20in%20higher%20education&sortdropdown=-&SORT=D&extended=0&SUBMIT=Search","linkType":"http://purl.org/pnx/linkType/lln01","@id":"_:13"},{"displayLabel":"linktoholdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2728831","linkType":"http://purl.org/pnx/linkType/linktoholdings","@id":"_:14"},{"displayLabel":"linktoholdings","inst4opac":"BALLARAT","linkURL":"http://innopac.ballarat.edu.au/record=b2677393","linkType":"http://purl.org/pnx/linkType/linktoholdings","@id":"_:15"},{"displayLabel":"openurlfulltext","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Misbehavior%20online%20in%20higher%20education&rft.aulast=Wankel&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9781780524566&rft.isbn=9781780524573&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3CUB_MILLENNIUM%3E.b27288316%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E1320740292%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/","linkType":"http://purl.org/pnx/linkType/openurlfulltext","@id":"_:16"},{"displayLabel":"openurlfulltext","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Misbehavior%20online%20in%20higher%20education&rft.aulast=Wankel&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9781780524566&rft.isbn=9781780524573&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3CUB_MILLENNIUM%3E.b26773934%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E1320740292%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/","linkType":"http://purl.org/pnx/linkType/openurlfulltext","@id":"_:17"},{"displayLabel":"$$Eworldcat","inst4opac":"BALLARAT","linkURL":"http://www.worldcat.org/search?q=isbn%3A9781780524573","linkType":"http://purl.org/pnx/linkType/linktouc","@id":"_:18"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=9781780524573/SC.JPG&client=primo","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:19"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=9781780524573/SC.JPG&client=CLIENT","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:20"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:9781780524573,OCLC:,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:21"}],"availability":["not_restricted"],"additionalLocations":false,"displayedAvailability":"not_restricted","holding":[],"deliveryCategory":["Online
+        Resource"],"serviceMode":["display"],"feDisplayOtherLocations":false,"GetIt2":{"isLinktoOnline":false,"displayText":"openurl","hyperlinkText":"","getItTabText":"tab2_norestrict","link":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-UB_MILLENNIUM&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Misbehavior%20online%20in%20higher%20education&rft.aulast=Wankel&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=9781780524566&rft.isbn=9781780524573&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CUB_MILLENNIUM%3E.b27288316%3C/UB_MILLENNIUM%3E%3Cgrp_id%3E1320740292%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=&rft_id=info:pmid/","@id":"_:0","serviceModeGetit2":"display"},"GetIt1":[{"links":[{"isLinktoOnline":true,"displayText":"Access
+        eBook online","hyperlinkText":"Access eBook online","getItTabText":"tab1_onl_norestrict","link":"http://ezproxy.federation.edu.au/login?url=http://www.emeraldinsight.com/2044-9968/5","@id":"_:0"},{"isLinktoOnline":true,"displayText":"Click
+        here to view book","hyperlinkText":"Click here to view book","getItTabText":"tab1_onl_norestrict","link":"http://ebookcentral.proquest.com/lib/ballarat/detail.action?docID=862260","@id":"_:1"}],"category":"Online
+        Resource"}]},"@rta_link":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/UB?recordInformation=$$V.b27288316$$OUB_MILLENNIUM.b27288316|$$V.b26773934$$OUB_MILLENNIUM.b26773934|,|$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b27288316|$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|,|$$VIII$$OUB_MILLENNIUM.b27288316|$$VIII$$OUB_MILLENNIUM.b26773934|,|dedupmrg1317898213|,|$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b27288316|$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|,|Online
+        Resource|,|$$VBALLARAT$$OUB_MILLENNIUM.b27288316|$$VBALLARAT$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|,|$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b27288316|$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__|,|$$Vb2728831$$OUB_MILLENNIUM.b27288316|$$Vb2677393$$OUB_MILLENNIUM.b26773934|,|__NO_VALUE__","context":"L","adaptor":"Local
+        Search Engine","pnx":{"delivery":{"institution":["$$VBALLARAT$$OUB_MILLENNIUM.b27288316","$$VBALLARAT$$OUB_MILLENNIUM.b26773934"],"delcategory":["$$VOnline
+        Resource$$OUB_MILLENNIUM.b27288316","$$VOnline Resource$$OUB_MILLENNIUM.b26773934"]},"display":{"lds06":["Bingley,
+        U.K. : Emerald"],"identifier":["$$CISBN$$V9781780524573 (electronic bk.) :"],"creationdate":["2012"],"subject":["Internet
+        in higher education; Education, Higher"],"format":["1 online resource (xi,
+        420 p.) : ill.."],"description":["ch. 1. Misbehavior online, a new frontier
+        in higher education : introduction / Laura A. Wankel, Charles Wankel -- ch.
+        2. Publish or perish : ramifications for online academic publishing / Tracey
+        Bretag -- ch. 3. Say that to my face : factors inherent to the online environment
+        that increase the likelihood of harassing and prejudicial behavior / Barbara
+        A. Ritter -- ch. 4. What do they expect? : academically entitled students
+        and perceptions of teacher misbehaviors in the online classroom / Heather
+        M. Crandall, Mike Hazel, John S. Caputo -- ch. 5. Facing off : Facebook and
+        higher education / Debra Bateman, Julie Willems -- ch. 6. The ripple effect
+        of positive change : raising awareness of cyberbullying through a community-based
+        service-learning project / Amy L. Kenworthy, Jeffrey E. Brand, Dee Bartrum
+        -- ch. 7. Cyberbullying : perceptions of bullies and victims / Kimberly L.
+        Kulovitz, Edward A. Mabry -- ch. 8. Cyberbullying? : voices of college students
+        / Angela Baldasare, Sheri Bauman, Lori Goldman, Alexandra Robie -- ch. 9.
+        Cyberbullying in the university classroom : a multiplicity of issues / Joanne
+        C. Jones, Sandra Scott -- ch. 10. Student conduct in the digital age : when
+        does the first amendment protection end and misconduct begin? / Lee E. Bird,
+        Tawny Taylor, Kevin M. Kraft -- ch. 11. Cyberbullying : it doesn''t stop after
+        high school graduation / Kent J. Smith, Jennifer Grimm, Anne E. Lombard, Brandon
+        Wolfe -- ch. 12. Misbehavior in online testing / Michael Mays -- ch. 13. Picture
+        perfect? : college students'' experiences and attitudes regarding their photo-related
+        behaviors on Facebook / Angela Paradise -- ch. 14. Cyber bullying among college
+        students : evidence from multiple domains of college life / Robin M. Kowalski,
+        Gary W. Giumetti, Amber N. Schroeder, Heather H. Reese -- ch. 15. Academic
+        integrity and shortcuts in an automated management accounting course management
+        system / Paul M. Goldwater, Timothy J. Fogarty -- ch. 16. Establishing guidelines
+        for the use of social media in higher education / Andrew J. Lenartz -- ch.
+        17. Will the real ''John Doe'' stand up? : verifying the identity of online
+        students / Wendy L. Kraglund-Gauthier, David C. Young -- ch. 18. Flaming the
+        faculty : exploring root causes, consequences, and potential remedies to the
+        problem of instructor-focused uncivil online student discourse in higher education
+        / Susan Wildermuth, Corey B. Davis.","As interaction in higher education among
+        faculty, staff, students, and others becomes ever more digital, the welter
+        of new online communication technologies have provided many unintentional
+        opportunities for indiscipline and misconduct. As a result of this unfortunate
+        increase is misbehavior, administrators and instructors in higher education
+        are increasingly being called upon to remedy and forestall such actions. Misbehavior
+        Online in Higher Education is rich in contemporary case studies, analytical
+        reports, and up-to-date research providing detailed overviews of various misbehavior,
+        including cyberbullying, cyberstaling, cyberslacking, and privacy invasion,
+        hacking, cheating, teasing, and enhanced prejudicial attitudes. The development
+        of approaches to addressing these problems is discussed and examples are provided.
+        The book also anticipates emerging problematic behavior and the development
+        of new policies, programs, facilities, and technologies to tackle the concerning
+        behaviors is explored."],"availlibrary":["$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b27288316","$$IBALLARAT$$L$$Scheck_holdings$$31$$40$$9ONLINE$$OUB_MILLENNIUM.b26773934"],"language":["eng"],"source":["$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b27288316","$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b26773934"],"title":["Misbehavior
+        online in higher education"],"type":["book"],"relation":["$$C series $$V Cutting-edge
+        technologies in higher education ; v. 5."],"contributor":["Laura A Wankel;
+        Charles Wankel"],"publisher":["Emerald"],"availpnx":["unavailable"],"lds01":["Includes
+        index.; eBook access requires you to log in as a Federation University Australia
+        library user.","Includes bibliographical references and index.; Electronic
+        reproduction.; Ebook access requires you to log in as a Federation University
+        Australia library user."]},"control":{"recordid":["dedupmrg1317898213"],"sourceid":["$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b27288316","$$VUB_MILLENNIUM$$OUB_MILLENNIUM.b26773934"],"sourceformat":["$$VMARC
+        Exchange$$OUB_MILLENNIUM.b27288316","$$VMARC Exchange$$OUB_MILLENNIUM.b26773934"],"sourcerecordid":["$$V.b27288316$$OUB_MILLENNIUM.b27288316","$$V.b26773934$$OUB_MILLENNIUM.b26773934"],"sourcesystem":["$$VIII$$OUB_MILLENNIUM.b27288316","$$VIII$$OUB_MILLENNIUM.b26773934"],"addsrcrecordid":["$$Vb2728831$$OUB_MILLENNIUM.b27288316","$$Vb2677393$$OUB_MILLENNIUM.b26773934"]},"sort":{"creationdate":["2012"],"author":["Wankel,
+        Laura A."],"title":["Misbehavior online in higher education"]},"frbr":{"t":[1],"k1":["$$Kballaratwankel
+        laura a$$AA","$$Kballaratwankel charles$$AA","$$Kballaratproquest firm$$AA"],"k3":["$$Kballaratmisbehavior
+        online in higher education$$AT"]},"dedup":{"c3":["misbehavioronlineinhreducation"],"f6":["2012"],"c4":["2012"],"f7":["misbehavior
+        online in higher education"],"f8":["enk"],"f9":["1 online resource (xi, 420
+        p.) :"],"t":[1],"f10":["emerald"],"f20":["BALLARAT"],"f3":["9781780524573"],"c2":["9781780524573"],"f5":["misbehavioronlineinhreducation"]},"facets":{"frbrtype":["6"],"creatorcontrib":["Wankel,
+        L","Wankel, C","ProQuest (Firm)"],"creationdate":["2012"],"toplevel":["online_resources"],"newrecords":["20180706_426","20170605_31"],"frbrgroupid":["1320740292"],"rsrctype":["books"],"topic":["Internet
+        in higher education","Education, Higher","College discipline"],"classificationlcc":["L
+        - Education.\u2013Theory and practice of education"],"language":["eng"],"prefilter":["books"]},"enrichment":{"classificationlcc":["LB1044.87"]},"search":{"sourceid":["UB_MILLENNIUM"],"creatorcontrib":["edited
+        by Laura A. Wankel, Charles Wankel.","Laura A.  Wankel","Charles.  Wankel","Wankel,
+        L","Wankel, C","Laura A.,  Wankel  editor.","Charles,  Wankel  editor.","ProQuest
+        (Firm)"],"creationdate":["2012"],"subject":["Internet in higher education.","Education,
+        Higher.","College discipline."],"isbn":["9781780524573","1780524579","1280120509","9781280120503","9781780524566","1780524560"],"rsrctype":["book"],"description":["As
+        interaction in higher education among faculty, staff, students, and others
+        becomes ever more digital, the welter of new online communication technologies
+        have provided many unintentional opportunities for indiscipline and misconduct.
+        As a result of this unfortunate increase is misbehavior, administrators and
+        instructors in higher education are increasingly being called upon to remedy
+        and forestall such actions. Misbehavior Online in Higher Education is rich
+        in contemporary case studies, analytical reports, and up-to-date research
+        providing detailed overviews of various misbehavior, including cyberbullying,
+        cyberstaling, cyberslacking, and privacy invasion, hacking, cheating, teasing,
+        and enhanced prejudicial attitudes. The development of approaches to addressing
+        these problems is discussed and examples are provided. The book also anticipates
+        emerging problematic behavior and the development of new policies, programs,
+        facilities, and technologies to tackle the concerning behaviors is explored."],"toc":["ch.
+        1. Misbehavior online, a new frontier in higher education : introduction /
+        Laura A. Wankel, Charles Wankel -- ch. 2. Publish or perish : ramifications
+        for online academic publishing / Tracey Bretag -- ch. 3. Say that to my face
+        : factors inherent to the online environment that increase the likelihood
+        of harassing and prejudicial behavior / Barbara A. Ritter -- ch. 4. What do
+        they expect? : academically entitled students and perceptions of teacher misbehaviors
+        in the online classroom / Heather M. Crandall, Mike Hazel, John S. Caputo
+        -- ch. 5. Facing off : Facebook and higher education / Debra Bateman, Julie
+        Willems -- ch. 6. The ripple effect of positive change : raising awareness
+        of cyberbullying through a community-based service-learning project / Amy
+        L. Kenworthy, Jeffrey E. Brand, Dee Bartrum -- ch. 7. Cyberbullying : perceptions
+        of bullies and victims / Kimberly L. Kulovitz, Edward A. Mabry -- ch. 8. Cyberbullying?
+        : voices of college students / Angela Baldasare, Sheri Bauman, Lori Goldman,
+        Alexandra Robie -- ch. 9. Cyberbullying in the university classroom : a multiplicity
+        of issues / Joanne C. Jones, Sandra Scott -- ch. 10. Student conduct in the
+        digital age : when does the first amendment protection end and misconduct
+        begin? / Lee E. Bird, Tawny Taylor, Kevin M. Kraft -- ch. 11. Cyberbullying
+        : it doesn''t stop after high school graduation / Kent J. Smith, Jennifer
+        Grimm, Anne E. Lombard, Brandon Wolfe -- ch. 12. Misbehavior in online testing
+        / Michael Mays -- ch. 13. Picture perfect? : college students'' experiences
+        and attitudes regarding their photo-related behaviors on Facebook / Angela
+        Paradise -- ch. 14. Cyber bullying among college students : evidence from
+        multiple domains of college life / Robin M. Kowalski, Gary W. Giumetti, Amber
+        N. Schroeder, Heather H. Reese -- ch. 15. Academic integrity and shortcuts
+        in an automated management accounting course management system / Paul M. Goldwater,
+        Timothy J. Fogarty -- ch. 16. Establishing guidelines for the use of social
+        media in higher education / Andrew J. Lenartz -- ch. 17. Will the real ''John
+        Doe'' stand up? : verifying the identity of online students / Wendy L. Kraglund-Gauthier,
+        David C. Young -- ch. 18. Flaming the faculty : exploring root causes, consequences,
+        and potential remedies to the problem of instructor-focused uncivil online
+        student discourse in higher education / Susan Wildermuth, Corey B. Davis.","chapter
+        1. Misbehavior online, a new frontier in higher education : introduction /
+        Laura A. Wankel, Charles Wankel -- chapter 2. Publish or perish : ramifications
+        for online academic publishing / Tracey Bretag -- chapter 3. Say that to my
+        face : factors inherent to the online environment that increase the likelihood
+        of harassing and prejudicial behavior / Barbara A. Ritter -- chapter 4. What
+        do they expect? : academically entitled students and perceptions of teacher
+        misbehaviors in the online classroom / Heather M. Crandall, Mike Hazel, John
+        S. Caputo -- chapter 5. Facing off : Facebook and higher education / Debra
+        Bateman, Julie Willems -- chapter 6. The ripple effect of positive change
+        : raising awareness of cyberbullying through a community-based service-learning
+        project / Amy L. Kenworthy, Jeffrey E. Brand, Dee Bartrum -- chapter 7. Cyberbullying
+        : perceptions of bullies and victims / Kimberly L. Kulovitz, Edward A. Mabry
+        -- chapter 8. Cyberbullying? : voices of college students / Angela Baldasare,
+        Sheri Bauman, Lori Goldman, Alexandra Robie -- chapter 9. Cyberbullying in
+        the university classroom : a multiplicity of issues / Joanne C. Jones, Sandra
+        Scott -- chapter 10. Student conduct in the digital age : when does the first
+        amendment protection end and misconduct begin? / Lee E. Bird, Tawny Taylor,
+        Kevin M. Kraft -- chapter 11. Cyberbullying : it doesn''t stop after high
+        school graduation / Kent J. Smith, Jennifer Grimm, Anne E. Lombard, Brandon
+        Wolfe -- chapter 12. Misbehavior in online testing / Michael Mays -- chapter
+        13. Picture perfect? : college students'' experiences and attitudes regarding
+        their photo-related behaviors on Facebook / Angela Paradise -- chapter 14.
+        Cyber bullying among college students : evidence from multiple domains of
+        college life / Robin M. Kowalski, Gary W. Giumetti, Amber N. Schroeder, Heather
+        H. Reese -- chapter 15. Academic integrity and shortcuts in an automated management
+        accounting course management system / Paul M. Goldwater, Timothy J. Fogarty
+        -- chapter 16. Establishing guidelines for the use of social media in higher
+        education / Andrew J. Lenartz -- chapter 17. Will the real ''John Doe'' stand
+        up? : verifying the identity of online students / Wendy L. Kraglund-Gauthier,
+        David C. Young -- chapter 18. Flaming the faculty : exploring root causes,
+        consequences, and potential remedies to the problem of instructor-focused
+        uncivil online student discourse in higher education / Susan Wildermuth, Corey
+        B. Davis."],"title":["Misbehavior online in higher education","Misbehavior
+        online in higher education /"],"addtitle":["Cutting-edge technologies in higher
+        education, v. 5.","Cutting-edge technologies in higher education ; v. 5.","Misbehavior
+        online in higher education."],"recordid":["UB_MILLENNIUM.b27288316","UB_MILLENNIUM.b26773934"],"general":["Emerald,","[electronic
+        resource] /"],"scope":["UB_MILLENNIUM","BALLARAT"]},"links":{"openurl":["$$V$$Topenurl_journal$$OUB_MILLENNIUM.b27288316","$$V$$Topenurl_journal$$OUB_MILLENNIUM.b26773934"],"linktoexcerpt":["$$Tsyndetics_excerpt$$Elinktoexcerpt"],"thumbnail":["$$Tamazon_thumb","$$Tsyndetics_thumb","$$Tgoogle_thumb"],"linktorequest":["$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b27288316","$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b26773934"],"backlink":["$$V$$TBALLARAT_III_holdings$$DSee
+        Holdings$$OUB_MILLENNIUM.b27288316","$$V$$TBALLARAT_III_holdings$$DSee Holdings$$OUB_MILLENNIUM.b26773934"],"lln02":["$$Tgoogle_books$$DThis
+        item in Google books$$OUB_MILLENNIUM.b27288316","$$Ttrove$$DThis item in Trove$$OUB_MILLENNIUM.b27288316","$$Tgoogle_books$$DThis
+        item in Google books$$OUB_MILLENNIUM.b26773934","$$Ttrove$$DThis item in Trove$$OUB_MILLENNIUM.b26773934"],"linktorsrc":["$$V$$Uhttp://ezproxy.federation.edu.au/login?url=http://www.emeraldinsight.com/2044-9968/5$$DAccess
+        eBook online$$OUB_MILLENNIUM.b27288316","$$V$$Uhttp://ebookcentral.proquest.com/lib/ballarat/detail.action?docID=862260$$DClick
+        here to view book$$OUB_MILLENNIUM.b26773934"],"lln01":["$$Tbonus_title$$DFind
+        this item in BONUS+$$OUB_MILLENNIUM.b27288316","$$Tbonus_title$$DFind this
+        item in BONUS+$$OUB_MILLENNIUM.b26773934"],"linktoholdings":["$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b27288316","$$V$$TBALLARAT_III_holdings$$OUB_MILLENNIUM.b26773934"],"openurlfulltext":["$$V$$Topenurlfull_journal$$OUB_MILLENNIUM.b27288316","$$V$$Topenurlfull_journal$$OUB_MILLENNIUM.b26773934"],"linktouc":["$$Tworldcat_isbn$$Eworldcat","$$Tworldcat_isbn$$Eworldcat"]},"ranking":{"booster2":["1"],"booster1":["1"]},"addata":{"date":["2012"],"notes":["Includes
+        bibliographical references and index."],"aulast":["Wankel"],"cop":["Bingley,
+        U.K.","Bingley, UK"],"isbn":["9781780524573","1780524579","1280120509","9781280120503"],"format":["book"],"ristype":["BOOK"],"eissn":["9781780524566"],"abstract":["As
+        interaction in higher education among faculty, staff, students, and others
+        becomes ever more digital, the welter of new online communication technologies
+        have provided many unintentional opportunities for indiscipline and misconduct.
+        As a result of this unfortunate increase is misbehavior, administrators and
+        instructors in higher education are increasingly being called upon to remedy
+        and forestall such actions. Misbehavior Online in Higher Education is rich
+        in contemporary case studies, analytical reports, and up-to-date research
+        providing detailed overviews of various misbehavior, including cyberbullying,
+        cyberstaling, cyberslacking, and privacy invasion, hacking, cheating, teasing,
+        and enhanced prejudicial attitudes. The development of approaches to addressing
+        these problems is discussed and examples are provided. The book also anticipates
+        emerging problematic behavior and the development of new policies, programs,
+        facilities, and technologies to tackle the concerning behaviors is explored."],"aufirst":["Laura
+        A.","Laura A.,"],"addau":["Wankel, Laura A","Wankel, Charles","Wankel, Laura
+        A., editor","Wankel, Charles, editor","ProQuest (Firm)"],"seriestitle":["Cutting-edge
+        technologies in higher education ; v. 5"],"genre":["book"],"btitle":["Misbehavior
+        online in higher education"],"risdate":["2012.","2012"],"pub":["Emerald","Emerald
+        Group Publishing Limited"]},"browse":{"callnumber":["$$IPRIMO"]}},"@id":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/dedupmrg1317898213"},{"enrichment":{"virtualBrowseObject":{"callNumber":"","isVirtualBrowseEnabled":false,"callNumberBrowseField":"browse_callnumber"}},"delivery":{"availabilityLinks":["directlink"],"physicalItemTextCodes":"","displayLocation":false,"availabilityLinksUrl":["http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Misbehavior%20Online%20in%20Higher%20Education:%20Cutting-Edge%20Technologies%20in%20Higher%20Education%20ed.%20by%20Laura%20A.%20Wankel%20and%20Charles%20Wankel&rft.jtitle=The%20Review%20of%20Higher%20Education&rft.btitle=&rft.aulast=Frolow&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Frolow,%20Miriam%20L.&rft.aucorp=&rft.date=2013&rft.volume=37&rft.issue=1&rft.part=&rft.quarter=&rft.ssn=&rft.spage=112&rft.epage=114&rft.pages=112-114&rft.artnum=&rft.issn=&rft.eissn=1090-7009&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1353/rhe.2013.0079&rft.object_id=&rft_dat=%3Ccrossref%3E10.1353/rhe.2013.0079%3C/crossref%3E%3Cgrp_id%3E8012625521899214399%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=1465331598&rft_id=info:pmid/"],"link":[{"displayLabel":"openurl","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Misbehavior%20Online%20in%20Higher%20Education:%20Cutting-Edge%20Technologies%20in%20Higher%20Education%20ed.%20by%20Laura%20A.%20Wankel%20and%20Charles%20Wankel&rft.jtitle=The%20Review%20of%20Higher%20Education&rft.btitle=&rft.aulast=Frolow&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Frolow,%20Miriam%20L.&rft.aucorp=&rft.date=2013&rft.volume=37&rft.issue=1&rft.part=&rft.quarter=&rft.ssn=&rft.spage=112&rft.epage=114&rft.pages=112-114&rft.artnum=&rft.issn=&rft.eissn=1090-7009&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1353/rhe.2013.0079&rft.object_id=&rft_dat=%3Ccrossref%3E10.1353/rhe.2013.0079%3C/crossref%3E%3Cgrp_id%3E8012625521899214399%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=1465331598&rft_id=info:pmid/","linkType":"http://purl.org/pnx/linkType/openurl","@id":"_:0"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:1"},{"displayLabel":"thumbnail","inst4opac":"BALLARAT","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:,OCLC:,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:2"},{"displayLabel":"openurlfulltext","inst4opac":"BALLARAT","linkURL":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Misbehavior%20Online%20in%20Higher%20Education:%20Cutting-Edge%20Technologies%20in%20Higher%20Education%20ed.%20by%20Laura%20A.%20Wankel%20and%20Charles%20Wankel&rft.jtitle=The%20Review%20of%20Higher%20Education&rft.btitle=&rft.aulast=Frolow&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Frolow,%20Miriam%20L.&rft.aucorp=&rft.date=2013&rft.volume=37&rft.issue=1&rft.part=&rft.quarter=&rft.ssn=&rft.spage=112&rft.epage=114&rft.pages=112-114&rft.artnum=&rft.issn=&rft.eissn=1090-7009&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1353/rhe.2013.0079&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=%3Ccrossref%3E10.1353/rhe.2013.0079%3C/crossref%3E%3Cgrp_id%3E8012625521899214399%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=1465331598&rft_id=info:pmid/","linkType":"http://purl.org/pnx/linkType/openurlfulltext","@id":"_:3"},{"displayLabel":"$$EView_CrossRef_copyright_notice","inst4opac":"BALLARAT","linkURL":"http://exlibris-pub.s3.amazonaws.com/aboutCrossref.html","linkType":"http://purl.org/pnx/linkType/addlink","@id":"_:4"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=/SC.JPG&client=primo","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:5"},{"displayLabel":"thumbnail","linkURL":"https://proxy-ap.hosted.exlibrisgroup.com/exl_rewrite/books.google.com/books?bibkeys=ISBN:,OCLC:,LCCN:&jscmd=viewapi&callback=updateGBSCover","linkType":"http://purl.org/pnx/linkType/thumbnail","@id":"_:6"}],"availability":["no_fulltext"],"additionalLocations":false,"displayedAvailability":"no_fulltext","holding":[],"deliveryCategory":["Remote
+        Search Resource"],"serviceMode":["display"],"feDisplayOtherLocations":false,"GetIt1":[{"links":[{"isLinktoOnline":false,"displayText":"openurl","hyperlinkText":"tab1_nofull","getItTabText":"tab1_nofull","link":"http://sfx-61uba.hosted.exlibrisgroup.com/61UBA/?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2018-10-31T09%3A59%3A33IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Article-crossref&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Misbehavior%20Online%20in%20Higher%20Education:%20Cutting-Edge%20Technologies%20in%20Higher%20Education%20ed.%20by%20Laura%20A.%20Wankel%20and%20Charles%20Wankel&rft.jtitle=The%20Review%20of%20Higher%20Education&rft.btitle=&rft.aulast=Frolow&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Frolow,%20Miriam%20L.&rft.aucorp=&rft.date=2013&rft.volume=37&rft.issue=1&rft.part=&rft.quarter=&rft.ssn=&rft.spage=112&rft.epage=114&rft.pages=112-114&rft.artnum=&rft.issn=&rft.eissn=1090-7009&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/10.1353/rhe.2013.0079&rft.object_id=&rft_dat=%3Ccrossref%3E10.1353/rhe.2013.0079%3C/crossref%3E%3Cgrp_id%3E8012625521899214399%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft_id=info:oai/&req.language=eng&rft_pqid=1465331598&rft_id=info:pmid/","@id":"_:0"}],"category":"Remote
+        Search Resource"}]},"context":"PC","adaptor":"primo_central_multiple_fe","pnx":{"delivery":{"fulltext":["no_fulltext"],"delcategory":["Remote
+        Search Resource"]},"search":{"sourceid":["crossref"],"lsr40":["2013"],"creatorcontrib":["Frolow,
+        Miriam L."],"creationdate":["2013"],"citation":["pf 112 pt 114 vol 37 issue
+        1"],"rsrctype":["article"],"lsr45":["2013"],"title":["Misbehavior Online in
+        Higher Education: Cutting-Edge Technologies in Higher Education ed. by Laura
+        A. Wankel and Charles Wankel"],"startdate":["20130101"],"lsr43":["2013"],"addtitle":["The
+        Review of Higher Education"],"lsr30":["VSR-Enriched:[subject, description,
+        pqid]"],"lsr41":["2013"],"recordid":["crossref10.1353/rhe.2013.0079"],"general":["English","10.1353/rhe.2013.0079","CrossRef"],"enddate":["20131231"],"issn":["10907009","1090-7009"],"scope":["crossref_rest","CrossRef","Crossref","crossref"]},"display":{"identifier":["<b>E-ISSN:</b>
+        1090-7009 ; <b>DOI:</b> http://dx.doi.org/10.1353/rhe.2013.0079"],"creator":["Frolow,
+        Miriam L."],"subject":["Higher Education ; Teaching ; Learning ; Social Networks
+        ; Bullying ; College Campuses;"],"ispartof":["The Review of Higher Education,
+        2013, Vol.37(1), pp.112-114"],"lds50":["peer_reviewed"],"description":["Misbehavior
+        Online in Higher Education: Cutting- Edge Technologies in Higher Education
+        is a timely and relevant book focusing on three key topics: cy- berbullying,
+        social media, and academic integrity. Considerations include designing multiple
+        versions of exams, the extent to which students can access additional resources
+        during the exam, the use of proctors, honor codes, and self-reporting mechanisms,
+        time stamping, verify- ing student identity online, and having multiple methods
+        for measuring student performance and knowledge gained."],"language":["eng"],"source":["CrossRef"],"title":["Misbehavior
+        Online in Higher Education: Cutting-Edge Technologies in Higher Education
+        ed. by Laura A. Wankel and Charles Wankel"],"type":["review"]},"links":{"openurl":["$$Topenurl_article"],"thumbnail":["$$TPCamazon_thumb","$$TPCgoogle_thumb"],"openurlfulltext":["$$Topenurlfull_article"],"addlink":["$$Uhttp://exlibris-pub.s3.amazonaws.com/aboutCrossref.html$$EView_CrossRef_copyright_notice"]},"control":{"recordid":["TN_crossref10.1353/rhe.2013.0079"],"sourceid":["crossref"],"sourceformat":["XML"],"pqid":["1465331598"],"sourcerecordid":["10.1353/rhe.2013.0079"],"sourcesystem":["Other"]},"addata":{"date":["2013"],"aulast":["Frolow"],"issue":["1"],"format":["journal"],"ristype":["GEN"],"eissn":["1090-7009"],"spage":["112"],"atitle":["Misbehavior
+        Online in Higher Education: Cutting-Edge Technologies in Higher Education
+        ed. by Laura A. Wankel and Charles Wankel"],"lad25":["drop record use citations"],"aufirst":["Miriam
+        L."],"volume":["37"],"pages":["112-114"],"au":["Frolow, Miriam L."],"stitle":["The
+        Review of Higher Education"],"epage":["114"],"genre":["article"],"jtitle":["The
+        Review of Higher Education"],"risdate":["2013"],"adddate":["2013"],"doi":["10.1353/rhe.2013.0079"]},"sort":{"creationdate":["20130000"],"author":["Frolow,
+        Miriam L."],"title":["Misbehavior Online in Higher Education: Cutting-Edge
+        Technologies in Higher Education ed. by Laura A. Wankel and Charles Wankel"],"lso01":["20130000"]},"facets":{"frbrtype":["5"],"creatorcontrib":["Frolow,
+        Miriam L."],"creationdate":["2013"],"toplevel":["peer_reviewed"],"frbrgroupid":["8012625521899214399"],"rsrctype":["articles"],"language":["eng"],"jtitle":["Review
+        of Higher Education"],"prefilter":["articles"]}},"@id":"https://primoapac01.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_crossref10.1353/rhe.2013.0079"}],"timelog":{"CalculateRtaLinks1DeltaTime":80,"BriefSearchDeltaTime":877,"DoSearchPrimoResultDeltaTime":797,"StartBriefSearch":1540951172993,"retrieveHighLightsDeltaTime":80,"retrieveDidUMeanDeltaTime":80,"GetSearchStatusDeltaTime":797,"StartTranslationTime":1540951173790,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":80,"retrieveFacetsDeltaTime":80},"lang3":"eng","info":{"total":2,"last":"2","maxTotal":0,"first":"1"},"facets":[{"values":[{"count":1,"value":"reviews"},{"count":1,"value":"books"}],"name":"rtype"},{"values":[{"count":1,"value":"Frolow,
+        Miriam Lyons"},{"count":1,"value":"ProQuest (Firm)"},{"count":1,"value":"Frolow,
+        Miriam L."},{"count":1,"value":"Frolow, Miriam"},{"count":1,"value":"Wankel,
+        C"},{"count":1,"value":"Wankel, L"},{"count":1,"value":"Frolow, Ml"}],"name":"creator"},{"values":[{"count":1,"value":"2013"},{"count":1,"value":"2012"}],"name":"creationdate"},{"values":[{"count":1,"value":"peer_reviewed"},{"count":1,"value":"online_resources"}],"name":"tlevel"},{"values":[{"count":1,"value":"Higher
+        Education"},{"count":1,"value":"Teaching"},{"count":1,"value":"Wankel Laura
+        A. Misbehavior Online In Higher Education"},{"count":1,"value":"Bullying"},{"count":1,"value":"Education"},{"count":1,"value":"Wankel
+        Charles"},{"count":1,"value":"Internet in higher education"},{"count":1,"value":"Learning"},{"count":1,"value":"Education,
+        Higher"},{"count":1,"value":"College Campuses"},{"count":1,"value":"Social
+        Networks"},{"count":2,"value":"College Discipline"}],"name":"topic"},{"values":[{"count":1,"value":"reviews"},{"count":1,"value":"articles"}],"name":"pfilter"},{"values":[{"count":1,"value":"Review
+        Of Higher Education"}],"name":"jtitle"},{"values":[{"count":2,"value":"eng"}],"name":"lang"},{"values":[{"count":1,"value":"L
+        - Education."}],"name":"lcc"}],"beaconO22":"887"}'
+    http_version: 
+  recorded_at: Wed, 31 Oct 2018 01:59:34 GMT
+recorded_with: VCR 2.9.3

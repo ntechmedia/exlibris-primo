@@ -6,7 +6,7 @@ module WebService
         @base_url = "http://bobcatdev.library.nyu.edu"
       end
 
-      def test_nonexistent_soap_action
+      def test_nonexistent_api_action
         VCR.use_cassette('client nonexistent soap action') do
           client = Exlibris::Primo::WebService::Client::Search.new :base_url => @base_url
           assert_kind_of Savon::Client, client.send(:client)
