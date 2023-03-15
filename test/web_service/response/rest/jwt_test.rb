@@ -6,7 +6,7 @@ module WebService
         Exlibris::Primo.configure do |config|
           config.api = :rest
           config.primo_version = :primo
-          config.api_key = ENV["REST_ALT_API_KEY"]
+          config.api_key = ENV["GEM_REST_ALT_API_KEY"]
           config.vid = 'LATROBE'
           config.tab = 'default_tab'
           config.base_url = 'https://api-ap.hosted.exlibrisgroup.com/'

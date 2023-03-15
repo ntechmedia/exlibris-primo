@@ -1,0 +1,72 @@
+version: v1.0
+name: exlibris-primo gem
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+execution_time_limit:
+  hours: 2
+blocks:
+  - name: code coverage setup
+    dependencies: []
+    task:
+      jobs:
+        - name: setup
+          commands:
+            - sem-version ruby 2.7.7
+            - checkout
+            - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            - chmod +x ./cc-test-reporter
+            - ./cc-test-reporter before-build
+            - cache delete gems-$SEMAPHORE_GIT_PR_BRANCH-$(checksum Gemfile.lock)
+            - gem install bundler:2.3.14
+            - 'bundle config set gems.railslts.com $ERESERVE_RAILS_LTS'
+            - bundle config set --local deployment 'true'
+            - bundle config set --local path 'vendor/bundle'
+            - bundle install
+            - cache store gems-$SEMAPHORE_GIT_PR_BRANCH-$(checksum Gemfile.lock) vendor/bundle
+      secrets:
+        - name: aws
+        - name: code_climate
+        - name: rails_lts
+  - name: tests
+    dependencies: ['code coverage setup']
+    task:
+      jobs:
+        - name: test runner
+          commands:
+            - rake test
+            - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            - chmod +x ./cc-test-reporter
+            - ./cc-test-reporter format-coverage --output "coverage/codeclimate.$SEMAPHORE_JOB_ID.json"
+            - 'aws s3 cp "coverage/codeclimate.$SEMAPHORE_JOB_ID.json" "s3://ereserve-dev/ci/code-coverage/$SEMAPHORE_PROJECT_NAME/$SEMAPHORE_GIT_BRANCH/coverage/$SEMAPHORE_WORKFLOW_ID/"'
+      prologue:
+        commands:
+          - checkout
+          - sem-version ruby 2.7.7
+          - cache restore gems-$SEMAPHORE_GIT_PR_BRANCH-$(checksum Gemfile.lock)
+          - gem install bundler:2.3.14
+          - 'bundle config set gems.railslts.com $ERESERVE_RAILS_LTS'
+          - bundle config set --local deployment 'true'
+          - bundle config set --local path 'vendor/bundle'
+          - gem install semaphore_test_boosters
+      secrets:
+        - name: aws
+        - name: code_climate
+        - name: rails_lts
+        - name: exlibris_primo
+  - name: code coverage ship
+    dependencies: ['tests']
+    task:
+      jobs:
+        - name: ship
+          commands:
+            - checkout
+            - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            - chmod +x ./cc-test-reporter
+            - mkdir coverage
+            - aws s3 sync "s3://ereserve-dev/ci/code-coverage/$SEMAPHORE_PROJECT_NAME/$SEMAPHORE_GIT_BRANCH/coverage/$SEMAPHORE_WORKFLOW_ID/" coverage/
+            - ./cc-test-reporter sum-coverage --output - --parts $(ls -1 coverage/ | wc -l) coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage --input -
+      secrets:
+        - name: aws
+        - name: code_climate

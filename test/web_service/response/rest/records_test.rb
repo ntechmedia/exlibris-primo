@@ -97,10 +97,10 @@ module WebService
           link = response.records.first.fulltexts.first
           assert_not_nil link
           assert_nil link.institution
-          assert_equal "dedupmrg1317898213", link.record_id
-          assert_equal "UB_MILLENNIUM.b27288316", link.original_id
-          assert_equal "http://ezproxy.federation.edu.au/login?url=http://www.emeraldinsight.com/2044-9968/5", link.url
-          assert_equal "Access eBook online", link.display
+          assert_equal "UB_MILLENNIUM.b26773934", link.record_id
+          assert_equal "UB_MILLENNIUM.b26773934", link.original_id
+          assert_equal "http://ebookcentral.proquest.com/lib/ballarat/detail.action?docID=862260", link.url
+          assert_equal "Click here to view book", link.display
         end
       end
 
@@ -115,7 +115,7 @@ module WebService
           response = Exlibris::Primo::WebService::Response::Search.new(client.send(api_action, request.query_params), api_action)
           records = response.records
           first_result = records.first
-          expected_urls = %w(http://www.ballarat.eblib.com.au/EBLWeb?target=patron&extendedid=P_699895_0 http://www.ballarat.eblib.com.au/EBLWeb?target=patron&extendedid=P_877401_0)
+          expected_urls = %w(https://ebookcentral.proquest.com/lib/ballarat/detail.action?docID=699895 https://ebookcentral.proquest.com/lib/ballarat/detail.action?docID=877401)
 
           assert_not_nil response.records
           assert_not_nil records
@@ -144,7 +144,7 @@ module WebService
           expected_libraries = %w(gall mall)
 
           assert_not_nil records
-          assert_equal 1, records.count
+          assert_equal 2, records.count
           assert_equal 2, first_result.holdings.count
           assert_equal 1, first_result.fulltexts.count
 
@@ -153,7 +153,7 @@ module WebService
           end
 
           fulltext = first_result.fulltexts.first
-          assert_equal 'http://ezproxy.federation.edu.au/login?url=http://www.ballarat.eblib.com.AU/EBLWeb/patron/?target=patron&extendedid=P_1722038_0', fulltext.url
+          assert_equal 'https://ebookcentral.proquest.com/lib/ballarat/detail.action?docID=1722038', fulltext.url
         end
       end
     end

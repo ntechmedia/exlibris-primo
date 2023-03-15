@@ -5,5 +5,11 @@ coverage/
 .ruby-gemset
 .ruby-version
 *.gem
-.idea
 sandpit
+.idea
+
+# Docker
+docker-compose.override.yml
+.env
+encrypted_data_bag_secret
+
