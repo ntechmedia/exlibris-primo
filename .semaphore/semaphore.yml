@@ -21,7 +21,6 @@ blocks:
             - cache delete gems-$SEMAPHORE_GIT_PR_BRANCH-$(checksum Gemfile.lock)
             - gem install bundler:2.3.14
             - 'bundle config set gems.railslts.com $ERESERVE_RAILS_LTS'
-            - bundle config set --local deployment 'true'
             - bundle config set --local path 'vendor/bundle'
             - bundle install
             - cache store gems-$SEMAPHORE_GIT_PR_BRANCH-$(checksum Gemfile.lock) vendor/bundle
@@ -47,7 +46,6 @@ blocks:
           - cache restore gems-$SEMAPHORE_GIT_PR_BRANCH-$(checksum Gemfile.lock)
           - gem install bundler:2.3.14
           - 'bundle config set gems.railslts.com $ERESERVE_RAILS_LTS'
-          - bundle config set --local deployment 'true'
           - bundle config set --local path 'vendor/bundle'
           - gem install semaphore_test_boosters
       secrets:
