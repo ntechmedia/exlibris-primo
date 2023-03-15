@@ -41,7 +41,7 @@ module WebService
           config.api = :rest
           config.vid = nil
           config.tab = 'quicksearch'
-          config.api_key = ENV['REST_API_KEY']
+          config.api_key = ENV['GEM_REST_API_KEY']
         end
 
         request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
@@ -59,7 +59,7 @@ module WebService
           config.api = :rest
           config.vid = 'UNI'
           config.tab = nil
-          config.api_key = ENV['REST_API_KEY']
+          config.api_key = ENV['GEM_REST_API_KEY']
         end
 
         request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
