@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'nokogiri', '< 2'
   s.add_dependency 'json', '>= 1.8.0', '< 3'
   s.add_dependency 'savon', '~> 2.11'
-  s.add_dependency 'faraday', '1.0.1'
+  s.add_dependency 'faraday', '~> 2.7'
   s.add_dependency 'iso-639', '~> 0.2.0'
   s.add_development_dependency 'rake', '~> 13'
   s.add_development_dependency 'vcr', '~> 6.0.0'
