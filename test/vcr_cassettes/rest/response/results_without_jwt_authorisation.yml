@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_ALT_API_KEY>&limit=5&multiFacets=facet_rtype,include,images&offset=0&q=title,contains,Wooden%20figure%20depicting%20a%20brown%20bear&scope=All&tab=default_tab&vid=LATROBE
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<GEM_REST_ALT_API_KEY>&limit=5&multiFacets=facet_rtype,include,images&offset=0&q=title,contains,Wooden%20figure%20depicting%20a%20brown%20bear&scope=All&tab=default_tab&vid=LATROBE
     body:
       encoding: US-ASCII
       string: ''
@@ -47,6 +47,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"highlights":{},"docs":[],"timelog":{"BriefSearchDeltaTime":548,"DoSearchPrimoResultDeltaTime":539,"StartBriefSearch":1562118404535,"retrieveHighLightsDeltaTime":9,"retrieveDidUMeanDeltaTime":9,"GetSearchStatusDeltaTime":539,"StartTranslationTime":1562118405074,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":9,"retrieveFacetsDeltaTime":9},"lang3":"eng","info":{"total":0,"last":"0","maxTotal":0,"first":"1"},"facets":[],"beaconO22":"566"}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 03 Jul 2019 01:46:45 GMT
 recorded_with: VCR 2.9.3

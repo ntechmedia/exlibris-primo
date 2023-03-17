@@ -7,8 +7,12 @@ gemspec
 
 gem 'jruby-openssl', "~> 0.9.0", platform: :jruby
 
+source 'https://gems.railslts.com' do
+  gem 'activesupport', :require => false
+end
+
 group :test do
-  gem "coveralls", "~> 0.7.0", :require => false
+  gem 'simplecov', '~> 0.20', require: false
 end
 
 platforms :rbx do

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/userJwt?apikey=<REST_ALT_API_KEY>
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/userJwt?apikey=<GEM_REST_ALT_API_KEY>
     body:
       encoding: UTF-8
       string: '{"viewId":"LATROBE","institution":"61LATROBE","user":"Pebbles","userName":"Murgatroyd
@@ -48,11 +48,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '"eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTYxTEFUUk9CRSIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJQcmltbyIsImp0aSI6bnVsbCwiZXhwIjoxNTYyMTMzNDI4LCJpYXQiOjE1NjIwNDcwMjgsInVzZXIiOiJQZWJibGVzIiwidXNlck5hbWUiOiJNdXJnYXRyb3lkIFBlYmJsZVBhZCIsInVzZXJHcm91cCI6IlUvR3JhZCIsImJvckdyb3VwSWQiOiIiLCJ1YmlkIjoiIiwiaW5zdGl0dXRpb24iOiI2MUxBVFJPQkUiLCJ2aWV3SW5zdGl0dXRpb25Db2RlIjoiNjFMQVRST0JFIiwiaXAiOiI0OS4xNzYuMjIzLjY5IiwicGRzUmVtb3RlSW5zdCI6bnVsbCwib25DYW1wdXMiOiJ0cnVlIiwibGFuZ3VhZ2UiOiJlbl9VUyIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IkxBVFJPQkUiLCJpbHNBcGlJZCI6IlBlYmJsZXMiLCJzYW1sU2Vzc2lvbkluZGV4IjoiIn0.qY46nBMVS8ZQbCvNG6DWO2Ilfq65gEpxg-EWtD66VeGcm1VFZyK_RrR6bNTynIrQ2Icxy7XDdGanHWAjSBlb1Q"'
-    http_version: 
+    http_version:
   recorded_at: Tue, 02 Jul 2019 05:57:08 GMT
 - request:
     method: get
-    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<REST_ALT_API_KEY>&limit=5&multiFacets=facet_rtype,include,images&offset=0&q=title,contains,Wooden%20figure%20depicting%20a%20brown%20bear&scope=All&tab=default_tab&vid=LATROBE
+    uri: https://api-ap.hosted.exlibrisgroup.com/primo/v1/search?apikey=<GEM_REST_ALT_API_KEY>&limit=5&multiFacets=facet_rtype,include,images&offset=0&q=title,contains,Wooden%20figure%20depicting%20a%20brown%20bear&scope=All&tab=default_tab&vid=LATROBE
     body:
       encoding: US-ASCII
       string: ''
@@ -123,6 +123,6 @@ http_interactions:
         ARTstor Digital Library"],"prefilter":["images"]}},"@id":"https://primo-direct-apac.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_artstorAHARVARDIG_10313276386"}],"timelog":{"BriefSearchDeltaTime":375,"DoSearchPrimoResultDeltaTime":358,"StartBriefSearch":1562047029253,"retrieveHighLightsDeltaTime":17,"retrieveDidUMeanDeltaTime":17,"GetSearchStatusDeltaTime":358,"StartTranslationTime":1562047029611,"AddSearchStatusDeltaTime":0,"FullEndDMDataDeltaTime":17,"retrieveFacetsDeltaTime":17},"lang3":"eng","info":{"total":1,"last":"1","maxTotal":0,"first":"1"},"facets":[{"values":[{"count":1,"value":"Tlingit:
         Teikweidi"}],"name":"creator"},{"values":[{"count":1,"value":"online_resources"}],"name":"tlevel"},{"values":[{"count":1,"value":"The
         ARTstor Digital Library"}],"name":"domain"},{"values":[{"count":1,"value":"images"}],"name":"pfilter"}],"beaconO22":"377"}'
-    http_version: 
+    http_version:
   recorded_at: Tue, 02 Jul 2019 05:57:09 GMT
 recorded_with: VCR 2.9.3

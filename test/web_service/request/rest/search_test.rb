@@ -36,11 +36,12 @@ module WebService
       end
 
       def test_missing_vid
+        reset_primo_configuration
         Exlibris::Primo.configure do |config|
           config.api = :rest
           config.vid = nil
           config.tab = 'quicksearch'
-          config.api_key = ENV['REST_API_KEY']
+          config.api_key = ENV['GEM_REST_API_KEY']
         end
 
         request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
@@ -49,14 +50,16 @@ module WebService
         expected_message = 'The vid (view ID) config attribute must be set. (e.g. ExlibrisPrimo.config.vid = "Auto1")'
 
         assert_raise_message(expected_message) { request.call }
+        reset_primo_configuration
       end
 
       def test_missing_tab
+        reset_primo_configuration
         Exlibris::Primo.configure do |config|
           config.api = :rest
           config.vid = 'UNI'
           config.tab = nil
-          config.api_key = ENV['REST_API_KEY']
+          config.api_key = ENV['GEM_REST_API_KEY']
         end
 
         request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
@@ -65,15 +68,18 @@ module WebService
         expected_message = 'The tab search tab (tab) config attribute must be set. (e.g. ExlibrisPrimo.config.tab = "quicksearch")'
 
         assert_raise_message(expected_message) { request.call }
+        reset_primo_configuration
       end
 
       def test_missing_api_key
+        reset_primo_configuration
         Exlibris::Primo.configure do |config|
           config.api = :rest
           config.vid = 'UNI'
           config.tab = 'quicksearch'
           config.api_key = nil
         end
+        reset_primo_configuration
 
         request = Exlibris::Primo::WebService::Request::Search.new base_url: @base_url
         request.add_query_term @issn, "isbn", "exact"
@@ -84,6 +90,7 @@ module WebService
       end
 
       def test_request_search_by_title
+        reset_primo_configuration
         Exlibris::Primo.configure do |config|
           config.api = :rest
           config.vid = 'UB'
@@ -102,6 +109,7 @@ module WebService
         assert_response request: request,
                         vcr_cassette: 'rest/request search by title',
                         expected_class: Exlibris::Primo::WebService::Response::Search
+        reset_primo_configuration
       end
     end
   end

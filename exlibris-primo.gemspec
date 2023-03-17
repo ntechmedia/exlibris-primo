@@ -17,19 +17,19 @@ Gem::Specification.new do |s|
   s.files = Dir["{lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency 'require_all', '~> 1.3'
+  s.add_dependency 'require_all', '~> 1.5'
   # Leverage ActiveSupport core extensions.
-  s.add_dependency 'activesupport', '>= 3.2', '< 3.3'
+  s.add_dependency 'activesupport', '3.2.22.35'
   s.add_dependency 'nokogiri', '< 2'
   s.add_dependency 'json', '>= 1.8.0', '< 3'
   s.add_dependency 'savon', '~> 2.11'
-  s.add_dependency 'faraday', '1.0.1'
+  s.add_dependency 'faraday', '~> 2.7'
   s.add_dependency 'iso-639', '~> 0.2.0'
-  s.add_development_dependency 'rake', '~> 10.1'
+  s.add_development_dependency 'rake', '~> 13'
   s.add_development_dependency 'vcr', '~> 6.0.0'
-  s.add_development_dependency 'webmock', '~> 3.12'
+  s.add_development_dependency 'webmock', '~> 3.14'
   s.add_development_dependency 'pry', '~> 0'
-  s.add_development_dependency 'minitest', '~> 4.7'
+  s.add_development_dependency 'minitest', '~> 5.1'
   s.add_development_dependency 'rack', '~> 1.6'
-  s.add_development_dependency 'test-unit', '~> 3.2'
+  s.add_development_dependency 'test-unit', '~> 3.5'
 end
