@@ -25,11 +25,12 @@ Gem::Specification.new do |s|
   s.add_dependency 'savon', '~> 2.11'
   s.add_dependency 'faraday', '~> 2.7'
   s.add_dependency 'iso-639', '~> 0.2.0'
+  s.add_development_dependency 'bundle-audit'
   s.add_development_dependency 'rake', '~> 13'
   s.add_development_dependency 'vcr', '~> 6.0.0'
   s.add_development_dependency 'webmock', '~> 3.14'
   s.add_development_dependency 'pry', '~> 0'
   s.add_development_dependency 'minitest', '~> 5.1'
-  s.add_development_dependency 'rack', '~> 1.6'
+  s.add_development_dependency 'rack', '~> 2.0'
   s.add_development_dependency 'test-unit', '~> 3.5'
 end

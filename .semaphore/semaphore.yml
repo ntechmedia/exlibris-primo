@@ -40,6 +40,7 @@ blocks:
           - 'bundle config set gems.railslts.com $ERESERVE_RAILS_LTS'
           - bundle config set --local path 'vendor/bundle'
           - bundle install
+          - bundle exec bundle-audit check --no-update
       secrets:
         - name: aws
         - name: code_climate
