@@ -1,0 +1,5 @@
+ignore:
+  # Resolved by RailsLTS see https://makandracards.com/railslts/474590-list-of-cves-addressed-by-rails-lts
+  - CVE-2020-8165
+  - CVE-2023-28120
+  - CVE-2023-22796
