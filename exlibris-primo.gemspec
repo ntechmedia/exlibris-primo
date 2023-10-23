@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'require_all', '~> 1.5'
   # Leverage ActiveSupport core extensions.
-  s.add_dependency 'activesupport', '3.2.22.41'
+  s.add_dependency 'activesupport', '3.2.22.44'
   s.add_dependency 'nokogiri', '< 2'
   s.add_dependency 'json', '>= 1.8.0', '< 3'
   s.add_dependency 'savon', '~> 2.11'
