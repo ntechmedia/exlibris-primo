@@ -9,4 +9,5 @@
 
 - [#8](https://github.com/ntechmedia/ereserve_entities/pull/8) Ops feature/Security - eReserve Backend RailsLTS Update 3.2.22.47
   - Update activesupport to 3.2.22.47
+  - Updates CI to use ubuntu2204 image
 
