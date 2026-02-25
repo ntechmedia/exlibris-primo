@@ -14,3 +14,8 @@
 - [#9](https://github.com/ntechmedia/ereserve_entities/pull/9) Ops feature/Security - eReserve Backend RailsLTS Update 3.2.22.47
   - Resolves issues with CI build
   - Updates Dockerfile ruby version to 2.7.8
+
+### 2.3.5 (2026-02-25)
+
+- [#11](https://github.com/ntechmedia/exlibris-primo/pull/11) Hotfix/nil delivery failure
+  - Resolved issues caused by records with missing metadata

@@ -76,20 +76,20 @@ module Exlibris
           end
 
           def merge_delivery(doc)
-            if doc['pnx']['delivery'].nil?
+            if doc['pnx']['delivery'].blank?
               doc['pnx']['delivery'] = doc['delivery']
             else
-              doc['pnx']['delivery'].merge!(doc['delivery'])
+              doc['pnx']['delivery'].merge!(doc['delivery']) if doc['delivery'].present?
             end
           end
 
           def merge_links(doc)
-            doc['pnx']['links'] = flatten_links(doc['pnx']['links'], doc['delivery']['link'].try(:dup) || [])
-            doc['delivery']['link'] = nil
+            doc['pnx']['links'] = flatten_links(doc['pnx']['links'], doc.dig('delivery', 'link').try(:dup) || [])
+            doc['delivery']['link'] = nil if doc['delivery'].present?
           end
 
           def flatten_links(existing_links, new_links)
-            hash = existing_links.nil? ? Hash.new : existing_links
+            hash = existing_links.blank? ? Hash.new : existing_links
             new_links.each do |link|
               type = link['linkType'].split('/').last
               hash[type] ||= []
