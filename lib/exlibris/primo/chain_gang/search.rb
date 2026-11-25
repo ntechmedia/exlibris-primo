@@ -205,7 +205,11 @@ module Exlibris
         #         search.records.first => 11th record from the search
         #
         def start_index!(start_index)
-          request_attributes[:start_index] = "#{start_index}"
+          if current_api == :rest
+            request_attributes[:offset] = "#{start_index}"
+          else
+            request_attributes[:start_index] = "#{start_index}"
+          end
           self
         end
         alias :start_index= :start_index!
