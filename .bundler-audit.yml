@@ -3,15 +3,44 @@ ignore:
   - CVE-2020-8165
   - CVE-2023-28120
   - CVE-2023-22796
-  # Resolution requires ruby 3.x
-  - GHSA-r95h-9x8f-r3f7
+  - CVE-2026-33176
+  - CVE-2026-33169
+  - CVE-2026-33170
+  - GHSA-8474-xrp6-wh69
 
+  # Resolution requires ruby 3.x
   # faraday
   - GHSA-33mh-2634-fwr2 # Medium
+  - GHSA-5rv5-xj5j-3484 # Medium
+  - GHSA-98m9-hrrm-r99r # High
+
+  # net-imap
+  - GHSA-46q3-7gv7-qmgg # Medium
+  - GHSA-c4fp-cxrr-mj66 # Low
+  - GHSA-8p34-64r3-mwg8 # Medium
 
   # nokogiri
+  - GHSA-r95h-9x8f-r3f7 # Low
+  - GHSA-wfpw-mmfh-qq69 # Unknown
+  - GHSA-3w22-6jfg-527w # Unknown
+  - GHSA-4p39-36wj-23h4 # Unknown
+  - GHSA-5v8h-3h3q-446p # Unknown
+  - GHSA-9cv2-cfxc-v4v2 # Unknown
+  - GHSA-wjv4-x9w8-wm3h # Unknown
+  - GHSA-8678-w3jw-xfc2 # Unknown
   - GHSA-mrxw-mxhj-p664 # High
-  - GHSA-wx95-c6cv-8532 # Medium
+  - GHSA-c4rq-3m3g-8wgx # High
   - GHSA-353f-x4gh-cqq8 # Unknown
-  - GHSA-5w6v-399v-w3cc # Unkown
-  - GHSA-vvfq-8hwr-qm4m # Unkown
+  - GHSA-p67v-3w7g-wjg7 # Unknown
+  - GHSA-v995-44v6-5fqm # Low
+  - GHSA-g9g8-vgvw-g3vf # Unknown
+  - GHSA-5w6v-399v-w3cc # Unknown
+  - GHSA-vvfq-8hwr-qm4m # Unknown
+  - GHSA-v2fc-qm4h-8hqv # Medium
+  - GHSA-wx95-c6cv-8532 # Medium
+  - GHSA-phwj-rprq-35pp # Unknown
+  - GHSA-5prr-v3j2-97mh # Unknown
+
+  # savon
+  - GHSA-mx5j-mp4f-g8jg # High
+  - GHSA-x99v-rwvj-g9p5 # Unknown
